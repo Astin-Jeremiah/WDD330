@@ -14,7 +14,7 @@ const list = document.getElementById("weeklist");
 
 for (let i=0; i<links.length; i++)
     {
-        let litsitems = document.createElement("li");
+        let listitems = document.createElement("li");
         let anchor = document.createElement("a");
         
         anchor.setAttribute("href", links[i].url);
