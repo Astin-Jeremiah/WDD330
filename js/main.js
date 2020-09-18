@@ -10,16 +10,16 @@ const links =[
     }
 ]
 
-const list = docuemnts.getElementById("weeklist");
+const list = document.getElementById("weeklist");
 
 for (let i=0; i<links.length; i++)
     {
-        let litsitem = document.createElement("li");
+        let litsitems = document.createElement("li");
         let anchor = document.createElement("a");
         
         anchor.setAttribute("href", links[i].url);
         anchor.innerText = links[i].label;
         
-        listitem.appendChild(anchor);
+        listitems.appendChild(anchor);
         list.appendChild(listitems);
     }
