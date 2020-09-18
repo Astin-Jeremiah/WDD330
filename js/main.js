@@ -14,12 +14,12 @@ const list = docuemnts.getElementById("weeklist");
 
 for (let i=0; i<links.length; i++)
     {
-        let litsitems = document.createElement("li");
+        let litsitem = document.createElement("li");
         let anchor = document.createElement("a");
         
         anchor.setAttribute("href", links[i].url);
         anchor.innerText = links[i].label;
         
-        listitems.appendChild(anchor);
+        listitem.appendChild(anchor);
         list.appendChild(listitems);
     }
