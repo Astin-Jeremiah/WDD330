@@ -36,10 +36,22 @@ ul#weeklist{
     font-size: 40px;  
 }
 
-h1, h2 {
+h1 {
     text-align: center;
     font-family: 'Lato', sans-serif;
     color: #272727;
+}
+
+h2, h3 {
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    color: #272727;
+    margin-bottom: 0px;
+    font-weight: normal;
+}
+
+h3 {
+    margin-top: 0px;
 }
 
 ol.notes {
@@ -60,4 +72,49 @@ ul.notedetail {
 
 ul.notedetail li {
     padding-bottom: 5px;
+}
+
+p.heading {
+    font-size: 26px;
+    font-family: 'Lato', sans-serif;
+    color: #272727;
+    text-align: center;
+}
+
+p.subheading {
+    font-family: 'Lato', sans-serif;
+    color: #272727;
+    text-align: center;
+}
+
+.myButton {
+	box-shadow:inset 0px 1px 0px 0px #f5978e;
+	background:linear-gradient(to bottom, #f24537 5%, #c62d1f 100%);
+	background-color:#A40B0B;
+	border-radius:6px;
+	border:1px solid #d02718;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:22px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #810e05;
+    margin: auto;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #c62d1f 5%, #f24537 100%);
+	background-color:#c62d1f;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+#button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
