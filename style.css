@@ -1,0 +1,63 @@
+@import @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fontlibrary.org/face/trueno');
+
+.center{
+    width: 900px;
+    display: block;
+    margin: 0px auto 0px auto;
+    overflow: auto;
+}
+
+ul#weeklist{
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    text-align: center;
+    grid-row-gap: 25px;
+    margin-top: 75px;
+}
+
+#weeklist li {
+    background-image: url(images/calendar.png);
+    background-size: 80%;
+    background-repeat: no-repeat;    
+    background-position: center;
+    font-size: 90px;
+    padding: 25px;
+    padding-bottom: 100px;
+}
+
+#weeklist li a {
+    display: inline;
+    font-family: 'TruenoRegular';
+    color: black;
+    text-decoration: none;
+    font-size: 40px;  
+}
+
+h1, h2 {
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    color: #272727;
+}
+
+ol.notes {
+    font-size: 26px;
+    font-family: 'Lato', sans-serif;
+    color: #272727;
+    margin: 30px auto 5px auto;
+    list-style-type: upper-roman;
+}
+
+ul.notedetail {
+    font-size: 18px;
+    color: #272727;
+    margin: 5px 0 5px 0;
+    margin-bottom: 5px;
+    font-family: 'Lato', sans-serif;
+}
+
+ul.notedetail li {
+    padding-bottom: 5px;
+}
