@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+  <title>Letter Counting</title>
+  <script>
+      function countChar(){
+          const sentence = document.getElementById("string").value;
+          const character = document.getElementById("ch").value;
+          const outputElement = document.getElementById("output");
+          outputElement.innerHTML = "The letter " + character +" is in the sentence " + count(sentence, character) +" times.";
+          
+          function count(string, ch) {
+              let c = 0
+              for (let i=0; i < string.length; i++){
+                  if (string[i] == ch) {
+                      c++;
+                  }
+              }
+              return c; 
+          }
+      }
+  </script>
+
+  <style>
+
+  </style>
+</head>
+
+<body>
+    Enter A Sentence: <input type="text" id="string"></input>
+    <br>
+    Enter A Letter: <input type="text" id="ch"></input>
+    <br>
+    <button onclick="countChar()">Count The Letter</button>
+    <br>
+    <section id="output"></section>
+</body>
+</html>
