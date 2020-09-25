@@ -13,32 +13,61 @@
     <body class="center">
         <h1>WDD 330 Portfolio<br>
             Jeremiah Astin</h1>
-        <h2>Week One Notes and Exercises</h2>
+        <h2>Week Two Notes and Exercises</h2>
         <h3>Click a Heading to Exand the Section</h3>
         
         <ol class="notes">
             <li>
-                <details><summary>Reading Notes</summary>
+                <details><summary>Reading Notes JavaScript Novice to Ninja: Chapter 2</summary>
                     <ul class="notedetail">
-                        <li>Naturally computers do not remember anything – when you stop an application everything is gone – that is why we design application to store what it has done</li>
-                        <li>Is local storage the best place to store data or your application?</li>
-                        <li>A Variable is liek a bow with a label that you put stuff in</li>
-                    </ul>
-                </details>
-            </li>
-            
-            <li>
-                <details><summary>Video Notes - Mobile First Development</summary>
-                    <ul class="notedetail">
-                        <li>Whatever you are designing do mobile first.</li>
-                        <li>Mobile first does not equal respoonsivie retrofiting your standard site.</li>
-                        <li>Be There...Be Useful...Be Quick</li>
-                        <li>Mobile users usually use their thumbs and operate the device with one hand.</li>
-                        <li>What is the easies you can make a mobile request form?
+                        <li>JavaScript single line comment //</li>
+                        <li>JavaScript multi line comment /*...*/</li>
+                        <li>It is best practice to write each JavaScript statement on a new line and terminate each line with a simicolon.</li>
+                        <li>A block is a series of JavaScript statements that are collected together using curly braces; blocks do not need to be termineted with a simicolon.</li>
+                        <li>Variables - a value stored in the program's memory; must be declaired before they can be used
                             <ul>
-                                <li>Use Proper Keyboards</li>
-                                <li>Use Proper Labels</li>
-                                <li>Use Autofill</li>
+                                <li>Const - A constant variable not assigend to another value</li>
+                                <li>Let - if the variable might be reassigned later in the program</li>
+                            </ul>
+                        </li>
+                        <li>You can assign multiple variables on the same line of code as long as you separte them by commas.</li>
+                        <li>Global Scope - Variables are declaired outside the block; variable is accessible anywhere in the program; should be kept to a minimum</li>
+                        <li>Local Scope - Variable is only defined within the block; variables cannot be accessed outside the block</li>
+                        <li>Variable names can start with upper or lower case letters, an underscore or dollar sign; variables can contain number but they cannot start with one; variable names are case sensitive</li>
+                        <li>Camel Case - starts with a lower case letter and then every new word is capitalized firstNameAndLastName</li>
+                        <li>Upderscore - seperates each new word wiht an underscore firs_name_and_last_name</li>
+                        <li>Strings - colelction fo characters such as letters and symbols
+                            <ul>
+                                <li>Written in single quotation marks 'Hello World'</li>
+                                <li>If the string contains an apostrophe use double quotes "It's A Small World After All"</li>
+                            </ul>
+                        </li>
+                        <li>Symbols - create unique values, do not have a litera form
+                            <ul>
+                                <li>Use the symbol function: const uniqueID = Symbol('this is a unique ID');</li>
+                            </ul>
+                        </li>
+                        <li>Numbers - can be integers (whole numbers), floating points (decimals), or exponential numbers (1e6)</li>
+                        <li>Infinity - numbers too big or small for JavaScript to deal with</li>
+                        <li>NaN - Not A Number; a numberical operation is attempted but the result is not numerical</li>
+                        <li>Undefined - variables that have not been assigned to a value</li>
+                        <li>Null - no vales; placeholders</li>
+                        <li>Booleans - True/Fasle values</li>
+                        <li>Logical Opeations
+                            <ul>
+                                <li>Logical Not - Returns the opposite of a booleanl place ! in front of the value</li>
+                                <li>Logical And - Only evalues to true if both vaules are true; use the &#38;&#38; symbol</li>
+                                <li>Logical Or - Evalues to true if any of the operators are true; use the || symbol</li>
+                            </ul>
+                        </li>
+                        <li>Equality
+                            <ul>
+                                <li>Two Values Are Equal To Each Other ==</li>
+                                <li>Two Values Are Not Equal To Each Other !==</li>
+                                <li>Two Values Are Greater Than ></li>
+                                <li>Two Values Are Less Than ></li>
+                                <li>Two Values Are Greater Than Or Equal To >=</li>
+                                <li>Two Values Are Less Than Or Equal To &#60;=</li>
                             </ul>
                         </li>
                     </ul>
@@ -46,34 +75,189 @@
             </li>
             
             <li>
-                <details><summary>Git Hub Command Line Cheat Sheets</summary>
+                <details><summary>Reading Notes JavaScript Novice to Ninja: Chapter 3</summary>
                     <ul class="notedetail">
-                        <li>Add Files To Git Hub
+                        <li>Arrays - Ordered lists of values</li>
+                        <li>Manipulating Arrays
                             <ul>
-                                <li>git status</li>
-                                <li>git add &#91;File Name&#93;</li>
-                                <li> git commit -m &#34;Comment&#34;</li>
-                                <li>git remove -v</li>
-                                <li>git push -u origin master or git pull</li>
+                                <li>.pop() – removes the last item from an array</li>
+                                <li>.shift() – removes the first item from an array</li>
+                                <li>.push() – appends new value at the end of the array</li>
+                                <li>.unshift() – appends new value at the start of the array</li>
+                                <li>.join() – turns the array into a list of stings separated by commas ( the separator can be changed by placing it in parentheses .jon(‘&#38;’)</li>
+                                <li>.slice() – creates a subarray by chopping out a slice of the original array; used to delete data from array as well as append in specific places</li>
+                                <li>.reverse() – permanently reverses order of the array</li>
+                                <li>.sort() – permanently arranges the array alphabetically</li>
+                                <li>.indexOf() – find the first occurrence of a value in an array; if not in the array displays -1</li>
+                                <li>.includes() – a Boolean version of indexOf()</li>
                             </ul>
                         </li>
-                        <li>Update Files
+                        <li>Sets - Data structure that represents a collection of unique values; cannot have any duplicate values</li>
+                        <li>Manupulating Sets
+                            <ul>
+                                <li>Creating Sets  const list = new Set();</li>
+                                <li>.add() - adds values to a set</li>
+                                <li>.size() - determines the number of values in a set</li>
+                                <li>.delete() - removes values from a set</li>
+                                <li>.clear() - reomve all values from a set</li>
+                                <li>[...] - Spread Operator; converts the set into an array literal</li>
+                            </ul> 
+                        </li>
+                        <li>Maps - Data structure that keeps a list of key and value pairs</li>
+                        <li>Manupulating Maps
+                            <ul>
+                                <li>Creating Maps  const romanNumerals = new Map();</li>
+                                <li>.set(1, 'I') -  add a key and value pair to a map</li>
+                                <li>.get() - check if a particaly key is used in a pay; returns True/False boolean</li>
+                                <li>.delete() - remove a key and value pair from a map</li>
+                                <li>.clear() - remove all key and value pairs from a map</li>
+                                <li>Array.from() or spread operator [...] can be used to convert a map into a nest array of key-value pairs</li>
+                            </ul>
+                        </li>
+                        <li>If Statement - The code insude the block will only run if the conditions in parenthese is true
+                            <ul>
+                                <li>if (condition) {<br>
+                                    code to run if true<br>
+                                    }</li>
+                            </ul>
+                        </li>
+                        <li>Else Statement -Add an alternative block of code to run if the condition is false
+                            <ul>
+                                <li>if (condition) {<br>
+                                    code to run if true<br>
+                                    } else { <br>
+                                    code to run if condition is false<br>
+                                    }</li>
+                                <li>Ternary Operator - Shorthand way to write an else statment
+                                    <ul>
+                                        <li>condition ? (//code to run if condition is true) : (//code to run if condition is false)</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>Switch Operator - Used When your code has lots of conditions to test
+                            <ul>
+                                <li>switch (number) {<br>
+                                &#9; case4:<br>
+                                &#9; console.log('You rolled a four');<br>
+                                &#9; break;<br>
+   		                        &#9; case 5:<br>
+    		                    &#9; console.log('You rolled a five');<br>
+   		                        &#9; break;<br>
+                                &#9; case 6:<br>
+    		                    &#9; console.log('You rolled a six');<br>
+    		                    &#9; break;<br>
+    		                    &#9; default:<br>
+    		                    &#9; console.log('You rolled a number less than four');<br>
+    		                    &#9; break;<br>
+                                }</li>
+                            </ul>    
+                        </li>
+                        <li>Loops - Repeat a piece of code over and over again according to certain conditions; if the conditions are not met the loop will get stuck in an infinant loop until it crashes the program</li>
+                        <li>While Loop - repeatedly runs a block of code while a certain condition is true
+                            <ul>
+                                <li>while (condition) {<br>
+                                do something<br>
+                                }</li>
+                            </ul>
+                        </li>
+                        <li>Do...While Loop - similar to a while loop but the conditions come after the block of code; loop alwasy runs once reguardless of the condition being true or not
+                            <ul>
+                                <li> do {<br>
+                                do something<br>
+                                } while (condition)</li>
+                            </ul>
+                        </li>
+                        <li>For Loop - has three parts initalizaion code that runs before the loop starts, a condtion that has to be satified for the loop to continue, and after code that is what to date after each loop iteration
+                            <ul>
+                                <li>for (initializtion ; condition ; after {<br>
+                                do something }</li>
+                                <li>For Loops can be nested inside another loop so that the inner loop will run all the way though before the next step of the outer loop occurs</li>
+                                <li>For loops can be used to loop over arrays, sets and maps</li>
+                            </ul>
+                        </li>
+                        
+                    </ul>
+                </details>
+            </li>
+            
+            <li>
+                <details><summary>Reading Notes JavaScript Novice to Ninja: Chapter 3</summary>
+                    <ul class="notedetail">
+                        <li>Functions - a chunk of code that is referenced by a name and is almost like a small, self contained mini program</li>
+                        <li>Function Declaration
                             <ul class="notedetail">
-                                <li>git status</li>
-                                <li>git diff</li>
-                                <li>git add &#91;File Name&#93;</li>
-                                <li>git commit -m &#34;Comment&#34;</li>
-                                <li>git push origin master</li>
+                                <li>fucntion hello(){<br>
+                                    console.log('Hello World!');<br>
+                                    }</li>
+                            </ul>
+                        </li>
+                        <li>Function Expression
+                            <ul class="notedetail">
+                                <li>const goodbye = function bye(){<br>
+                                    console.log('Goodbye World!');<br>
+                                    };</li>
+                            </ul>
+                        </li>
+                        <li>Function() Constructors
+                            <ul class="notedetail">
+                                <li>cpmst hi = new Function('console.log("Hi<br>
+                                    World!");');</li>
+                            </ul>
+                        </li>
+                        <li>INvoling A Function - run the code inside the function's body; simply enter the functions name followed by parentheses</li>
+                        <li>DRY - DONT REPEAT YOURSELF - code should not only be written once and not duplicated multiple palces in a program</li>
+                        <li>Return Values- what the functino retunrs after completing the code; comes after the keyword return</li>
+                        <li>Parameters and Arguments - the values provided to the function for input</li>
+                        <li>Arrow Functions - appreviated syntax for declearing functions; parameters come before the arrow and the main body of the function come after
+                            <ul>
+                                <li>const square = x => x*x;</li>
+                                <li>Single parameters do not need to be put in parentheses</li>
+                                <li>Body of the function doesn't beed placing inside a block if it's only one line</li>
+                                <li>Return keyword is not required if the return statement is the only statement in the body of the function</li>
+                                <li>If the function doesn't requre any parameners a pair of empty parentheses must go before the arrow</li>
+                                <li>Longer functions will still require curly braces to delimate the body of the function and the return keywords at the end</li>
+                                <li>Best for short annoymous functions</li>
+                            </ul>
+                        </li>
+                        <li>Callbacks - A function that passes parameters to another function</li>
+                        <li>.map() - iterates over an array and takes a callback function as a paramenter that is invoked on each item in the array
+                            <ul>
+                                <li>[1,2,3].map(square);<br>
+                                    <b>[1, 4, 9]</b></li>
+                            </ul>
+                        </li>
+                        <li>.reduce() - inerates over each value in an array and cumulatively combines each resut to return just a single value
+                            <ul>
+                                <li>[1,2,3, 4, 5].reduce( (acc,val) => prev + val);<br>
+                                <b>15</b></li>
+                            </ul>
+                        </li>
+                        <li>.filter() - returns a new array that only contains items from the original array that return true when passed to the callback
+                            <ul>
+                                <li>const numbers = [2, 7, 6, 5, 11, 23, 12]<br><br>
+                                numbers.filter(x => x%2 === 0); <i>returns true if the number is even</i><br><br>
+                                <b>[2, 6, 12]</b></li>
                             </ul>
                         </li>
                     </ul>
         
+                </details>
+            </li>
+            <li>
+                <details><summary>Group Exercise Week 2</summary>
+                    <ul class="notedetail">
+                        <li><a href="story_editor.html">Week 2 Exercise Here</a></li>
+                    </ul>
                 </details>
             </li>
             <li>
                 <details><summary>Additional Exercises</summary>
                     <ul class="notedetail">
-                        <li><a href="story_editor.html">Story Editor</a></li>
+                        <li><a href="minimum.html">Calculate Minimum</a></li>
+                        <li><a href="lettercounting.html">Letter Counting</a></li>
+                        <li><a href="range.html">Range Sum</a></li>
+                        <li><a href="reverse.html">Array Reverse</a></li>
                     </ul>
                 </details>
             </li>
