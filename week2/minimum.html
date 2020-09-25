@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+  <title>Calculate Minimum</title>
+  <script>
+      function minimum(){
+        const inputa = document.getElementById("a").value;
+        const inputb = document.getElementById("b").value;
+        const numbera = parseFloat(inputa);
+        const numberb = parseFloat(inputb);
+        const outputElement = document.getElementById("output");
+          
+        if ((numbera !== NaN) & (numberb !== NaN)) {
+             outputElement.innerHTML = 'The minimum of the two numbers is: '+ min(numbera,numberb);  
+            };
+          
+      function min(a, b) {
+            if (a < b) return a;
+            else return b;
+        }
+      }
+  </script>
+
+  <style>
+
+  </style>
+</head>
+
+<body>
+    Enter A Number: <input type="text" id="a"></input>
+    <br>
+    Enter A Second Number: <input type="text" id="b"></input>
+    <br>
+    <button onclick="minimum()">Calculate The Minimum</button>
+    <br>
+    <section id="output"></section>
+</body>
+</html>
