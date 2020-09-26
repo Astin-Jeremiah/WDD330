@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+<head>
+  <title>Group Project #1</title>
+  <script>
+      
+      //Requirement #1
+      function copyPaste(){
+          const input = document.getElementById("text").value;
+          const outputElement = document.getElementById("output1");
+          outputElement.innerHTML = input;
+      }
+      
+      
+      //Requiremnet #2
+      function sum(){
+          const input = document.getElementById("number").value;
+          const num = parseInt(input);
+          const outputElement = document.getElementById("output2");
+          if (num !== NaN) {
+              outputElement.innerHTML = "The Sum Of The Number Is: " + sumNumber(num);
+          }
+          
+          function sumNumber(num){
+              let summation = 0;
+              for (let i=1; i<=num; i++){
+                  summation += i;
+          }
+          return summation;
+          }
+          
+      }
+      
+      //Requirement #3
+      
+      function getnumber(number) {
+          const num = document.getElementById(number).value;
+          const input = parseFloat(num);
+          if (input !== NaN){
+              return input;
+          } else return 0;
+      }
+      
+      function getoutput(output){
+          const outputElement = document.getElementById("output3");
+          outputElement.innerHTML = "The Total Is: " + output;
+      }
+      
+      function add(num1, num2){
+          return num1 + num2;
+      }
+      
+      const sub = function(num1, num2){
+          return num1 - num2;
+      }
+      
+      const mult = (num1, num2) => num1*num2;
+      
+      function math(operation) {
+          const answer = operation(
+          getnumber('number1'),
+          getnumber('number2')
+          );
+          getoutput(answer);
+      }
+
+  </script>
+
+  <style>
+
+  </style>
+</head>
+
+<body>
+    
+    <h1>Requirement #1 - JavaScript Read And Write</h1>
+    <input type="text" placeholder="Enter Text Here" id="text">
+    <button onclick="copyPaste()">Copy/Paste Text</button>
+    <br>
+    <br>
+    <div id="output1"></div>
+    <h1>Requirement #2 - JavaScript Sum A Number</h1>
+    <input type="text" placeholder="Enter A Number" id="number">
+    <button onclick="sum()">Sum The Number</button>
+    <br>
+    <br>
+    <div id="output2"></div>
+    <h1>Requirement #3 - JavaScript Calculator</h1>
+    <input type="number" placeholder="Enter A Number" id="number1"> <input type="number" placeholder="Enter A Number" id="number2">
+    <br>
+    <br>
+    <button onclick="math(add)">Add The Numbers</button>&nbsp;&nbsp;<button onclick="math(sub)">Subtract The Numbers</button>&nbsp;&nbsp;<button onclick="math(mult)">Multiply The Numbers</button>
+    <br>
+    <br>
+    <div id="output3"></div>
+    <br>
+</body>
+</html>
