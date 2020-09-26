@@ -14,7 +14,7 @@
         <h1>WDD 330 Portfolio<br>
             Jeremiah Astin</h1>
         <h2>Week Two Notes and Exercises</h2>
-        <h3>Click a Heading to Exand the Section</h3>
+        <h3>Click a Heading to Expand the Section</h3>
         
         <ol class="notes">
             <li>
@@ -22,42 +22,42 @@
                     <ul class="notedetail">
                         <li>JavaScript single line comment //</li>
                         <li>JavaScript multi line comment /*...*/</li>
-                        <li>It is best practice to write each JavaScript statement on a new line and terminate each line with a simicolon.</li>
-                        <li>A block is a series of JavaScript statements that are collected together using curly braces; blocks do not need to be termineted with a simicolon.</li>
-                        <li>Variables - a value stored in the program's memory; must be declaired before they can be used
+                        <li>It is best practice to write each JavaScript statement on a new line and terminate each line with a semicolon.</li>
+                        <li>A block is a series of JavaScript statements that are collected together using curly braces; blocks do not need to be terminated with a semicolon.</li>
+                        <li>Variables - a value stored in the program's memory; must be declared before they can be used
                             <ul>
-                                <li>Const - A constant variable not assigend to another value</li>
+                                <li>Const - A constant variable not assigned to another value</li>
                                 <li>Let - if the variable might be reassigned later in the program</li>
                             </ul>
                         </li>
-                        <li>You can assign multiple variables on the same line of code as long as you separte them by commas.</li>
-                        <li>Global Scope - Variables are declaired outside the block; variable is accessible anywhere in the program; should be kept to a minimum</li>
+                        <li>You can assign multiple variables on the same line of code as long as you separate them by commas.</li>
+                        <li>Global Scope - Variables are declared outside the block; variable is accessible anywhere in the program; should be kept to a minimum</li>
                         <li>Local Scope - Variable is only defined within the block; variables cannot be accessed outside the block</li>
                         <li>Variable names can start with upper or lower case letters, an underscore or dollar sign; variables can contain number but they cannot start with one; variable names are case sensitive</li>
                         <li>Camel Case - starts with a lower case letter and then every new word is capitalized firstNameAndLastName</li>
-                        <li>Upderscore - seperates each new word wiht an underscore firs_name_and_last_name</li>
-                        <li>Strings - colelction fo characters such as letters and symbols
+                        <li>Upderscore - separates each new word with an underscore firs_name_and_last_name</li>
+                        <li>Strings - collection of characters such as letters and symbols
                             <ul>
                                 <li>Written in single quotation marks 'Hello World'</li>
                                 <li>If the string contains an apostrophe use double quotes "It's A Small World After All"</li>
                             </ul>
                         </li>
-                        <li>Symbols - create unique values, do not have a litera form
+                        <li>Symbols - create unique values, do not have a literal form
                             <ul>
                                 <li>Use the symbol function: const uniqueID = Symbol('this is a unique ID');</li>
                             </ul>
                         </li>
                         <li>Numbers - can be integers (whole numbers), floating points (decimals), or exponential numbers (1e6)</li>
                         <li>Infinity - numbers too big or small for JavaScript to deal with</li>
-                        <li>NaN - Not A Number; a numberical operation is attempted but the result is not numerical</li>
+                        <li>NaN - Not A Number; a numerical operation is attempted but the result is not numerical</li>
                         <li>Undefined - variables that have not been assigned to a value</li>
                         <li>Null - no vales; placeholders</li>
-                        <li>Booleans - True/Fasle values</li>
-                        <li>Logical Opeations
+                        <li>Booleans - True/False values</li>
+                        <li>Logical Operations
                             <ul>
-                                <li>Logical Not - Returns the opposite of a booleanl place ! in front of the value</li>
-                                <li>Logical And - Only evalues to true if both vaules are true; use the &#38;&#38; symbol</li>
-                                <li>Logical Or - Evalues to true if any of the operators are true; use the || symbol</li>
+                                <li>Logical Not - Returns the opposite of a boolean place ! in front of the value</li>
+                                <li>Logical And - Only evaluates to true if both values are true; use the &#38;&#38; symbol</li>
+                                <li>Logical Or - Ecaluates to true if any of the operators are true; use the || symbol</li>
                             </ul>
                         </li>
                         <li>Equality
@@ -84,7 +84,7 @@
                                 <li>.shift() – removes the first item from an array</li>
                                 <li>.push() – appends new value at the end of the array</li>
                                 <li>.unshift() – appends new value at the start of the array</li>
-                                <li>.join() – turns the array into a list of stings separated by commas ( the separator can be changed by placing it in parentheses .jon(‘&#38;’)</li>
+                                <li>.join() – turns the array into a list of stings separated by commas ( the separator can be changed by placing it in parentheses .join(‘&#38;’)</li>
                                 <li>.slice() – creates a subarray by chopping out a slice of the original array; used to delete data from array as well as append in specific places</li>
                                 <li>.reverse() – permanently reverses order of the array</li>
                                 <li>.sort() – permanently arranges the array alphabetically</li>
@@ -93,7 +93,7 @@
                             </ul>
                         </li>
                         <li>Sets - Data structure that represents a collection of unique values; cannot have any duplicate values</li>
-                        <li>Manupulating Sets
+                        <li>Manipulating Sets
                             <ul>
                                 <li>Creating Sets  const list = new Set();</li>
                                 <li>.add() - adds values to a set</li>
@@ -108,13 +108,14 @@
                             <ul>
                                 <li>Creating Maps  const romanNumerals = new Map();</li>
                                 <li>.set(1, 'I') -  add a key and value pair to a map</li>
-                                <li>.get() - check if a particaly key is used in a pay; returns True/False boolean</li>
+                                <li>.get() - looks up a value in a map</li>
+                                <li>.has() - check if a particular key is in a pay; returns a boolean value</li>
                                 <li>.delete() - remove a key and value pair from a map</li>
                                 <li>.clear() - remove all key and value pairs from a map</li>
                                 <li>Array.from() or spread operator [...] can be used to convert a map into a nest array of key-value pairs</li>
                             </ul>
                         </li>
-                        <li>If Statement - The code insude the block will only run if the conditions in parenthese is true
+                        <li>If Statement - The code inside the block will only run if the conditions in parentheses is true
                             <ul>
                                 <li>if (condition) {<br>
                                     code to run if true<br>
@@ -128,7 +129,7 @@
                                     } else { <br>
                                     code to run if condition is false<br>
                                     }</li>
-                                <li>Ternary Operator - Shorthand way to write an else statment
+                                <li>Ternary Operator - Shorthand way to write an else statement
                                     <ul>
                                         <li>condition ? (//code to run if condition is true) : (//code to run if condition is false)</li>
                                     </ul>
@@ -153,7 +154,7 @@
                                 }</li>
                             </ul>    
                         </li>
-                        <li>Loops - Repeat a piece of code over and over again according to certain conditions; if the conditions are not met the loop will get stuck in an infinant loop until it crashes the program</li>
+                        <li>Loops - Repeat a piece of code over and over again according to certain conditions; if the conditions are not met the loop will get stuck in an infinite loop until it crashes the program</li>
                         <li>While Loop - repeatedly runs a block of code while a certain condition is true
                             <ul>
                                 <li>while (condition) {<br>
@@ -161,16 +162,16 @@
                                 }</li>
                             </ul>
                         </li>
-                        <li>Do...While Loop - similar to a while loop but the conditions come after the block of code; loop alwasy runs once reguardless of the condition being true or not
+                        <li>Do...While Loop - similar to a while loop but the conditions come after the block of code; loop always runs once regardless of the condition being true or not
                             <ul>
                                 <li> do {<br>
                                 do something<br>
                                 } while (condition)</li>
                             </ul>
                         </li>
-                        <li>For Loop - has three parts initalizaion code that runs before the loop starts, a condtion that has to be satified for the loop to continue, and after code that is what to date after each loop iteration
+                        <li>For Loop - has three parts initialization code that runs before the loop starts, a condition that has to be satisfied for the loop to continue, and after code that is what to date after each loop iteration
                             <ul>
-                                <li>for (initializtion ; condition ; after {<br>
+                                <li>for (initialization ; condition ; after {<br>
                                 do something }</li>
                                 <li>For Loops can be nested inside another loop so that the inner loop will run all the way though before the next step of the outer loop occurs</li>
                                 <li>For loops can be used to loop over arrays, sets and maps</li>
@@ -187,7 +188,7 @@
                         <li>Functions - a chunk of code that is referenced by a name and is almost like a small, self contained mini program</li>
                         <li>Function Declaration
                             <ul class="notedetail">
-                                <li>fucntion hello(){<br>
+                                <li>function hello(){<br>
                                     console.log('Hello World!');<br>
                                     }</li>
                             </ul>
@@ -201,33 +202,33 @@
                         </li>
                         <li>Function() Constructors
                             <ul class="notedetail">
-                                <li>cpmst hi = new Function('console.log("Hi<br>
+                                <li>const hi = new Function('console.log("Hi<br>
                                     World!");');</li>
                             </ul>
                         </li>
-                        <li>INvoling A Function - run the code inside the function's body; simply enter the functions name followed by parentheses</li>
-                        <li>DRY - DONT REPEAT YOURSELF - code should not only be written once and not duplicated multiple palces in a program</li>
-                        <li>Return Values- what the functino retunrs after completing the code; comes after the keyword return</li>
+                        <li>Invoking A Function - run the code inside the function's body; simply enter the functions name followed by parentheses</li>
+                        <li>DRY - DONT REPEAT YOURSELF - code should not only be written once and not duplicated multiple places in a program</li>
+                        <li>Return Values- what the function returns after completing the code; comes after the keyword return</li>
                         <li>Parameters and Arguments - the values provided to the function for input</li>
-                        <li>Arrow Functions - appreviated syntax for declearing functions; parameters come before the arrow and the main body of the function come after
+                        <li>Arrow Functions - abbreviated syntax for declaring functions; parameters come before the arrow and the main body of the function come after
                             <ul>
                                 <li>const square = x => x*x;</li>
                                 <li>Single parameters do not need to be put in parentheses</li>
-                                <li>Body of the function doesn't beed placing inside a block if it's only one line</li>
+                                <li>Body of the function doesn't need placed inside a block if it's only one line</li>
                                 <li>Return keyword is not required if the return statement is the only statement in the body of the function</li>
-                                <li>If the function doesn't requre any parameners a pair of empty parentheses must go before the arrow</li>
-                                <li>Longer functions will still require curly braces to delimate the body of the function and the return keywords at the end</li>
-                                <li>Best for short annoymous functions</li>
+                                <li>If the function doesn't require any parameters a pair of empty parentheses must go before the arrow</li>
+                                <li>Longer functions will still require curly braces to delimite the body of the function and the return keywords at the end</li>
+                                <li>Best for short anonymous functions</li>
                             </ul>
                         </li>
                         <li>Callbacks - A function that passes parameters to another function</li>
-                        <li>.map() - iterates over an array and takes a callback function as a paramenter that is invoked on each item in the array
+                        <li>.map() - iterates over an array and takes a callback function as a parameter that is invoked on each item in the array
                             <ul>
                                 <li>[1,2,3].map(square);<br>
                                     <b>[1, 4, 9]</b></li>
                             </ul>
                         </li>
-                        <li>.reduce() - inerates over each value in an array and cumulatively combines each resut to return just a single value
+                        <li>.reduce() - iterates over each value in an array and cumulatively combines each result to return just a single value
                             <ul>
                                 <li>[1,2,3, 4, 5].reduce( (acc,val) => prev + val);<br>
                                 <b>15</b></li>
