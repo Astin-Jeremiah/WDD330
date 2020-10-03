@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+  <title>Balloons</title>
+</head>
+
+<body>
+    <h1>Use The Up And Down Arrows To Control The Balloon</h1>
+    <p>&#127880;</p>
+</body>
+<script>
+    let p = document.querySelector("p");
+    let size = 20;
+    
+    function sizechange(newSize) {
+        size = newSize;
+        p.style.fontSize = size + "px";
+    }
+    
+    function arrowkeys(event) {
+        if (event.key == "ArrowUp") {
+            if (size > 70) {
+                p.textContent = "💥";
+                document.body.removeEventListener("keydown", arrowkeys);
+            } else {
+                sizechange(size * 1.1);
+                event.preventDefault();
+            }
+        } else if (event.key == "ArrowDown") {
+            sizechange(size * 0.9);
+            event.preventDefault();
+        }
+    }
+    
+    document.body.addEventListener("keydown", arrowkeys);
+    
+</script>
+    
+<style>   
+    p {padding-left: 200px;}
+</style>
+</html>
