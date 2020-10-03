@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+  <title>Mouse Tail</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    let tail = [];
+    for (let i=0; i<15; i++) {
+        let node = document.createElement("div");
+        node.className = "tail";
+        document.body.appendChild(node);
+        tail.push(node);
+    }
+    
+    let current = 0;
+    
+    window.addEventListener("mousemove", build);
+    
+    function build(){
+        let circle = tail[current];
+        circle.style.left = (event.pageX - 5) + "px";
+        circle.style.top = (event.pageY -5) + "px";
+        current = (current +1) % tail.length;
+    }
+    
+</script>
+    
+<style>   
+    .tail {
+    position: absolute;
+    height: 6px; width: 6px;
+    border-radius: 3px;
+    background: orange;
+    }
+    
+    body {height: 500px;}
+</style>
+</html>

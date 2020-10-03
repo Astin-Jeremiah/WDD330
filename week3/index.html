@@ -4,82 +4,494 @@
         <meta charset="UTF-8">
         <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
         <title>
-            Week 1 WDD 330 Portfolio
+            Week 3 WDD 330 Portfolio
         </title>
         <link href="../style.css" type="text/css" rel="stylesheet" />
+        <link rel="icon" href="/images/favicon.png">
     </head>
 
     <body class="center">
         <h1>WDD 330 Portfolio<br>
             Jeremiah Astin</h1>
         <h2>Week Three Notes and Exercises</h2>
-        <h3>Page Content Coming Soon</h3>
-        <!--<h3>Click a Heading to Exand the Section</h3>
+        <h3>Click a Heading to Expand the Section</h3>
         
         <ol class="notes">
             <li>
-                <details><summary>Reading Notes</summary>
+                <details><summary>Reading Notes JavaScript Novice to Ninja: Chapter 5</summary>
                     <ul class="notedetail">
-                        <li>Naturally computers do not remember anything – when you stop an application everything is gone – that is why we design application to store what it has done</li>
-                        <li>Is local storage the best place to store data or your application?</li>
-                        <li>A Variable is liek a bow with a label that you put stuff in</li>
+                        <li>Object - self contained set of related values and functions</li>
+                        <li>Object Literal - object that is created directly in the langauge by wrapping all its properties and methods in curley braces
+                            <ul>
+                                <li>const spiderman = {};</li>
+                                <li>const spiderman = newObject();</li>
+                            </ul>
+                        </li>
+                        <li>Accessing properties of objects = use the dot notation
+                            <ul>
+                                <li>superman.name</li>
+                                <li>superman[`name`]</li>
+                            </ul>
+                        </li>
+                        <li>Calling an object = use dot or bracket notation followed by parentheses after the method name
+                            <ul>
+                                <li>superman.fly()</li>
+                                <li>superman[`fly`]()</li>
+                            </ul>
+                        </li>
+                        <li>In Operator - used to check if properties of a method exist
+                            <ul>
+                                <li>`city` in superman;</li>
+                            </ul>
+                        </li>
+                        <li>hasOwnProperty() = also used to check if properties of methds exist
+                            <ul>
+                                <li>superman.hasOwnProperty(`city`);</li>
+                            </ul>
+                        </li>
+                        <li>Finding all the properties of an object = loop though all of an objects properties and methods using a for in loop
+                            <ul>
+                                <li> for(const key in superman) {<br>
+                                    console.log(key + ":" + superman[key]);<br>
+                                    }</li>
+                            </ul>
+                        </li>
+                        <li>Object.key() = returns an array of all the keys of an object that is provided as an argument
+                            <ul>
+                                <li>for(const key of Object.keys(superman)) {<br>
+                                    console.log(key)<br>
+                                    }</li>
+                            </ul>
+                        </li>
+                        <li>Object.values() = returns an array of all the objects values
+                            <ul>
+                                <li>for(const value of Object.values(superman)) {<br>
+                                    console.log(value);<br>
+                                    }</li>
+                            </ul>
+                        </li>
+                        <li>Object.entries() = returns an array of key-value pairs
+                            <ul>
+                                <li>for(const [key,value] of <br>
+                                    Object.entries(superman)) {<br>
+                                    console.log(`${key} : ${value}`);<br>
+                                    }</li>
+                            </ul>
+                        </li>
+                        <li>Adding new properties to a method can ebe done at any time in a program; properties do not alwasy apper in the order they are entered
+                            <ul>
+                                <li>superman.city = 'Metropolis';</li>
+                            </ul>
+                        </li>
+                        <li>Changing properties of an object can be done any time using assignments
+                            <ul>
+                                <li>superman['real name'] = 'Kal-El';</li>
+                            </ul>
+                        </li>
+                        <li>Delete Operator = removes properites from an object
+                            <ul>
+                                <li>delete superman.fly</li>
+                            </ul>
+                        </li>
+                        <li>Nested Objects - when an object contains other objects; values in nested objects are accessed by reference each property name in order using either dot or bracket notation
+                            <ul>
+                                <li>jla.wonderWoman.realName</li>
+                            </ul>
+                        </li>
+                        <li>Object literals can be passed as parameters to other functions</li>
+                        <li>This - refers to the object that is is within; used to gain access to the objects parameters</li>
+                        <li>Naming Collisions = when the same variable or function name is used for different purposes by code sharing the same scope</li>
+                        <li>Object Literal Pattern = creating an object literal that serves as the namespace and then addin any values or properties of that object and funcstions as methods
+                            <ul>
+                                <li>myCanvas.square()</li>
+                            </ul>
+                        </li>
+                        <li>JSON = JavaScript Object Notation; lightweight data-storage format that is used for data serialization and configuration
+                            <ul>
+                                <li>Propery names must be double quoted</li>
+                                <li>Permitted values are double quoted strings, numbers, booleans, arrays, and objects</li>
+                                <li>Functions are not permitted values</li>
+                                <li>parse() = takes a sting of data in JSON and format and returns a JavaScript object</li>
+                                <li>stringfly() = takes a JavaScript object and returns a string of JSON data</li>
+                            </ul>
+                        </li>
+                        <li>Math Object - built in object that has several properties represending mathematical constraints
+                            <ul>
+                                <li>Math.PI = dispalys pi</li>
+                                <li>Math.SQRT@ = the square root of 2</li>
+                                <li>Math.SQRT1_2 = the reciprocial of the square root of 2</li>
+                                <li>Math.E = Euler's constant</li>
+                                <li>Math.LN2 = the natural logarithm of 2</li>
+                                <li>Math.LN10 = the natural logarithm of 10</li>
+                                <li>Math.LOG2E = the log base 2 of Euler's constant</li>
+                            </ul>
+                        </li>
+                        <li>Math.abs() = Absolute value; if number is positive it will remain the same, if number isw negative it will become positive</li>
+                        <li>Rounding Methods
+                            <ul>
+                                <li>Math.celi() = rounds a number up to the next integer or remains the same if already an integer</li>
+                                <li>Math.floor() = rounds a number down to the next integer or remains the same if alrady an integer</li>
+                                <li>Math.round() = round a number to the nearest integer</li>
+                                <li>Math.trunc() = returns the integer part of the number only (chops off numbers after the decimal</li>
+                            </ul>
+                        </li>
+                        <li>Powers and Square Roots
+                            <ul>
+                                <li>Math.exp() = reaises a number to the power or Euler's constant</li>
+                                <li>Math.pew(x,y) = raies any number (first argument) to the power of anonter number (second argument)</li>
+                                <li>Math.sqrt() = returns positive square root of a number</li>
+                                <li>Math.cbrt() = returns the cube root of a number</li>
+                                <li>Math.hypot() = returns the quare root of the sum of the squares of all its arguments (calcuate hypothenuse of a right-angled triange)</li>
+                            </ul>
+                        </li>
+                        <li>Math.log() = returns the natural logarithm of a number</li>
+                        <li>Maximum and Minimum Methods
+                            <ul>
+                                <li>Math.max() = returns the maximum number from its arguments</li>
+                                <li>Math.min() = returns the minimum number from the given arguments</li>
+                            </ul>
+                        </li>
+                        <li>Trigonometric Functions
+                            <ul>
+                                <li>Math.sin() = returns the sine of an angle</li>
+                                <li>Math.con() = returns the cosine of an angle</li>
+                                <li>Math.tan() = returns the tangent of an angle</li>
+                                <li>Math.asin() = returns the arcsine of a number; result is an angle</li>
+                                <li>Math.acos() = returns the arccosie of a number; result is an angle </li>
+                                <li>Math.atan() = returns the arctangent of a number; result is an angle</li>
+                            </ul>
+                        </li>
+                        <li>Random Numbers
+                            <ul>
+                                <li>Math.random() = creates a random number; number will be between 0 and 1</li>
+                                <li>Multiple Random numbers function to increase random numbers; 6*Math.random() = random numbers between 0 and 6 with decimal values</li>
+                                <li>For random whole numbers use Math.floor(); Math.floor(6*Math.random())= random whole numbers between 0 and 6</li>
+                            </ul>
+                        </li>
+                        <li>Date Objects
+                            <ul>
+                                <li>Create New Date Object
+                                    <ul>
+                                        <li>const today = new Date();</li>
+                                        <li>today.toString() = <b>'Tue Feb 14 2017 16:35:18 GMT+000 (GMT)'</b></li>
+                                    </ul>
+                                </li>
+                                <li>If a specific date is not specified the default is the current date and time
+                                    <ul>
+                                        <li>const christmas = newDate('2017 12 25')</li>
+                                    </ul>
+                                </li>
+                                <li>Getter Methods
+                                    <ul>
+                                        <li>getDay() or getUTCDay() = used to find the day of the week that the date object falls on; returns a number between 0 and 6; 0=Sunday...6=Saturday</li>
+                                        <li>getDate() or getUTCDate() = retuns the day of the month for the date object; retuns actual number of the date</li>
+                                        <li>getMonth() or get UTCMonth() = find teh month of the date object; returns a number 0 to 11; 0=January....11=December</li>
+                                        <li>getFullYear() or getUTCFullYear() = returns the year of the date object</li>
+                                        <li>getTime() = returns a time stamp representing the number of miliseconds since the Epoch
+                                            <ul>
+                                                <li>A day = 1000*60*60*24 miliseconds</li>
+                                            </ul>
+                                        </li>
+                                        <li>getTimezoneOffset() = returns the differnce in minutes between the local time on the computer and UTC</li>
+                                    </ul>
+                                </li>
+                                <li>Setter Mehods
+                                    <ul>
+                                        <li>setDate() = sets day of event; returns timestamp of updated date object</li>
+                                        <li>setMonth() = sets month of event; returns timestamp</li>
+                                        <li>setFullYear() = sets year of event; returns timestamp</li>
+                                        <li>setTime() = sets time stamp for event; must use milisecond time stamp</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>Regular Expressions - Pattern that can be used to search strings for matches to a pattern; common with find and replace types of operations
+                            <ul>
+                                <li>Creating Reular Expressions
+                                    <ul>
+                                        <li>Using literal notation of writing the regular expression between forward slashes
+                                            <ul>
+                                                <li>const pattern = /[a-zA-Z+ing$/;</li>
+                                            </ul>
+                                        </li>
+                                        <li>Creating a new instance of the regular expresion using a new operator and constructor
+                                            <ul>
+                                                <li>const pattern = newRegExp('[a-zA-Z]+ing');</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>Regular Expression Methods
+                                    <ul>
+                                        <li>test() = see if a stirng passed to the methods as a parameter matches the regular expression; returns true/false answer
+                                            <ul>
+                                                <li>pattern.test('joke');</li>
+                                            </ul>
+                                        </li>
+                                        <li>exec() = works same way as test but return's an array conatining the first match found or null if no matches are found
+                                            <ul>
+                                                <li>pattern.exec('joke');</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>Character Groups - groups of characters placed together inside square brackets represenging any one of the characters inside the brackets
+                                    <ul>
+                                        <li>const vowels = /[aeiou];/</li>
+                                        <li>const alphabet = /[A-Z]/;</li>
+                                        <li>const numbers = /[0-9]/;</li>
+                                        <li>const notcapital = /[^A-Z]/; ^ represents is not</li>
+                                    </ul>
+                                </li>
+                                <li>Regular Expression Properties
+                                    <ul>
+                                        <li>Global - Makes pattern return all matches; defualt only looks at fisrt occurrence
+                                            <ul>
+                                                <li>pattern = /java/g</li>
+                                            </ul>
+                                        </li>
+                                        <li>Ignore Case - Makes the pattern case insentive; by defualt they are case sensitive
+                                            <ul>
+                                                <li>pattern = /java/i</li>
+                                            </ul>
+                                        </li>
+                                        <li>Multiline - Makes the pattern multiline; defualt will stop after the end of the line
+                                            <ul>
+                                                <li>pattern = /java/m</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>Speical Characters/Metacharacters
+                                    <ul>
+                                        <li>. = matches any character; except line breaks</li>
+                                        <li>\w = matches any word character; equivilant to [A-Za-z0-9]</li>
+                                        <li>\W = matches any non-word character; eqiuvilant to [\^A-Za-z0-9_]</li>
+                                        <li>\d = matches any digit character; equivilant to [0-9]</li>
+                                        <li>\D = matches any non difit charcater; equivilant to [^0-9]</li>
+                                        <li>\s = matches any white space character; equivilant to [\t\r\n\f]</li>
+                                        <li>\S = matches any non-white space character; equivilant to [^\t\r\n\f]</li>
+                                    </ul>
+                                </li>
+                                <li>Modifiers - palced after a token to deal with multiple occurrences of that token
+                                    <ul>
+                                        <li>? = maeks the preceding token in the regular expression optical</li>
+                                        <li>* = makes one or more occurrences of the preceding token</li>
+                                        <li>+ = matches one or emore occurrences of the preceding token</li>
+                                        <li>{n} = matches n occurrences of teh precdeing token</li>
+                                        <li>{n,} = matches at least n occurrrences of the pattern</li>
+                                        <li>{,m) = matches at most n occurrences of the preceding token</li>
+                                        <li>{n,m} = matches at least n and at most m occurrences of the preceding token</li>
+                                        <li>^ = marks the position immediately before the first character in the string</li>
+                                        <li>$ = marks the position immediatley after the first character in the string</li>
+                                    </ul>
+                                </li>
+                                <li>Regular Expressions and Strings
+                                    <ul>
+                                        <li>split() = can be used to split a string into the separate elements of an array</li>
+                                        <li>match() = used to return an array of all matches</li>
+                                        <li>search() = return the position of the first match</li>
+                                        <li>replace() = replace any matches with another string</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
                     </ul>
                 </details>
             </li>
             
             <li>
-                <details><summary>Video Notes - Mobile First Development</summary>
+                <details><summary>Reading Notes JavaScript Novice to Ninja: Chapter 6</summary>
                     <ul class="notedetail">
-                        <li>Whatever you are designing do mobile first.</li>
-                        <li>Mobile first does not equal respoonsivie retrofiting your standard site.</li>
-                        <li>Be There...Be Useful...Be Quick</li>
-                        <li>Mobile users usually use their thumbs and operate the device with one hand.</li>
-                        <li>What is the easies you can make a mobile request form?</li>
+                        <li>Document Object Model (DOM) = allows you to access elements of a web page and enable interactions with the page by adding and removing elements, changing the order, content and attributes of elements, and even altering how they are styled</li>
+                        <li>Node = special object with a number of properties and methods that we can use to find information abuot or modify</li>
+                        <li>node.nodeType = displays the type of node; identified by a number
                             <ul>
-                                <li>Use Proper Keyboards</li>
-                                <li>Use Proper Labels</li>
-                                <li>Use Autofill</li>
+                                <li>1 = element</li>
+                                <li>2 = attribute</li>
+                                <li>3 = text</li>
+                                <li>4 = comment</li>
+                                <li>9 = body</li>
                             </ul>
+                        </li>
+                        <li>node.nodeName = find the name of the element</li>
+                        <li>Document.body = returns the body element of a website</li>
+                        <li>Document.images = returns a node list of all the images contained in the document</li>
+                        <li>Document.links = returns a node list of all the &#60;a&#62; and &#60;area&#62; elements that have an href reference</li>
+                        <li>Document.anchors = returns a node list off all the &#60;a&#62; elements that have a name attribute</li>
+                        <li>Document.forms = returns a node list off all the forms on a document</li>
+                        <li>Array.ffrom() and the spread operator [...] can be used to convert a node list into an array</li>
+                        <li>getElementById() = retuns a refernce to the element with an unique id attribute that is given as an argument; if no element exists the ID provided null is returned</li>
+                        <li>Every ID attribute should be unique to just one element</li>
+                        <li>getElementsByTagName() = return a live node list of all the elements with the given tag name; example: get all list items in a document; if no elements in the document with the given tag name an empty node list is returned</li>
+                        <li>getElementsByClassName() = return a live node list of all elements that have the calss name this is specified as an arguments</li>
+                        <li>document.quearySelector() = allows you to use CSS notation to find the fist element in the document that matches a CSS selector provided as an arguemntl if no element match it will return an empty node list</li>
+                        <li>document.quearySelectorAll() = use CSS noatation but returns a node list of all the elements in the document that match the CSS query selector; if no elements mathc it will return an empty node list</li>
+                        <li>childNodes = lists all the nodes that are children of the node concerned</li>
+                        <li>firstChild = returns the first child of a node</li>
+                        <li>lastChild = returns the last child of a node</li>
+                        <li>parentNode = returns the parent node of an element</li>
+                        <li>nextSibling = returns the next adjacent node of the same parent</li>
+                        <li>previousSibling = return the prevous adjacent node</li>
+                        <li>nodeValue = returns the text conatined inside a referenced text node</li>
+                        <li>textContent = returnsthe text content of an element as a string</li>
+                        <li>getAttribute() = returns the value of the attribute provided as an argument; if an element does not have the given attribute null is returned</li>
+                        <li>setAttribute() = change the value of an elements attribute; takes two arguments the attribute you wish to change and the value of the new attribute
+                            <uL>
+                                <li>wonderWoman.setAttribute('class', 'villian');</li>
+                            </uL>
+                        </li>
+                        <li>className = allows the class of an element to be set directly; can also be used to find out the value of the class attribute</li>
+                        <li>classList = lists all the classes an element has
+                            <ul>
+                                <li>classList.add() = adds a class to an element without overwriting any classes that already exist</li>
+                                <li>classList.remove() = reove a specific class from an element</li>
+                                <li>classList.toggle() = add a class if an element does't have it already and reove the class if it does already</li>
+                                <li>classList.contains() = checks to see if an element has a particular class</li>
+                            </ul>
+                        </li>
+                        <li>createElement() = takes a tag name as a paramter and returns that element</li>
+                        <li>document.createTextNode() = creates a text node from a string parameter</li>
+                        <li>appendChild() = adds another node given as an arguemtn as a child node</li>
+                        <li>Function to create HTML elements
+                            <ul>
+                                <li>Function createElement(tag, text) {<br>
+                                    &#9;const el = document.createElement(tag);<br>
+                                    &#9;el.textContent = text;<br>
+                                    &#9;return el;<br>
+                                }</li>
+                            </ul>
+                        </li>
+                        <li>insertBefore() = place a new element before another element in the markup; called on the parent node; takes two paramenters the new node to be added and the node you want it to go before
+                            <ul>
+                                <li>heroes.insertBefore(aquaman,wonderWoman);</li>
+                            </ul>
+                        </li>
+                        <li>removeChild() = revoes an element from the page</li>
+                        <li>replaceChild() = repalce one node with another; called on the parent node; takes two parameters the new node and the node to be replaced
+                            <ul>
+                                <li>h1.replaceChild(newText,oldText);</li>
+                            </ul>
+                        </li>
+                        <li>innerHTML = returns all the child elements of an element as string of HTML</li>
+                        <li>Using style properites to update CSS; CSS properties with dashes are converted to camel case; elements can be hidden using dispaly hide and display block
+                            <ul>
+                                <li>superman.style.border = "red 2px solid";</li>
+                            </ul>
+                        </li>
+                        <li>getComputedStyle() = retrive all the style informaiton of an element given a parameter; read only to find out information</li>
                     </ul>
                 </details>
             </li>
             
             <li>
-                <details><summary>Git Hub Command Line Cheat Sheets</summary>
+                <details><summary>Reading Notes JavaScript Novice to Ninja: Chapter 7</summary>
                     <ul class="notedetail">
-                        <li>Add Files To Git Hub</li>
+                        <li>Event Listener = checks to see if a particular action is done in order to acrivate the JavaScript code
                             <ul>
-                                <li>git status</li>
-                                <li>git add &#91;File Name&#93;</li>
-                                <li> git commit -m &#34;Comment&#34;</li>
-                                <li>git remove -v</li>
-                                <li>git push -u origin master or git pull</li>
+                                <li>Document.body.addEventListener("click", doSomething);</li>
                             </ul>
-                        <li>Update Files</li>
-                            <ul class="notedetail">
-                                <li>git status</li>
-                                <li>git diff</li>
-                                <li>git add &#91;File Name&#93;</li>
-                                <li>git commit -m &#34;Comment&#34;</li>
-                                <li>git push origin master</li>
+                        </li>
+                        <li>Inline Event Handling = the event listening goes into the HTML code; not best practive</li>
+                        <li>Using Event Handlers = uese the event handler properties that all node object have; restricted becaue you can only have function or each event
+                            <ul>
+                                <li>document.onclick = function(){<br>
+                                &#9;console.log('You clicked on the page!');}
+                                </li>
                             </ul>
+                        </li>
+                        <li>Using Event Listeners = allows multiple functinos to be attached independently to different events
+                            <ul>
+                                <li>Document.body.addEventListener('click, doSomething)</li>
+                                <li>addEventListener('click', () => alert(;You Clicked!));</li>
+                                <li>function doSomething() {<br>
+                                alert('You Clicked!');<br>
+                                }<br>
+                                addEventListener('click,doSomething);</li>
+                            </ul>
+                        </li>
+                        <li>event.type = logs the ype of event such as a click
+                            <ul>
+                                <li>console.log(event.type);</li>
+                            </ul>
+                        </li>
+                        <li>event.target = logs the type of event with refernce to the mode that fired the event
+                            <ul>
+                                <li>console.log(event.target);</li>
+                            </ul>
+                        </li>
+                        <li>Finding The Position Where The Mose Event Occurred
+                            <ul>
+                                <li>Screen X, Screen Y = show the number of pixels from the left and top of the screen respectively where the end took place</li>
+                                <li>Client X, Client Y = show the number of pixels from the left and top of the client that is being used</li>
+                                <li>Page X, Page Y = shows the number of pixels from the left and top respectively where the event took place on the document; takes into account the page being scrolled before the event</li>
+                            </ul>
+                        </li>
+                        <li>Mouse Events
+                            <ul>
+                                <li>click = when the mouse is clicked</li>
+                                <li>mousedown &#38; mouseup = occur before a click happens</li>
+                                <li>dblclick = the mose was double clicked; you should not place a click and double click event on the same element</li>
+                                <li>mouseover = when the mouse pointer is placed over the element</li>
+                                <li>mouseout = when the mouse pointer moves away from an element</li>
+                                <li>mousemove = whenever the mouse moves</li>
+                            </ul>
+                        </li>
+                        <li>Keyboard Events
+                            <ul>
+                                <li>keydown = when a key is pressed; contines to occur if the key is held down</li>
+                                <li>keypress = occurs after a keydown but before a keyup event; only works on keys that produce input</li>
+                                <li>keyup = when a key is released</li>
+                                <li>Modifer Keys = Shit, Ctrl, Alt, meta (windows)</li>
+                            </ul>
+                        </li>
+                        <li>Touch Events = used to record events when using mobile devices with a touch screen; you should support both touch and non-touch events becuse you do not know howthe useer will be using the applicatino; click sill fires on touch screens but there is a small delay
+                            <ul>
+                                <li>touchend = user stops touching the surface</li>
+                                <li>touchmove = user has tuched the screen then moves around without leaving; occurs as long as the user is touching the screen</li>
+                                <li>touchenter = a user has already started touching the surface but passed over the element which the event listerner is attached </li>
+                                <li>touchleave = the user is still touching the surface but leave the elemtn to which the event listener is attached</li>
+                                <li>touchcancel = a touch event is interupted; user finger moves outside the doucment window or multiple fingers being used at once</li>
+                                <li>touches = list of touch objects that represent all the touches taking palce on the device; length property that teells you how many touch points are in contact with the screen</li>
+                            </ul>
+                        </li>
+                        <li>removeEventListener() = reovmes an event listner</li>
+                        <li>preventDefault() = stops a default behavior from happening; use carefully users expect certain behaviors</li>
+                        <li>Bubbling = when the event fires on the element clicked on first, then bubbles up the document tree firing an event on each parent elemment until it reaches the root node; bubbling is a default behavior
+                            <ul>
+                                <li>event.stoprPropagation() = stops bubbling from happening</li>
+                            </ul>
+                        </li>
+                        <li>Capturing = firing an element on the root element, which propagates downward firing of an event on each child element until it reaches the target element that was clicked on</li>
                     </ul>
         
+                </details>
+            </li>
+            <li>
+                <details><summary>Group Exercise Week 2</summary>
+                    <ul class="notedetail">
+                        <li><a href="group1.html"></a></li>
+                    </ul>
                 </details>
             </li>
             <li>
                 <details><summary>Additional Exercises</summary>
                     <ul class="notedetail">
-                        <li><a href="story_editor.html">Story Editor</a></li>
+                        <li><a href="buildtable.html">Using JavaScript To Build An HTML Table</a></li>
+                        <li><a href="cathat.html">Cat In The Hat Prank</a></li>
+                        <li><a href="balloon.html">Balloon Pop</a></li>
+                        <li><a href="mousetail.html">JavaScript Mouse Trail</a></li>
                     </ul>
                 </details>
             </li>
-        </ol>-->
+        </ol>
         <br>
         <div id="button">
             <a href="https://astin-jeremiah.github.io/WDD330/" class="myButton">Return To Main Menu</a>
         </div>
+        
+    <script src="/js/main.js"></script>
     </body>
 
-    <script src="/js/main.js"></script>
+    
 </html>
