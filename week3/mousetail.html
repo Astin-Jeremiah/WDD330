@@ -1,12 +1,14 @@
 <!doctype html>
 <html>
 <head>
-  <title>Mouse Tail</title>
+  <title>Ghost Busters</title>
 </head>
 
 <body>
   <embed name="Ghosts" src="../images/ghost.mp3" loop="true" hidden="true" autostart="true">  
-</body>
+    <h1>Zap The Ghosts</h1>
+    <h2>Ghosts Zapped:&nbsp;<span id="score"></span></h2>
+    <p id=hide>👻</p>
 <script>
     let tail = [];
     for (let i=0; i<15; i++) {
@@ -27,6 +29,34 @@
         current = (current +1) % tail.length;
     }
     
+    const outputElement = document.getElementById("score");
+    
+    let score=0;
+    updateDisplay();
+    
+    const hide = document.getElementById('hide');
+        hide.addEventListener('mouseover', over);
+        
+        function over(){
+        let number=Math.floor(750 * Math.random());
+        let str = number.toString();
+        let position =str+"px";
+        hide.style.right=position;
+        hide.style.top=position;
+        score++;
+        updateDisplay();
+    }
+    
+    function updateDisplay(){
+        outputElement.innerHTML = score;
+        
+    }
+        
+    
+        
+    
+    
+   
 </script>
     
 <style>   
@@ -34,12 +64,23 @@
     position: absolute;
     height: 6px; width: 6px;
     border-radius: 3px;
-    background: black;
+    background: green;
     }
     
     body {
     height: 500px;
-    background-color: #5e0087;
+    background-color: black;
+    }
+    
+    #hide {
+        font-size: 150px;
+        position: absolute;
+        right: 360px;
+        top: 390px;
+    }
+    
+    h1, h2 {
+        color: white;
     }
 </style>
 </html>
