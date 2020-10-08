@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+<head>
+  <title>Vector Calculations</title>
+  <script>
+      function calculate(){
+        const inputa = document.getElementById("x1").value;
+        const inputb = document.getElementById("y1").value;
+        const inputc = document.getElementById("x2").value;
+        const inputd = document.getElementById("y2").value;
+        const inpute = document.getElementById("x3").value;
+        const inputf = document.getElementById("y3").value;
+        const x1 = parseFloat(inputa);
+        const y1 = parseFloat(inputb);
+        const x2 = parseFloat(inputc);
+        const y2 = parseFloat(inputd);
+        const x3 = parseFloat(inpute);
+        const y3 = parseFloat(inputf);
+          
+        const outputElement = document.getElementById("output");
+        const outputElement2 = document.getElementById("output2");
+   
+        function total () {
+            const pair1 = new Vec(x1,y1);
+            const pair2 = new Vec(x2, y2);
+            const pair3 = (pair1.plus(pair2));
+            outputElement.innerHTML = "Vector Total Is: " + Object.values(pair3);
+        }
+          
+        function difference () {
+            const pair1 = new Vec(x1,y1);
+            const pair2 = new Vec(x2, y2);
+            const pair3 = (pair1.minus(pair2));
+            outputElement.innerHTML = "Vector Difference Is: " + Object.values(pair3);
+        }
+          
+        function length2 () {
+            const pair1 = new Vec(x3,y3);
+            const lengthpair1 = (pair1.lenght());
+            outputElement2.innerHTML = "Vector Length Is: " + lengthpair1;
+        }
+        
+          calculate.total = total;
+          calculate.difference = difference;
+          calculate.length2 = length2;
+            
+          
+      }
+      
+      class Vec {
+          constructor(x,y) {
+              this.x = x;
+              this.y = y;
+          }
+      
+      
+        plus(other) {
+          return new Vec(this.x + other.x, this.y + other.y);
+          
+      }
+      
+      minus(other) {
+          return new Vec(this.x -other.x, this.y - other.y);
+      }
+      
+      lenght() {
+          return Math.sqrt(this.x *this.x + this.y *this.y);
+      }
+      }
+  </script>
+
+  <style>
+
+  </style>
+</head>
+
+<body>
+    <h1>Calculate The Sum And Difference Of Vectors</h1>
+    <input type="number" id="x1" placeholder="Enter X Coordinate"></input>&nbsp;&nbsp;<input type="number" id="y1" placeholder="Enter Y Coordinate"></input>
+    <br>
+    <br>
+    <input type="number" id="x2" placeholder="Enter X Coordinate"></input>&nbsp;&nbsp;<input type="number" id="y2" placeholder="Enter Y Coordinate"></input>
+    <br>
+    <br>
+    <button onclick="calculate();calculate.total();" id="sum">Calulate Vector Total</button>&nbsp;&nbsp;&nbsp;&nbsp;<button onclick="calculate();calculate.difference();" id="diff">Calulate Vector Difference</button>
+    <br>
+    <br>
+    <section id="output"></section>
+    <h1>Caculate The Length Of A Vector</h1>
+    <input type="number" id="x3" placeholder="Enter X Coordinate"></input>&nbsp;&nbsp;<input type="number" id="y3" placeholder="Enter Y Coordinate"></input>
+    <br>
+    <br>
+    <button onclick="calculate();calculate.length2();" id="tot">Calulate Vector Length</button>
+    <br>
+    <br>
+    <section id="output2"></section>
+    
+</body>
+</html>
