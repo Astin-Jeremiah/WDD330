@@ -1,0 +1,181 @@
+<!doctype html>
+<html>
+<head>
+  <title>Tic-Tac-Toe</title>
+</head>
+
+<body>
+    <h1>Tic-Tac-Toe</h1>
+    <h2><span id="output"></span></h2>
+    <div class="board">
+        <div id="one" data-cell-index ="1"></div>
+        <div id="two" data-cell-index ="2"></div>
+        <div id="three" data-cell-index ="3"></div>
+        <div id="four" data-cell-index ="4"></div>
+        <div id="five" data-cell-index ="5"></div>
+        <div id="six" data-cell-index ="6"></div>
+        <div id="seven" data-cell-index ="7"></div>
+        <div id="eight" data-cell-index ="8"></div>
+        <div id="nine" data-cell-index ="9"></div>
+    </div>
+    <br>
+    <div id="buttondiv">
+    <button id="reset">Reset Game</button>
+    </div>
+</body>
+<script>
+    const gameboard = document.querySelector('.board');
+    const resetgame = document.getElementById("reset");
+    const outputelement = document.getElementById("output");
+    const move = document.get
+    const player1 = '🎃';
+    const player2 = '👻';
+    const gamearrayp1 = [];
+    const gamearrayp2 = [];
+    const takenarray = [];
+    let player = player1;
+    outputelement.innerHTML = "Player One";
+    
+    function play(e){
+        const click = e.target;
+        const id = parseInt(click.getAttribute('data-cell-index'));
+        const taken = takenarray.indexOf(id);
+        if (taken !== -1){
+            outputelement.innerHTML = "Please Select An Open Space"
+            return false;
+        }
+        click.innerHTML = player;
+        if (player === player1) {
+            player = player2;
+            outputelement.innerHTML = "Player Two";
+            gamearrayp1.push(id);
+            takenarray.push(id);
+            checkboard();
+        } else {
+            player = player1;
+            outputelement.innerHTML = "Player One";
+            gamearrayp2.push(id);
+            takenarray.push(id);
+            checkboard();
+            }
+    
+    
+    function checkboard(){
+        const winners = [[1,2,3], [4,5,6], [7,8,9], [1,4,7], [2,5,8], [3,6,9], [1,5,9], [3,5,7]];
+        for (let y = 0; y < winners.length; y++) {
+            const num1 = winners[y][0];
+            const num2 = winners[y][1];
+            const num3 = winners[y][2];
+            const check1 = gamearrayp1.indexOf(num1);
+            const check2 = gamearrayp1.indexOf(num2);
+            const check3 = gamearrayp1.indexOf(num3);
+            const check4 = gamearrayp2.indexOf(num1);
+            const check5 = gamearrayp2.indexOf(num2);
+            const check6 = gamearrayp2.indexOf(num3);
+            
+            if (check1 !== -1 && check2 !== -1 && check3 !== -1 ){
+                outputelement.innerHTML = "🎃 Player One Wins 🎃";
+                stopgame();
+            }
+            else if (check4 !== -1 && check5 !== -1 && check6 !== -1){
+                outputelement.innerHTML = "👻 Player Two Wins 👻";
+                stopgame();
+            }
+        }
+    }
+    }
+
+    function resetboard() {
+        for (let i = 0; i < gameboard.children.length; i++){
+            gameboard.children[i].innerText = '';
+        }
+        const children = Array.from(gameboard.children);
+        const empty = children.filter(function(child) {
+            return child.innerText == '🎃' || child.innerText == '👻';
+        });
+        console.log(empty);
+        gamearrayp1.length = 0;
+        gamearrayp2.length = 0;
+        takenarray.length = 0;
+        outputelement.innerHTML= "Player One";
+        gameboard.addEventListener('click', play);
+    }
+    
+    function stopgame() {
+        gameboard.removeEventListener('click', play);
+    }
+    
+    gameboard.addEventListener('click', play);
+    resetgame.addEventListener('click', resetboard);    
+
+</script>
+    
+<style>
+    .board {
+        display: grid;
+        grid-template-columns: 120px 120px 120px;
+        grid-template-rows: 120px 120px 120px;
+        justify-content: center;
+        width: 360px;
+        margin: auto;
+      }
+      .board > div {
+        border: 5px inset #fb9e25;
+        font-size: 5em;
+        text-align: center;
+      }
+    h1, h2 {
+        text-align: center;
+    }
+    
+    #one, #two, #three {
+        border-top: none;
+    }
+    
+    #one, #four, #seven {
+        border-left: none;
+    }
+    
+    #three, #six, #nine {
+        border-right: none;
+    }
+    
+    #seven, #eight, #nine {
+        border-bottom: none;
+    }
+    
+    #reset {
+       box-shadow:inset 0px 1px 0px 0px #fce2c1;
+	   background:linear-gradient(to bottom, #fa9519 5%, #fb9e25 100%);
+	   background-color:#fa9519;
+	   border-radius:9px;
+	   border:2px solid #eeb44f;
+	   display:inline-block;
+	   cursor:pointer;
+	   color:#ffffff;
+	   font-family:Arial;
+	   font-size:20px;
+	   font-weight:bold;
+	   padding:6px 23px;
+	   text-decoration:none;
+	   text-shadow:0px 1px 0px #cc9f52;
+    }
+    
+    #reset:hover {
+       background:linear-gradient(to bottom, #fb9e25 5%, #ffc477 100%);
+	   background-color:#fb9e25;
+    }
+    
+    #reset:active {
+        position:relative;
+	   top:1px;    
+    }
+    
+    #buttondiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+</style>
+</html>
