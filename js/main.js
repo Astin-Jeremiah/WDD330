@@ -12,7 +12,7 @@ const links =[
     { image: "images/week11.png", url: "week11/index.html"},
     { image: "images/week12.png", url: "week12/index.html"}, 
     { image: "images/week13.png", url: "week13/index.html"}, 
-    { image: "images/facebook.png", url: "https://www.facebook.com/jeremiah.astin"},
+    { image: "images/Facebook.png", url: "https://www.facebook.com/jeremiah.astin"},
     { image: "images/instagram.png", url: "https://www.instagram.com/astinjeremy/?hl=en"},
     { image: "images/twitter.png", url: "https://twitter.com/astin_jeremiah?p=s"},
     { image: "images/internet.png", url: "https://www.popculturevinyl.com/about_us/"},
