@@ -7,7 +7,7 @@
             Week 4 WDD 330 Portfolio
         </title>
         <link href="../style.css" type="text/css" rel="stylesheet" />
-        <link rel="icon" href="/images/favicon.png">
+        <link rel="icon" href="../images/favicon.png">
     </head>
 
     <body class="center">
@@ -18,163 +18,118 @@
         
         <ol class="notes">
             <li>
-                <details><summary>Reading Notes JavaScript Novice to Ninja: Chapter 2</summary>
+                <details><summary>Reading Notes JavaScript Novice to Ninja: Chapter 8</summary>
                     <ul class="notedetail">
-                        <li>JavaScript single line comment //</li>
-                        <li>JavaScript multi line comment /*...*/</li>
-                        <li>It is best practice to write each JavaScript statement on a new line and terminate each line with a semicolon.</li>
-                        <li>A block is a series of JavaScript statements that are collected together using curly braces; blocks do not need to be terminated with a semicolon.</li>
-                        <li>Variables - a value stored in the program's memory; must be declared before they can be used
+                        <li>document.forms = returns an HTML collection of all the forms in the document in the order they appear
                             <ul>
-                                <li>Const - A constant variable not assigned to another value</li>
-                                <li>Let - if the variable might be reassigned later in the program</li>
+                                <li>const form = document.forms.search;</li>
+                                <li>const form = document.forms['search'];</li>
+                                <li>const [input, button] = form.elements;</li>
+                                <li>const input = form['searchinput'];</li>
+                            </ul>
+                            
+                        <li>form.submit() = will submit the form automatically; does not trigger submit events</li>
+                        <li>form.rest() = reset all the form controls back to their initial values specified in the HTML</li>
+                        <li>form.action()= set the action attribute of the form; can also be sent to a different URL to be processed on the server</li>
+                        <li>Form Events
+                            <ul>
+                                <li>Focus = event occurs when an element is focused on; when the courser is placed in the form field 
+                                    <ul>
+                                        <li>Input.addEventListener(‘focus’, () =><br>
+		                                  &emsp;alert(‘focused’), false);</li>
+                                    </ul>
+                                </li>
+                                <li>Blur = occurs when the user moves the focus away form the form event
+                                    <ul>
+                                        <li>Input.addEventListnener(‘blur’. () =><br>
+		                                  &emsp;alert(‘blurred’), false);</li>
+                                    </ul>
+                                </li>
+                                <li>Change =occurs when the user move the focus away from the forms element after changing it
+                                    <ul>
+                                        <li>Input.addEventListener(‘change’, () =><br>
+		                                  &emsp;alert(‘changed’), false);</li>
+                                    </ul>
+                                </li>
+                                <li>Submit =occurs when the form is submitted
+                                    <ul>
+                                        <li>Const form = document.forms[‘search’];<br>
+		                                  &emsp;form.addEventListener (‘submit’, search,<br>
+                                          &emsp;false);<br>
+		                                  &emsp;function search() {<br>
+		                                  &emsp;alert(‘ Form Submitted’);<br>
+		                                  &emsp;}</li>
+                                    </ul>
+                                </li>
                             </ul>
                         </li>
-                        <li>You can assign multiple variables on the same line of code as long as you separate them by commas.</li>
-                        <li>Global Scope - Variables are declared outside the block; variable is accessible anywhere in the program; should be kept to a minimum</li>
-                        <li>Local Scope - Variable is only defined within the block; variables cannot be accessed outside the block</li>
-                        <li>Variable names can start with upper or lower case letters, an underscore or dollar sign; variables can contain number but they cannot start with one; variable names are case sensitive</li>
-                        <li>Camel Case - starts with a lower case letter and then every new word is capitalized firstNameAndLastName</li>
-                        <li>Underscore - separates each new word with an underscore firs_name_and_last_name</li>
-                        <li>Strings - collection of characters such as letters and symbols
+                        <li>Text input objects have a value property that can be used to retrieve the text inside the field using the search() function
                             <ul>
-                                <li>Written in single quotation marks 'Hello World'</li>
-                                <li>If the string contains an apostrophe use double quotes "It's A Small World After All"</li>
+                                <li>Function search(event) {<br>
+                                Alert(`You Searched for: ${input.value}`);<br>
+	                               Event.preventDefault();<br>
+	                               }</li>
                             </ul>
                         </li>
-                        <li>Symbols - create unique values, do not have a literal form
+                        <li>Focus and Blur can be used to create place holder text on forms</li>
+                        <li>Form Controls
                             <ul>
-                                <li>Use the symbol function: const uniqueID = Symbol('this is a unique ID');</li>
+                                <li>&lt;input&gt; = fields, text, passwords, check boxes, radio buttons, and file uploads</li>
+                                <li>&lt;select&gt; = menues of drop down categories</li>
+                                <li>&lt;textarea&gt; = elements for longer text entry</li>
+                                <li>&lt;button&gt; = elements for submitting or setting the form</li>
                             </ul>
                         </li>
-                        <li>Numbers - can be integers (whole numbers), floating points (decimals), or exponential numbers (1e6)</li>
-                        <li>Infinity - numbers too big or small for JavaScript to deal with</li>
-                        <li>NaN - Not A Number; a numerical operation is attempted but the result is not numerical</li>
-                        <li>Undefined - variables that have not been assigned to a value</li>
-                        <li>Null - no vales; placeholders</li>
-                        <li>Booleans - True/False values</li>
-                        <li>Logical Operations
-                            <ul>
-                                <li>Logical Not - Returns the opposite of a boolean place ! in front of the value</li>
-                                <li>Logical And - Only evaluates to true if both values are true; use the &#38;&#38; symbol</li>
-                                <li>Logical Or - Evaluates to true if any of the operators are true; use the || symbol</li>
-                            </ul>
-                        </li>
-                        <li>Equality
-                            <ul>
-                                <li>Two Values Are Equal To Each Other ==</li>
-                                <li>Two Values Are Not Equal To Each Other !==</li>
-                                <li>Two Values Are Greater Than ></li>
-                                <li>Two Values Are Less Than ></li>
-                                <li>Two Values Are Greater Than Or Equal To >=</li>
-                                <li>Two Values Are Less Than Or Equal To &#60;=</li>
-                            </ul>
-                        </li>
+                        <li>Form Validation - The process of checking whether a user has entered the information into the form correctly; can occur on the client side using JavaScript or on the server side,; best to use JavaScript to improve the user experience when completing the form or to give feedback about errors before being submitted</li>
                     </ul>
                 </details>
             </li>
             
             <li>
-                <details><summary>Reading Notes JavaScript Novice to Ninja: Chapter 3</summary>
+                <details><summary>Reading Notes JavaScript Novice to Ninja: Chapter 12</summary>
                     <ul class="notedetail">
-                        <li>Arrays - Ordered lists of values</li>
-                        <li>Manipulating Arrays
+                        <li>Object Oriented Programming - style of programming that involves separating the code into objects that have properties and methods</li>
+                        <li>Encapsulation - the inner workings are kept hidden inside the object and only the essential functions are exposed to the end user</li>
+                        <li>Polymorphism - the same process ca be used for different objects; various objects can share the same methods but also have the ability to override shared methods with more specific implementation</li>
+                        <li>Inheritance - taking the features of one object than adding new features; takes an object that currently exists and  inherit all of its properties and methods, we can use the new properties and methods </li>
+                        <li>This - keyword used to represent the object that will be returned by the construction function</li>
+                        <li>Static Methods - add the static keyword in the class declaration; called by the class directly rather than by instances of the class; not available to instances of the class</li>
+                        <li>Prototypal Inheritance - every class has a prototype property that is shared by every instance of the class; any properties or methods of a class's prototype can be accessed by every object instantiated by the class</li>
+                        <li>hasOwnProperty() = used to check if a method is its own property or is inherited from the prototype</li>
+                        <li>If a new property or method is added to the prototype any instances of its class will inherit the new properties and methods, even if the instance has already been created</li>
+                        <li>It is not possible to overwrite the prototype by assigning it to a new object literal if class declarations are used</li>
+                        <li>Object instance can overwrite any properties or methods inherited from its prototype by simply assigning a new value to them</li>
+                        <li>Public Methods - can be queried directly and changed by assignment; this is the default property</li>
+                        <li>Private Methods - impossible to access outside the scope; getter and setter methods are used to form a closure over this variable and provide controlled access to the property inside</li>
+                        <li>Object.getPrototypeOf() = shows us the prototype of the prototype is an apparently empty object lateral</li>
+                        <li>propertyIsEnumerable() = checks to see if a property is enumerable
                             <ul>
-                                <li>.pop() – removes the last item from an array</li>
-                                <li>.shift() – removes the first item from an array</li>
-                                <li>.push() – appends new value at the end of the array</li>
-                                <li>.unshift() – appends new value at the start of the array</li>
-                                <li>.join() – turns the array into a list of stings separated by commas ( the separator can be changed by placing it in parentheses .join(‘&#38;’)</li>
-                                <li>.slice() – creates a subarray by chopping out a slice of the original array; used to delete data from array as well as append in specific places</li>
-                                <li>.reverse() – permanently reverses order of the array</li>
-                                <li>.sort() – permanently arranges the array alphabetically</li>
-                                <li>.indexOf() – find the first occurrence of a value in an array; if not in the array displays -1</li>
-                                <li>.includes() – a Boolean version of indexOf()</li>
+                                <li>All built in methods should be non-enumerable</li>
+                                <li>All user defined methods should be enumerable</li>
                             </ul>
                         </li>
-                        <li>Sets - Data structure that represents a collection of unique values; cannot have any duplicate values</li>
-                        <li>Manipulating Sets
+                        <li>Extends = allows a class to inherit from another class</li>
+                        <li>Monkey Patching - adding additional methods to the prototype of JavaScript's built in objects; should be avoided unless absolutely necessary</li>
+                        <li>All object properties have the following attributes
                             <ul>
-                                <li>Creating Sets  const list = new Set();</li>
-                                <li>.add() - adds values to a set</li>
-                                <li>.size() - determines the number of values in a set</li>
-                                <li>.delete() - removes values from a set</li>
-                                <li>.clear() - removes all values from a set</li>
-                                <li>[...] - Spread Operator; converts the set into an array literal</li>
-                            </ul> 
-                        </li>
-                        <li>Maps - Data structure that keeps a list of key and value pairs</li>
-                        <li>Manipulating Maps
-                            <ul>
-                                <li>Creating Maps  const romanNumerals = new Map();</li>
-                                <li>.set(1, 'I') -  add a key and value pair to a map</li>
-                                <li>.get() - looks up a value in a map</li>
-                                <li>.has() - check if a particular key is in a pay; returns a boolean value</li>
-                                <li>.delete() - remove a key and value pair from a map</li>
-                                <li>.clear() - remove all key and value pairs from a map</li>
-                                <li>Array.from() or spread operator [...] can be used to convert a map into a nest array of key-value pairs</li>
+                                <li>Value - values of the property and is undefined by default</li>
+                                <li>Writable - boolean value shows whether a property can be changed or not; false by default</li>
+                                <li>Enumerable - boolean value shows whether a property will shows up when the object is displayed in a for in loop; false by default</li>
+                                <li>Configurable - boolean value shows whether you can delete a property or change any of its attributes; false by default</li>
                             </ul>
                         </li>
-                        <li>If Statement - The code inside the block will only run if the conditions in parentheses is true
+                        <li>Object() = creates a new object based on another object</li>
+                        <li>Mixin - Way of adding properties and methods of some object to another object without using inheritance</li>
+                        <li>Factory Function - a function that can be used to return an object</li>
+                        <li>If a method returns this its method can be chained together to form a sequence of method calls that acre called one after another</li>
+                        <li>That can sometimes go out of scope when nested in other functions
                             <ul>
-                                <li>if (condition) {<br>
-                                    code to run if true<br>
-                                    }</li>
-                            </ul>
-                        </li>
-                        <li>Else Statement -Add an alternative block of code to run if the condition is false
-                            <ul>
-                                <li>if (condition) {<br>
-                                    code to run if true<br>
-                                    } else { <br>
-                                    code to run if condition is false<br>
-                                    }</li>
-                                <li>Ternary Operator - Shorthand way to write an else statement
-                                    <ul>
-                                        <li>condition ? (//code to run if condition is true) : (//code to run if condition is false)</li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>Switch Operator - Used When your code has lots of conditions to test
-                            <ul>
-                                <li>switch (number) {<br>
-                                &#9; case4:<br>
-                                &#9; console.log('You rolled a four');<br>
-                                &#9; break;<br>
-   		                        &#9; case 5:<br>
-    		                    &#9; console.log('You rolled a five');<br>
-   		                        &#9; break;<br>
-                                &#9; case 6:<br>
-    		                    &#9; console.log('You rolled a six');<br>
-    		                    &#9; break;<br>
-    		                    &#9; default:<br>
-    		                    &#9; console.log('You rolled a number less than four');<br>
-    		                    &#9; break;<br>
-                                }</li>
-                            </ul>    
-                        </li>
-                        <li>Loops - Repeat a piece of code over and over again according to certain conditions; if the conditions are not met the loop will get stuck in an infinite loop until it crashes the program</li>
-                        <li>While Loop - repeatedly runs a block of code while a certain condition is true
-                            <ul>
-                                <li>while (condition) {<br>
-                                do something<br>
-                                }</li>
-                            </ul>
-                        </li>
-                        <li>Do...While Loop - similar to a while loop but the conditions come after the block of code; loop always runs once regardless of the condition being true or not
-                            <ul>
-                                <li> do {<br>
-                                do something<br>
-                                } while (condition)</li>
-                            </ul>
-                        </li>
-                        <li>For Loop - has three parts initialization code that runs before the loop starts, a condition that has to be satisfied for the loop to continue, and after code that is what to date after each loop iteration
-                            <ul>
-                                <li>for (initialization ; condition ; after {<br>
-                                do something }</li>
-                                <li>For Loops can be nested inside another loop so that the inner loop will run all the way though before the next step of the outer loop occurs</li>
-                                <li>For loops can be used to loop over arrays, sets and maps</li>
+                                <li>Set the variable that to equal this before the nested function; later refers to the nested function and not the this</li>
+                                <li>bind() = method for all functions and is used to set the value of this in the function</li>
+                                <li>For Of = syntax for arrays and does not require a nested function to be used so this remains bound to the object</li>
+                                <li>Using Arrow Functions - Arrow functions do not have their own context, so this remains bound to the original object making the function call</li>
+                                <li>Methods can be borrowed from objects without having to inherit all their properties and methods by making a reference to the function that you want to borrow</li>
+                                <li>call() = takes the object that the function is to be applied to as its first argument, then the usual arguments come afterwards</li>
                             </ul>
                         </li>
                         
@@ -183,70 +138,28 @@
             </li>
             
             <li>
-                <details><summary>Reading Notes JavaScript Novice to Ninja: Chapter 3</summary>
+                <details><summary>Reading Notes JavaScript Novice to Ninja: Chapter 15</summary>
                     <ul class="notedetail">
-                        <li>Functions - a chunk of code that is referenced by a name and is almost like a small, self contained mini program</li>
-                        <li>Function Declaration
+                        <li>Module - self contained pieces of code that provided functions and methods that can then be used in other files any by other methods; helps keep code organized in separate reusable files</li>
+                        <li>ES6 Modules
                             <ul class="notedetail">
-                                <li>function hello(){<br>
-                                    console.log('Hello World!');<br>
-                                    }</li>
+                                <li>All code in modules is always in strict mode without the need for 'use strict' and there is no way to opt out of this</li>
+                                <li>A module has its own global scope, so any variables created in the top level of a module can only be accessed within the module</li>
+                                <li>The value of this in the top level of a module is undefined, rather than the global object</li>
+                                <li>You cannot use HTML style comments in modules</li>
                             </ul>
                         </li>
-                        <li>Function Expression
-                            <ul class="notedetail">
-                                <li>const goodbye = function bye(){<br>
-                                    console.log('Goodbye World!');<br>
-                                    };</li>
-                            </ul>
-                        </li>
-                        <li>Function() Constructors
-                            <ul class="notedetail">
-                                <li>const hi = new Function('console.log("Hi<br>
-                                    World!");');</li>
-                            </ul>
-                        </li>
-                        <li>Invoking A Function - run the code inside the function's body; simply enter the functions name followed by parentheses</li>
-                        <li>DRY - DONT REPEAT YOURSELF - code should not only be written once and not duplicated multiple places in a program</li>
-                        <li>Return Values- what the function returns after completing the code; comes after the keyword return</li>
-                        <li>Parameters and Arguments - the values provided to the function for input</li>
-                        <li>Arrow Functions - abbreviated syntax for declaring functions; parameters come before the arrow and the main body of the function come after
-                            <ul>
-                                <li>const square = x => x*x;</li>
-                                <li>Single parameters do not need to be put in parentheses</li>
-                                <li>Body of the function doesn't need placed inside a block if it's only one line</li>
-                                <li>Return keyword is not required if the return statement is the only statement in the body of the function</li>
-                                <li>If the function doesn't require any parameters a pair of empty parentheses must go before the arrow</li>
-                                <li>Longer functions will still require curly braces to delimite the body of the function and the return keywords at the end</li>
-                                <li>Best for short anonymous functions</li>
-                            </ul>
-                        </li>
-                        <li>Callbacks - A function that passes parameters to another function</li>
-                        <li>.map() - iterates over an array and takes a callback function as a parameter that is invoked on each item in the array
-                            <ul>
-                                <li>[1,2,3].map(square);<br>
-                                    <b>[1, 4, 9]</b></li>
-                            </ul>
-                        </li>
-                        <li>.reduce() - iterates over each value in an array and cumulatively combines each result to return just a single value
-                            <ul>
-                                <li>[1,2,3, 4, 5].reduce( (acc,val) => prev + val);<br>
-                                <b>15</b></li>
-                            </ul>
-                        </li>
-                        <li>.filter() - returns a new array that only contains items from the original array that return true when passed to the callback
-                            <ul>
-                                <li>const numbers = [2, 7, 6, 5, 11, 23, 12]<br><br>
-                                numbers.filter(x => x%2 === 0); <i>returns true if the number is even</i><br><br>
-                                <b>[2, 6, 12]</b></li>
-                            </ul>
-                        </li>
+                        <li>Module files use the keyword export to specify any values of functions that are to be made available in the module</li>
+                        <li>Not everything in a module needs to be used</li>
+                        <li>Import is used to add the modalized functions into the main JavaScript file</li>
+                        <li>* = wild card symbol used to indicate everything in the module file should be imported</li>
+                        <li>Default Exports - a single variable, function, or class in a module that can be imported without having to be explicitly named; can only be used once</li>
                     </ul>
         
                 </details>
             </li>
             <li>
-                <details><summary>Group Exercise Week 2</summary>
+                <details><summary>Group Exercise Week 4</summary>
                     <ul class="notedetail">
                         <li><a href="tictactoe.html">Tic Tac Toe</a></li>
                     </ul>
