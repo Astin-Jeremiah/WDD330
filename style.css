@@ -79,7 +79,7 @@ ul.notedetail {
     color: #272727;
     margin: 5px auto 5px auto;
     margin-bottom: 5px;
-    font-family: 'Architects Daughter', cursive;
+    font-family: 'Architects Daughter', sans-serif;
     width: 650px;
 }
 
@@ -220,7 +220,7 @@ p.subheading {
 }
 
 .notestitle {
-    font-family: 'Architects Daughter', cursive;
+    font-family: 'Architects Daughter', sans-serif;
     font-weight: normal;
     text-decoration: underline;
 }
