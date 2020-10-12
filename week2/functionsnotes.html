@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+        <title>
+            Functions Notes
+        </title>
+        <link href="../style.css" type="text/css" rel="stylesheet" />
+        <link rel="icon" href="../images/favicon.png">
+    </head>
+
+<body class ="notes";>
+    <h1>WDD 330 Portfolio<br>
+        Jeremiah Astin<br><br>
+        <span class="notestitle">Functions Notes</span></h1>
+    <ul class="notedetail">
+                        <li>Functions - a chunk of code that is referenced by a name and is almost like a small, self contained mini program</li>
+                        <li>Function Declaration
+                            <ul class="notedetail">
+                                <li>function hello(){<br>
+                                    console.log('Hello World!');<br>
+                                    }</li>
+                            </ul>
+                        </li>
+                        <li>Function Expression
+                            <ul class="notedetail">
+                                <li>const goodbye = function bye(){<br>
+                                    console.log('Goodbye World!');<br>
+                                    };</li>
+                            </ul>
+                        </li>
+                        <li>Function() Constructors
+                            <ul class="notedetail">
+                                <li>const hi = new Function('console.log("Hi<br>
+                                    World!");');</li>
+                            </ul>
+                        </li>
+                        <li>Invoking A Function - run the code inside the function's body; simply enter the functions name followed by parentheses</li>
+                        <li>DRY - DONT REPEAT YOURSELF - code should not only be written once and not duplicated multiple places in a program</li>
+                        <li>Return Values- what the function returns after completing the code; comes after the keyword return</li>
+                        <li>Parameters and Arguments - the values provided to the function for input</li>
+                        <li>Arrow Functions - abbreviated syntax for declaring functions; parameters come before the arrow and the main body of the function come after
+                            <ul>
+                                <li>const square = x => x*x;</li>
+                                <li>Single parameters do not need to be put in parentheses</li>
+                                <li>Body of the function doesn't need placed inside a block if it's only one line</li>
+                                <li>Return keyword is not required if the return statement is the only statement in the body of the function</li>
+                                <li>If the function doesn't require any parameters a pair of empty parentheses must go before the arrow</li>
+                                <li>Longer functions will still require curly braces to delimite the body of the function and the return keywords at the end</li>
+                                <li>Best for short anonymous functions</li>
+                            </ul>
+                        </li>
+                        <li>Callbacks - A function that passes parameters to another function</li>
+                        <li>.map() - iterates over an array and takes a callback function as a parameter that is invoked on each item in the array
+                            <ul>
+                                <li>[1,2,3].map(square);<br>
+                                    <b>[1, 4, 9]</b></li>
+                            </ul>
+                        </li>
+                        <li>.reduce() - iterates over each value in an array and cumulatively combines each result to return just a single value
+                            <ul>
+                                <li>[1,2,3, 4, 5].reduce( (acc,val) => prev + val);<br>
+                                <b>15</b></li>
+                            </ul>
+                        </li>
+                        <li>.filter() - returns a new array that only contains items from the original array that return true when passed to the callback
+                            <ul>
+                                <li>const numbers = [2, 7, 6, 5, 11, 23, 12]<br><br>
+                                numbers.filter(x => x%2 === 0); <i>returns true if the number is even</i><br><br>
+                                <b>[2, 6, 12]</b></li>
+                            </ul>
+                        </li>
+                    </ul>
+   
+    <br>
+    <div class="button">
+            <a href="https://astin-jeremiah.github.io/WDD330/" class="mainmenu">Return To Main Menu</a>&emsp;<a href="index.html" class="sectionmenu">Return To Section Menu</a>
+        </div>
+    
+    <script src="../js/week1.js"></script>   
+</body>
+</html>

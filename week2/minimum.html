@@ -1,32 +1,22 @@
 <!doctype html>
 <html>
-<head>
-  <title>Calculate Minimum</title>
-  <script>
-      function minimum(){
-        const inputa = document.getElementById("a").value;
-        const inputb = document.getElementById("b").value;
-        const numbera = parseFloat(inputa);
-        const numberb = parseFloat(inputb);
-        const outputElement = document.getElementById("output");
-          
-        if ((numbera !== NaN) & (numberb !== NaN)) {
-             outputElement.innerHTML = 'The minimum of the two numbers is: '+ min(numbera,numberb);  
-            };
-          
-      function min(a, b) {
-            if (a < b) return a;
-            else return b;
-        }
-      }
-  </script>
+<<head>
+        <meta charset="UTF-8">
+        <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+        <title>
+            Calculate Minimum
+        </title>
+        <link href="../style.css" type="text/css" rel="stylesheet" />
+        <link rel="icon" href="../images/favicon.png">
+        <script src="../js/week2.js"></script> 
+    </head>
 
-  <style>
-
-  </style>
-</head>
-
-<body>
+<body class="center">
+    <script src="../js/week2.js"></script> 
+    <h1>WDD 330 Portfolio<br>
+        Jeremiah Astin<br><br>
+        <u>Calculate Minimum</u></h1>
+    <div class="centerdiv">
     Enter A Number: <input type="text" id="a"></input>
     <br>
     Enter A Second Number: <input type="text" id="b"></input>
@@ -34,5 +24,11 @@
     <button onclick="minimum()">Calculate The Minimum</button>
     <br>
     <section id="output"></section>
+    </div>
+    <br>
+    <br>
+    <div class="button">
+            <a href="https://astin-jeremiah.github.io/WDD330/" class="mainmenu">Return To Main Menu</a>&emsp;<a href="index.html" class="sectionmenu">Return To Section Menu</a>
+        </div>
 </body>
 </html>

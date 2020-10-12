@@ -29,11 +29,11 @@ body {
     display: relative;
 }
 
-#weeklist, #week1 {
+#weeklist, #week1, #week2 {
     position: absolute;
 }
 
-ul#weeklist, ul#week1{
+ul#weeklist, ul#week1, ul#week2{
     list-style-type: none;
     display: grid;
     grid-template-columns: 150px 150px 150px;
@@ -58,8 +58,7 @@ h1 {
 h2, h3 {
     text-align: center;
     font-family: 'Lato', sans-serif;
-    color: #272727;
-    margin-bottom: 0px;
+    color: #272727
     font-weight: normal;
 }
 
@@ -229,6 +228,10 @@ p.subheading {
 .pressed:active {
    transform: scale(.9);
 } 
+
+.centerdiv {
+    text-align: center;
+}
 
 
 

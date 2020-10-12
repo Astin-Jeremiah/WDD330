@@ -1,45 +1,22 @@
 <!doctype html>
 <html>
 <head>
-  <title>Calculate Minimum</title>
-  <script>
-      function rangetotal(){
-        const inputa = document.getElementById("start").value;
-        const inputb = document.getElementById("end").value;
-        const numbera = parseFloat(inputa);
-        const numberb = parseFloat(inputb);
-        const outputElement = document.getElementById("output");
+        <meta charset="UTF-8">
+        <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+        <title>
+            Calculate The Sum Of A Range
+        </title>
+        <link href="../style.css" type="text/css" rel="stylesheet" />
+        <link rel="icon" href="../images/favicon.png">
+        <script src="../js/week2.js"></script> 
+    </head>
 
-        outputElement.innerHTML = "Array: " + range(numbera, numberb) + "<br>" + "Array Sum: " + sum(range(numbera, numberb));
-          
-        function range (numbera, numberb, step = numbera < numberb ? 1 : -1){
-            let array = [];
-
-            if (step > 0) {
-                for (let i = numbera; i <= numberb; i += step) array.push(i);
-            } else {
-                for (let i = numbera; i >= numberb; i += step) array.push(i);
-            }
-        return array;
-        }
-          
-        function sum(array) {
-            let total = 0;
-            for (let value of array) {
-                total += value;
-            }
-            return total;
-        }
-          
-      }
-  </script>
-
-  <style>
-
-  </style>
-</head>
-
-<body>
+<body class="center">
+    <script src="../js/week2.js"></script> 
+    <h1>WDD 330 Portfolio<br>
+        Jeremiah Astin<br><br>
+        <u>Calculate The Sum Of A Range Of Numbers</u></h1>
+    <div class="centerdiv">
     Enter A Starting Number: <input type="text" id="start"></input>
     <br>
     Enter An Ending Number: <input type="text" id="end"></input>
@@ -48,5 +25,11 @@
     <br>
     <section id="output"></section>
     <section id="output2"></section>
+    </div>
+    <br>
+    <br>
+    <div class="button">
+            <a href="https://astin-jeremiah.github.io/WDD330/" class="mainmenu">Return To Main Menu</a>&emsp;<a href="index.html" class="sectionmenu">Return To Section Menu</a>
+        </div>
 </body>
 </html>

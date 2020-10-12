@@ -1,38 +1,35 @@
 <!doctype html>
 <html>
 <head>
-  <title>Letter Counting</title>
-  <script>
-      function countChar(){
-          const sentence = document.getElementById("string").value;
-          const character = document.getElementById("ch").value;
-          const outputElement = document.getElementById("output");
-          outputElement.innerHTML = "The letter " + character +" is in the sentence " + count(sentence, character) +" times.";
-          
-          function count(string, ch) {
-              let c = 0
-              for (let i=0; i < string.length; i++){
-                  if (string[i] == ch) {
-                      c++;
-                  }
-              }
-              return c; 
-          }
-      }
-  </script>
+        <meta charset="UTF-8">
+        <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+        <title>
+            Letter Counting
+        </title>
+        <link href="../style.css" type="text/css" rel="stylesheet" />
+        <link rel="icon" href="../images/favicon.png">
+        <script src="../js/week2.js"></script> 
+    </head>
 
-  <style>
-
-  </style>
-</head>
-
-<body>
+<body class="center">
+    <h1>WDD 330 Portfolio<br>
+        Jeremiah Astin<br><br>
+        <u>Letter Counting Program</u></h1>
+    <div class="centerdiv">
     Enter A Sentence: <input type="text" id="string"></input>
     <br>
+    <br>
     Enter A Letter: <input type="text" id="ch"></input>
+    <br>
     <br>
     <button onclick="countChar()">Count The Letter</button>
     <br>
     <section id="output"></section>
+    </div>
+    <br>
+    <br>
+    <div class="button">
+            <a href="https://astin-jeremiah.github.io/WDD330/" class="mainmenu">Return To Main Menu</a>&emsp;<a href="index.html" class="sectionmenu">Return To Section Menu</a>
+    </div>
 </body>
 </html>
