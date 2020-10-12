@@ -27,7 +27,7 @@
         </div>
 <script>
     let tail = [];
-    for (let i=0; i<15; i++) {
+    for (let i=0; i<12; i++) {
         let node = document.createElement("div");
         node.className = "tail";
         document.body.appendChild(node);
@@ -40,8 +40,8 @@
     
     function build(){
         let circle = tail[current];
-        circle.style.left = (event.pageX - 5) + "px";
-        circle.style.top = (event.pageY -5) + "px";
+        circle.style.left = (event.pageX + 5) + "px";
+        circle.style.top = (event.pageY + 5) + "px";
         current = (current +1) % tail.length;
     }
     
