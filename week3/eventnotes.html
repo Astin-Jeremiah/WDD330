@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+        <title>Event Notes</title>
+        <link href="../style.css" type="text/css" rel="stylesheet" />
+        <link rel="icon" href="../images/favicon.png">
+    </head>
+
+<body class ="notes";>
+    <h1>WDD 330 Portfolio<br>
+        Jeremiah Astin<br><br>
+        <span class="notestitle">Event Notes</span></h1>
+    <ul class="notedetail">
+                        <li>Event Listener = checks to see if a particular action is done in order to activate the JavaScript code
+                            <ul>
+                                <li>Document.body.addEventListener("click", doSomething);</li>
+                            </ul>
+                        </li>
+                        <li>Inline Event Handling = the event listening goes into the HTML code; not best practice</li>
+                        <li>Using Event Handlers = uses the event handler properties that all node object have; restricted because you can only have function or each event
+                            <ul>
+                                <li>document.onclick = function(){<br>
+                                &#9;console.log('You clicked on the page!');}
+                                </li>
+                            </ul>
+                        </li>
+                        <li>Using Event Listeners = allows multiple functions to be attached independently to different events
+                            <ul>
+                                <li>Document.body.addEventListener('click, doSomething)</li>
+                                <li>addEventListener('click', () => alert(;You Clicked!));</li>
+                                <li>function doSomething() {<br>
+                                alert('You Clicked!');<br>
+                                }<br>
+                                addEventListener('click,doSomething);</li>
+                            </ul>
+                        </li>
+                        <li>event.type = logs the type of event such as a click
+                            <ul>
+                                <li>console.log(event.type);</li>
+                            </ul>
+                        </li>
+                        <li>event.target = logs the type of event with reference to the mode that fired the event
+                            <ul>
+                                <li>console.log(event.target);</li>
+                            </ul>
+                        </li>
+                        <li>Finding The Position Where The Mouse Event Occurred
+                            <ul>
+                                <li>Screen X, Screen Y = show the number of pixels from the left and top of the screen respectively where the end took place</li>
+                                <li>Client X, Client Y = show the number of pixels from the left and top of the client that is being used</li>
+                                <li>Page X, Page Y = shows the number of pixels from the left and top respectively where the event took place on the document; takes into account the page being scrolled before the event</li>
+                            </ul>
+                        </li>
+                        <li>Mouse Events
+                            <ul>
+                                <li>click = when the mouse is clicked</li>
+                                <li>mousedown &#38; mouseup = occur before a click happens</li>
+                                <li>dblclick = the mouse was double clicked; you should not place a click and double click event on the same element</li>
+                                <li>mouseover = when the mouse pointer is placed over the element</li>
+                                <li>mouseout = when the mouse pointer moves away from an element</li>
+                                <li>mousemove = whenever the mouse moves</li>
+                            </ul>
+                        </li>
+                        <li>Keyboard Events
+                            <ul>
+                                <li>keydown = when a key is pressed; continues to occur if the key is held down</li>
+                                <li>keypress = occurs after a keydown but before a keyup event; only works on keys that produce input</li>
+                                <li>keyup = when a key is released</li>
+                                <li>Modifer Keys = Shit, Ctrl, Alt, meta (windows)</li>
+                            </ul>
+                        </li>
+                        <li>Touch Events = used to record events when using mobile devices with a touch screen; you should support both touch and non-touch events because you do not know how the user will be using the application; click sill fires on touch screens but there is a small delay
+                            <ul>
+                                <li>touchend = user stops touching the surface</li>
+                                <li>touchmove = user has touched the screen then moves around without leaving; occurs as long as the user is touching the screen</li>
+                                <li>touchenter = a user has already started touching the surface but passed over the element which the event listener is attached </li>
+                                <li>touchleave = the user is still touching the surface but leave the element to which the event listener is attached</li>
+                                <li>touchcancel = a touch event is interrupted; user finger moves outside the document window or multiple fingers being used at once</li>
+                                <li>touches = list of touch objects that represent all the touches taking place on the device; length property that tells you how many touch points are in contact with the screen</li>
+                            </ul>
+                        </li>
+                        <li>removeEventListener() = removes an event listener</li>
+                        <li>preventDefault() = stops a default behavior from happening; use carefully users expect certain behaviors</li>
+                        <li>Bubbling = when the event fires on the element clicked on first, then bubbles up the document tree firing an event on each parent element until it reaches the root node; bubbling is a default behavior
+                            <ul>
+                                <li>event.stoprPropagation() = stops bubbling from happening</li>
+                            </ul>
+                        </li>
+                        <li>Capturing = firing an element on the root element, which propagates downward firing of an event on each child element until it reaches the target element that was clicked on</li>
+                    </ul>
+   
+    <br>
+    <div class="button">
+            <a href="https://astin-jeremiah.github.io/WDD330/" class="mainmenu">Return To Main Menu</a>&emsp;<a href="index.html" class="sectionmenu">Return To Section Menu</a>
+        </div>
+    
+    <script src="../js/week1.js"></script>   
+</body>
+</html>

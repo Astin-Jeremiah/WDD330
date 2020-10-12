@@ -1,15 +1,30 @@
 <!doctype html>
 <html>
 <head>
-  <title>Build A Table</title>
-</head>
+        <meta charset="UTF-8">
+        <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+        <title>
+            Building A Table Using JavaScript
+        </title>
+        <link href="../style.css" type="text/css" rel="stylesheet" />
+        <link rel="icon" href="../images/favicon.png">
+    </head>
 
-<body>
-    <h1>Mountains</h1>
+<body class="center">
+    <h1>WDD 330 Portfolio<br>
+        Jeremiah Astin<br><br>
+        <u>Building An HTML Table With JavaScript</u></h1>
+    <div class="centerdiv">
+    <h2>Mountains</h2>
     <div id="mountains"></div>
+    </div>
+    <br>
+    <br>
+    <div class="button">
+            <a href="https://astin-jeremiah.github.io/WDD330/" class="mainmenu">Return To Main Menu</a>&emsp;<a href="index.html" class="sectionmenu">Return To Section Menu</a>
+        </div>
 </body>
 <script>
-      
         const MOUNTAINS = [
         {Name: "Kilimanjaro", Height: 5895, Place: "Tanzania"},
         {Name: "Everest", Height: 8848, Place: "Nepal"},
@@ -49,10 +64,4 @@
     .appendChild(buildTable(MOUNTAINS));
       
   </script>
-
-  <style>
-      th, td {padding-right: 15px; padding-bottom: 2px;}
-      th {text-align: left; border-bottom: 2px solid #111111;}
-      
-  </style>
 </html>

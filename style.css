@@ -29,11 +29,11 @@ body {
     display: relative;
 }
 
-#weeklist, #week1, #week2, #week4 {
+#weeklist, #week1, #week2,#week3, #week4 {
     position: absolute;
 }
 
-ul#weeklist, ul#week1, ul#week2, ul#week4{
+ul#weeklist, ul#week1, ul#week2, ul#week3, ul#week4{
     list-style-type: none;
     display: grid;
     grid-template-columns: 150px 150px 150px;
@@ -233,6 +233,43 @@ p.subheading {
     text-align: center;
 }
 
+img#hat {
+    position: absolute;
+    width: 5%;
+}
 
+ .tail {
+    position: absolute;
+    height: 6px; width: 6px;
+    border-radius: 3px;
+    background: green;
+    }
 
+body#ghost {
+    height: 500px;
+    background-color: black;
+}
+
+#ghost h1, #ghost h2, #ghost h3 {
+    color: white;
+}
+
+p#hide {
+    font-size: 150px;
+    position: absolute;
+}
+
+#mountains th, #mountains td {
+ padding-right: 15px; 
+ padding-bottom: 2px;
+ text-align: left;
+}
+
+#mountains th {
+  text-align: left; border-bottom: 2px solid #111111;  
+}
+
+#mountains table {
+    margin: auto;
+}
 

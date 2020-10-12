@@ -1,0 +1,301 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+        <title>Objects Notes</title>
+        <link href="../style.css" type="text/css" rel="stylesheet" />
+        <link rel="icon" href="../images/favicon.png">
+    </head>
+
+<body class ="notes";>
+    <h1>WDD 330 Portfolio<br>
+        Jeremiah Astin<br><br>
+        <span class="notestitle">Objects Notes</span></h1>
+    <ul class="notedetail">
+                        <li>Object - self contained set of related values and functions</li>
+                        <li>Object Literal - object that is created directly in the language by wrapping all its properties and methods in curly braces
+                            <ul>
+                                <li>const spiderman = {};</li>
+                                <li>const spiderman = newObject();</li>
+                            </ul>
+                        </li>
+                        <li>Accessing properties of objects = use the dot notation
+                            <ul>
+                                <li>superman.name</li>
+                                <li>superman[`name`]</li>
+                            </ul>
+                        </li>
+                        <li>Calling an object = use dot or bracket notation followed by parentheses after the method name
+                            <ul>
+                                <li>superman.fly()</li>
+                                <li>superman[`fly`]()</li>
+                            </ul>
+                        </li>
+                        <li>In Operator - used to check if properties of a method exist
+                            <ul>
+                                <li>`city` in superman;</li>
+                            </ul>
+                        </li>
+                        <li>hasOwnProperty() = also used to check if properties of methods exist
+                            <ul>
+                                <li>superman.hasOwnProperty(`city`);</li>
+                            </ul>
+                        </li>
+                        <li>Finding all the properties of an object = loop though all of an objects properties and methods using a for in loop
+                            <ul>
+                                <li> for(const key in superman) {<br>
+                                    console.log(key + ":" + superman[key]);<br>
+                                    }</li>
+                            </ul>
+                        </li>
+                        <li>Object.key() = returns an array of all the keys of an object that is provided as an argument
+                            <ul>
+                                <li>for(const key of Object.keys(superman)) {<br>
+                                    console.log(key)<br>
+                                    }</li>
+                            </ul>
+                        </li>
+                        <li>Object.values() = returns an array of all the objects values
+                            <ul>
+                                <li>for(const value of Object.values(superman)) {<br>
+                                    console.log(value);<br>
+                                    }</li>
+                            </ul>
+                        </li>
+                        <li>Object.entries() = returns an array of key-value pairs
+                            <ul>
+                                <li>for(const [key,value] of <br>
+                                    Object.entries(superman)) {<br>
+                                    console.log(`${key} : ${value}`);<br>
+                                    }</li>
+                            </ul>
+                        </li>
+                        <li>Adding new properties to a method can be done at any time in a program; properties do not always appear in the order they are entered
+                            <ul>
+                                <li>superman.city = 'Metropolis';</li>
+                            </ul>
+                        </li>
+                        <li>Changing properties of an object can be done any time using assignments
+                            <ul>
+                                <li>superman['real name'] = 'Kal-El';</li>
+                            </ul>
+                        </li>
+                        <li>Delete Operator = removes properties from an object
+                            <ul>
+                                <li>delete superman.fly</li>
+                            </ul>
+                        </li>
+                        <li>Nested Objects - when an object contains other objects; values in nested objects are accessed by reference each property name in order using either dot or bracket notation
+                            <ul>
+                                <li>jla.wonderWoman.realName</li>
+                            </ul>
+                        </li>
+                        <li>Object literals can be passed as parameters to other functions</li>
+                        <li>This - refers to the object that is is within; used to gain access to the objects parameters</li>
+                        <li>Naming Collisions = when the same variable or function name is used for different purposes by code sharing the same scope</li>
+                        <li>Object Literal Pattern = creating an object literal that serves as the namespace and then adds in any values or properties of that object and functions as methods
+                            <ul>
+                                <li>myCanvas.square()</li>
+                            </ul>
+                        </li>
+                        <li>JSON = JavaScript Object Notation; lightweight data-storage format that is used for data serialization and configuration
+                            <ul>
+                                <li>Property names must be double quoted</li>
+                                <li>Permitted values are double quoted strings, numbers, booleans, arrays, and objects</li>
+                                <li>Functions are not permitted values</li>
+                                <li>parse() = takes a sting of data in JSON and format and returns a JavaScript object</li>
+                                <li>stringfly() = takes a JavaScript object and returns a string of JSON data</li>
+                            </ul>
+                        </li>
+                        <li>Math Object - built in object that has several properties representing mathematical constraints
+                            <ul>
+                                <li>Math.PI = displays pi</li>
+                                <li>Math.SQRT@ = the square root of 2</li>
+                                <li>Math.SQRT1_2 = the reciprocal of the square root of 2</li>
+                                <li>Math.E = Euler's constant</li>
+                                <li>Math.LN2 = the natural logarithm of 2</li>
+                                <li>Math.LN10 = the natural logarithm of 10</li>
+                                <li>Math.LOG2E = the log base 2 of Euler's constant</li>
+                            </ul>
+                        </li>
+                        <li>Math.abs() = Absolute value; if number is positive it will remain the same, if number is negative it will become positive</li>
+                        <li>Rounding Methods
+                            <ul>
+                                <li>Math.celi() = rounds a number up to the next integer or remains the same if already an integer</li>
+                                <li>Math.floor() = rounds a number down to the next integer or remains the same if already an integer</li>
+                                <li>Math.round() = round a number to the nearest integer</li>
+                                <li>Math.trunc() = returns the integer part of the number only (chops off numbers after the decimal</li>
+                            </ul>
+                        </li>
+                        <li>Powers and Square Roots
+                            <ul>
+                                <li>Math.exp() = reaises a number to the power or Euler's constant</li>
+                                <li>Math.pew(x,y) = raises any number (first argument) to the power of another number (second argument)</li>
+                                <li>Math.sqrt() = returns positive square root of a number</li>
+                                <li>Math.cbrt() = returns the cube root of a number</li>
+                                <li>Math.hypot() = returns the square root of the sum of the squares of all its arguments (calculate hypothenuse of a right-angled triangle)</li>
+                            </ul>
+                        </li>
+                        <li>Math.log() = returns the natural logarithm of a number</li>
+                        <li>Maximum and Minimum Methods
+                            <ul>
+                                <li>Math.max() = returns the maximum number from its arguments</li>
+                                <li>Math.min() = returns the minimum number from the given arguments</li>
+                            </ul>
+                        </li>
+                        <li>Trigonometric Functions
+                            <ul>
+                                <li>Math.sin() = returns the sine of an angle</li>
+                                <li>Math.con() = returns the cosine of an angle</li>
+                                <li>Math.tan() = returns the tangent of an angle</li>
+                                <li>Math.asin() = returns the arcsine of a number; result is an angle</li>
+                                <li>Math.acos() = returns the arccosine of a number; result is an angle </li>
+                                <li>Math.atan() = returns the arctangent of a number; result is an angle</li>
+                            </ul>
+                        </li>
+                        <li>Random Numbers
+                            <ul>
+                                <li>Math.random() = creates a random number; number will be between 0 and 1</li>
+                                <li>Multiple Random numbers function to increase random numbers; 6*Math.random() = random numbers between 0 and 6 with decimal values</li>
+                                <li>For random whole numbers use Math.floor(); Math.floor(6*Math.random())= random whole numbers between 0 and 6</li>
+                            </ul>
+                        </li>
+                        <li>Date Objects
+                            <ul>
+                                <li>Create New Date Object
+                                    <ul>
+                                        <li>const today = new Date();</li>
+                                        <li>today.toString() = <b>'Tue Feb 14 2017 16:35:18 GMT+000 (GMT)'</b></li>
+                                    </ul>
+                                </li>
+                                <li>If a specific date is not specified the default is the current date and time
+                                    <ul>
+                                        <li>const christmas = newDate('2017 12 25')</li>
+                                    </ul>
+                                </li>
+                                <li>Getter Methods
+                                    <ul>
+                                        <li>getDay() or getUTCDay() = used to find the day of the week that the date object falls on; returns a number between 0 and 6; 0=Sunday...6=Saturday</li>
+                                        <li>getDate() or getUTCDate() = returns the day of the month for the date object; returns actual number of the date</li>
+                                        <li>getMonth() or get UTCMonth() = find the month of the date object; returns a number 0 to 11; 0=January....11=December</li>
+                                        <li>getFullYear() or getUTCFullYear() = returns the year of the date object</li>
+                                        <li>getTime() = returns a time stamp representing the number of milliseconds since the Epoch
+                                            <ul>
+                                                <li>A day = 1000*60*60*24 milliseconds</li>
+                                            </ul>
+                                        </li>
+                                        <li>getTimezoneOffset() = returns the difference in minutes between the local time on the computer and UTC</li>
+                                    </ul>
+                                </li>
+                                <li>Setter Mehods
+                                    <ul>
+                                        <li>setDate() = sets day of event; returns timestamp of updated date object</li>
+                                        <li>setMonth() = sets month of event; returns timestamp</li>
+                                        <li>setFullYear() = sets year of event; returns timestamp</li>
+                                        <li>setTime() = sets time stamp for event; must use millisecond time stamp</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>Regular Expressions - Pattern that can be used to search strings for matches to a pattern; common with find and replace types of operations
+                            <ul>
+                                <li>Creating Regular Expressions
+                                    <ul>
+                                        <li>Using literal notation of writing the regular expression between forward slashes
+                                            <ul>
+                                                <li>const pattern = /[a-zA-Z+ing$/;</li>
+                                            </ul>
+                                        </li>
+                                        <li>Creating a new instance of the regular expresion using a new operator and constructor
+                                            <ul>
+                                                <li>const pattern = newRegExp('[a-zA-Z]+ing');</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>Regular Expression Methods
+                                    <ul>
+                                        <li>test() = see if a string passed to the methods as a parameter matches the regular expression; returns true/false answer
+                                            <ul>
+                                                <li>pattern.test('joke');</li>
+                                            </ul>
+                                        </li>
+                                        <li>exec() = works same way as test but return's an array containing the first match found or null if no matches are found
+                                            <ul>
+                                                <li>pattern.exec('joke');</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>Character Groups - groups of characters placed together inside square brackets representing any one of the characters inside the brackets
+                                    <ul>
+                                        <li>const vowels = /[aeiou];/</li>
+                                        <li>const alphabet = /[A-Z]/;</li>
+                                        <li>const numbers = /[0-9]/;</li>
+                                        <li>const notcapital = /[^A-Z]/; ^ represents is not</li>
+                                    </ul>
+                                </li>
+                                <li>Regular Expression Properties
+                                    <ul>
+                                        <li>Global - Makes pattern return all matches; default only looks at first occurrence
+                                            <ul>
+                                                <li>pattern = /java/g</li>
+                                            </ul>
+                                        </li>
+                                        <li>Ignore Case - Makes the pattern case insensitive; by default they are case sensitive
+                                            <ul>
+                                                <li>pattern = /java/i</li>
+                                            </ul>
+                                        </li>
+                                        <li>Multiline - Makes the pattern multiline; default will stop after the end of the line
+                                            <ul>
+                                                <li>pattern = /java/m</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>Special Characters/Metacharacters
+                                    <ul>
+                                        <li>. = matches any character; except line breaks</li>
+                                        <li>\w = matches any word character; equivalent to [A-Za-z0-9]</li>
+                                        <li>\W = matches any non-word character; equivalent to [\^A-Za-z0-9_]</li>
+                                        <li>\d = matches any digit character; equivalent to [0-9]</li>
+                                        <li>\D = matches any non digit character; equivalent to [^0-9]</li>
+                                        <li>\s = matches any white space character; equivalent to [\t\r\n\f]</li>
+                                        <li>\S = matches any non-white space character; equivalent to [^\t\r\n\f]</li>
+                                    </ul>
+                                </li>
+                                <li>Modifiers - placed after a token to deal with multiple occurrences of that token
+                                    <ul>
+                                        <li>? = makes the preceding token in the regular expression optical</li>
+                                        <li>* = makes one or more occurrences of the preceding token</li>
+                                        <li>+ = matches one or more occurrences of the preceding token</li>
+                                        <li>{n} = matches n occurrences of the preceding token</li>
+                                        <li>{n,} = matches at least n occurrences of the pattern</li>
+                                        <li>{,m) = matches at most n occurrences of the preceding token</li>
+                                        <li>{n,m} = matches at least n and at most m occurrences of the preceding token</li>
+                                        <li>^ = marks the position immediately before the first character in the string</li>
+                                        <li>$ = marks the position immediately after the first character in the string</li>
+                                    </ul>
+                                </li>
+                                <li>Regular Expressions and Strings
+                                    <ul>
+                                        <li>split() = can be used to split a string into the separate elements of an array</li>
+                                        <li>match() = used to return an array of all matches</li>
+                                        <li>search() = return the position of the first match</li>
+                                        <li>replace() = replace any matches with another string</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+   
+    <br>
+    <div class="button">
+            <a href="https://astin-jeremiah.github.io/WDD330/" class="mainmenu">Return To Main Menu</a>&emsp;<a href="index.html" class="sectionmenu">Return To Section Menu</a>
+        </div>
+    
+    <script src="../js/week1.js"></script>   
+</body>
+</html>

@@ -1,12 +1,28 @@
 <!doctype html>
 <html>
 <head>
-  <title>Balloons</title>
-</head>
+        <meta charset="UTF-8">
+        <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+        <title>
+            Balloon Pop
+        </title>
+        <link href="../style.css" type="text/css" rel="stylesheet" />
+        <link rel="icon" href="../images/favicon.png">
+    </head>
 
-<body>
-    <h1>Use The Up And Down Arrows To Control The Balloon</h1>
+<body class="center">
+    <h1>WDD 330 Portfolio<br>
+        Jeremiah Astin<br><br>
+        <u>Balloon Pop</u></h1>
+    <div class="centerdiv">
+    <h2>Use The Up And Down Arrows To Control The Balloon</h2>
     <p>&#127880;</p>
+    </div>
+    <br>
+    <br>
+    <div class="button">
+            <a href="https://astin-jeremiah.github.io/WDD330/" class="mainmenu">Return To Main Menu</a>&emsp;<a href="index.html" class="sectionmenu">Return To Section Menu</a>
+        </div>
 </body>
 <script>
     let p = document.querySelector("p");
@@ -32,11 +48,6 @@
         }
     }
     
-    document.body.addEventListener("keydown", arrowkeys);
-    
+    document.body.addEventListener("keydown", arrowkeys);  
 </script>
-    
-<style>   
-    p {padding-left: 200px;}
-</style>
 </html>
