@@ -4,180 +4,22 @@
         <meta charset="UTF-8">
         <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
         <title>
-            Week 4 WDD 330 Portfolio
+            Week 4
         </title>
         <link href="../style.css" type="text/css" rel="stylesheet" />
         <link rel="icon" href="../images/favicon.png">
     </head>
 
     <body class="center">
+        <div class="centerhome">
         <h1>WDD 330 Portfolio<br>
-            Jeremiah Astin</h1>
-        <h2>Week Four Notes and Exercises</h2>
-        <h3>Click a Heading to Expand the Section</h3>
-        
-        <ol class="notes">
-            <li>
-                <details><summary>Reading Notes JavaScript Novice to Ninja: Chapter 8</summary>
-                    <ul class="notedetail">
-                        <li>document.forms = returns an HTML collection of all the forms in the document in the order they appear
-                            <ul>
-                                <li>const form = document.forms.search;</li>
-                                <li>const form = document.forms['search'];</li>
-                                <li>const [input, button] = form.elements;</li>
-                                <li>const input = form['searchinput'];</li>
-                            </ul>
-                            
-                        <li>form.submit() = will submit the form automatically; does not trigger submit events</li>
-                        <li>form.rest() = reset all the form controls back to their initial values specified in the HTML</li>
-                        <li>form.action()= set the action attribute of the form; can also be sent to a different URL to be processed on the server</li>
-                        <li>Form Events
-                            <ul>
-                                <li>Focus = event occurs when an element is focused on; when the courser is placed in the form field 
-                                    <ul>
-                                        <li>Input.addEventListener(‘focus’, () =><br>
-		                                  &emsp;alert(‘focused’), false);</li>
-                                    </ul>
-                                </li>
-                                <li>Blur = occurs when the user moves the focus away form the form event
-                                    <ul>
-                                        <li>Input.addEventListnener(‘blur’. () =><br>
-		                                  &emsp;alert(‘blurred’), false);</li>
-                                    </ul>
-                                </li>
-                                <li>Change =occurs when the user move the focus away from the forms element after changing it
-                                    <ul>
-                                        <li>Input.addEventListener(‘change’, () =><br>
-		                                  &emsp;alert(‘changed’), false);</li>
-                                    </ul>
-                                </li>
-                                <li>Submit =occurs when the form is submitted
-                                    <ul>
-                                        <li>Const form = document.forms[‘search’];<br>
-		                                  &emsp;form.addEventListener (‘submit’, search,<br>
-                                          &emsp;false);<br>
-		                                  &emsp;function search() {<br>
-		                                  &emsp;alert(‘ Form Submitted’);<br>
-		                                  &emsp;}</li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>Text input objects have a value property that can be used to retrieve the text inside the field using the search() function
-                            <ul>
-                                <li>Function search(event) {<br>
-                                Alert(`You Searched for: ${input.value}`);<br>
-	                               Event.preventDefault();<br>
-	                               }</li>
-                            </ul>
-                        </li>
-                        <li>Focus and Blur can be used to create place holder text on forms</li>
-                        <li>Form Controls
-                            <ul>
-                                <li>&lt;input&gt; = fields, text, passwords, check boxes, radio buttons, and file uploads</li>
-                                <li>&lt;select&gt; = menues of drop down categories</li>
-                                <li>&lt;textarea&gt; = elements for longer text entry</li>
-                                <li>&lt;button&gt; = elements for submitting or setting the form</li>
-                            </ul>
-                        </li>
-                        <li>Form Validation - The process of checking whether a user has entered the information into the form correctly; can occur on the client side using JavaScript or on the server side,; best to use JavaScript to improve the user experience when completing the form or to give feedback about errors before being submitted</li>
-                    </ul>
-                </details>
-            </li>
-            
-            <li>
-                <details><summary>Reading Notes JavaScript Novice to Ninja: Chapter 12</summary>
-                    <ul class="notedetail">
-                        <li>Object Oriented Programming - style of programming that involves separating the code into objects that have properties and methods</li>
-                        <li>Encapsulation - the inner workings are kept hidden inside the object and only the essential functions are exposed to the end user</li>
-                        <li>Polymorphism - the same process ca be used for different objects; various objects can share the same methods but also have the ability to override shared methods with more specific implementation</li>
-                        <li>Inheritance - taking the features of one object than adding new features; takes an object that currently exists and  inherit all of its properties and methods, we can use the new properties and methods </li>
-                        <li>This - keyword used to represent the object that will be returned by the construction function</li>
-                        <li>Static Methods - add the static keyword in the class declaration; called by the class directly rather than by instances of the class; not available to instances of the class</li>
-                        <li>Prototypal Inheritance - every class has a prototype property that is shared by every instance of the class; any properties or methods of a class's prototype can be accessed by every object instantiated by the class</li>
-                        <li>hasOwnProperty() = used to check if a method is its own property or is inherited from the prototype</li>
-                        <li>If a new property or method is added to the prototype any instances of its class will inherit the new properties and methods, even if the instance has already been created</li>
-                        <li>It is not possible to overwrite the prototype by assigning it to a new object literal if class declarations are used</li>
-                        <li>Object instance can overwrite any properties or methods inherited from its prototype by simply assigning a new value to them</li>
-                        <li>Public Methods - can be queried directly and changed by assignment; this is the default property</li>
-                        <li>Private Methods - impossible to access outside the scope; getter and setter methods are used to form a closure over this variable and provide controlled access to the property inside</li>
-                        <li>Object.getPrototypeOf() = shows us the prototype of the prototype is an apparently empty object lateral</li>
-                        <li>propertyIsEnumerable() = checks to see if a property is enumerable
-                            <ul>
-                                <li>All built in methods should be non-enumerable</li>
-                                <li>All user defined methods should be enumerable</li>
-                            </ul>
-                        </li>
-                        <li>Extends = allows a class to inherit from another class</li>
-                        <li>Monkey Patching - adding additional methods to the prototype of JavaScript's built in objects; should be avoided unless absolutely necessary</li>
-                        <li>All object properties have the following attributes
-                            <ul>
-                                <li>Value - values of the property and is undefined by default</li>
-                                <li>Writable - boolean value shows whether a property can be changed or not; false by default</li>
-                                <li>Enumerable - boolean value shows whether a property will shows up when the object is displayed in a for in loop; false by default</li>
-                                <li>Configurable - boolean value shows whether you can delete a property or change any of its attributes; false by default</li>
-                            </ul>
-                        </li>
-                        <li>Object() = creates a new object based on another object</li>
-                        <li>Mixin - Way of adding properties and methods of some object to another object without using inheritance</li>
-                        <li>Factory Function - a function that can be used to return an object</li>
-                        <li>If a method returns this its method can be chained together to form a sequence of method calls that acre called one after another</li>
-                        <li>That can sometimes go out of scope when nested in other functions
-                            <ul>
-                                <li>Set the variable that to equal this before the nested function; later refers to the nested function and not the this</li>
-                                <li>bind() = method for all functions and is used to set the value of this in the function</li>
-                                <li>For Of = syntax for arrays and does not require a nested function to be used so this remains bound to the object</li>
-                                <li>Using Arrow Functions - Arrow functions do not have their own context, so this remains bound to the original object making the function call</li>
-                                <li>Methods can be borrowed from objects without having to inherit all their properties and methods by making a reference to the function that you want to borrow</li>
-                                <li>call() = takes the object that the function is to be applied to as its first argument, then the usual arguments come afterwards</li>
-                            </ul>
-                        </li>
-                        
-                    </ul>
-                </details>
-            </li>
-            
-            <li>
-                <details><summary>Reading Notes JavaScript Novice to Ninja: Chapter 15</summary>
-                    <ul class="notedetail">
-                        <li>Module - self contained pieces of code that provided functions and methods that can then be used in other files any by other methods; helps keep code organized in separate reusable files</li>
-                        <li>ES6 Modules
-                            <ul class="notedetail">
-                                <li>All code in modules is always in strict mode without the need for 'use strict' and there is no way to opt out of this</li>
-                                <li>A module has its own global scope, so any variables created in the top level of a module can only be accessed within the module</li>
-                                <li>The value of this in the top level of a module is undefined, rather than the global object</li>
-                                <li>You cannot use HTML style comments in modules</li>
-                            </ul>
-                        </li>
-                        <li>Module files use the keyword export to specify any values of functions that are to be made available in the module</li>
-                        <li>Not everything in a module needs to be used</li>
-                        <li>Import is used to add the modalized functions into the main JavaScript file</li>
-                        <li>* = wild card symbol used to indicate everything in the module file should be imported</li>
-                        <li>Default Exports - a single variable, function, or class in a module that can be imported without having to be explicitly named; can only be used once</li>
-                    </ul>
-        
-                </details>
-            </li>
-            <li>
-                <details><summary>Group Exercise Week 4</summary>
-                    <ul class="notedetail">
-                        <li><a href="tictactoe.html">Tic Tac Toe</a></li>
-                    </ul>
-                </details>
-            </li>
-            <li>
-                <details><summary>Additional Exercises</summary>
-                    <ul class="notedetail">
-                        <li><a href="vector.html">Vector Calculations</a></li>
-                    </ul>
-                </details>
-            </li>
-        </ol>
-        <br>
-        <div id="button">
-            <a href="https://astin-jeremiah.github.io/WDD330/" class="myButton">Return To Main Menu</a>
-        </div>
+            Jeremiah Astin<br>
+            Week Four</h1>
+        <div class="phone">
+            <ul id="week4"></ul>
+            <img src="../images/phone.png" id="background">
+        </div> 
+        </div>    
+    <script src="../js/week4.js"></script>    
     </body>
-
-    
 </html>

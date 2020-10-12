@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+        <title>
+            Forms Notes
+        </title>
+        <link href="../style.css" type="text/css" rel="stylesheet" />
+        <link rel="icon" href="../images/favicon.png">
+    </head>
+
+<body class ="notes";>
+    <h1>WDD 330 Portfolio<br>
+        Jeremiah Astin<br><br>
+        <span class="notestitle">Forms Notes</span></h1>
+    <ul class="notedetail">
+                        <li>document.forms = returns an HTML collection of all the forms in the document in the order they appear
+                            <ul>
+                                <li>const form = document.forms.search;</li>
+                                <li>const form = document.forms['search'];</li>
+                                <li>const [input, button] = form.elements;</li>
+                                <li>const input = form['searchinput'];</li>
+                            </ul>
+                            
+                        <li>form.submit() = will submit the form automatically; does not trigger submit events</li>
+                        <li>form.rest() = reset all the form controls back to their initial values specified in the HTML</li>
+                        <li>form.action()= set the action attribute of the form; can also be sent to a different URL to be processed on the server</li>
+                        <li>Form Events
+                            <ul>
+                                <li>Focus = event occurs when an element is focused on; when the courser is placed in the form field 
+                                    <ul>
+                                        <li>Input.addEventListener(‘focus’, () =><br>
+		                                  &emsp;alert(‘focused’), false);</li>
+                                    </ul>
+                                </li>
+                                <li>Blur = occurs when the user moves the focus away form the form event
+                                    <ul>
+                                        <li>Input.addEventListnener(‘blur’. () =><br>
+		                                  &emsp;alert(‘blurred’), false);</li>
+                                    </ul>
+                                </li>
+                                <li>Change =occurs when the user move the focus away from the forms element after changing it
+                                    <ul>
+                                        <li>Input.addEventListener(‘change’, () =><br>
+		                                  &emsp;alert(‘changed’), false);</li>
+                                    </ul>
+                                </li>
+                                <li>Submit =occurs when the form is submitted
+                                    <ul>
+                                        <li>Const form = document.forms[‘search’];<br>
+		                                  &emsp;form.addEventListener (‘submit’, search,<br>
+                                          &emsp;false);<br>
+		                                  &emsp;function search() {<br>
+		                                  &emsp;alert(‘ Form Submitted’);<br>
+		                                  &emsp;}</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>Text input objects have a value property that can be used to retrieve the text inside the field using the search() function
+                            <ul>
+                                <li>Function search(event) {<br>
+                                Alert(`You Searched for: ${input.value}`);<br>
+	                               Event.preventDefault();<br>
+	                               }</li>
+                            </ul>
+                        </li>
+                        <li>Focus and Blur can be used to create place holder text on forms</li>
+                        <li>Form Controls
+                            <ul>
+                                <li>&lt;input&gt; = fields, text, passwords, check boxes, radio buttons, and file uploads</li>
+                                <li>&lt;select&gt; = menues of drop down categories</li>
+                                <li>&lt;textarea&gt; = elements for longer text entry</li>
+                                <li>&lt;button&gt; = elements for submitting or setting the form</li>
+                            </ul>
+                        </li>
+                        <li>Form Validation - The process of checking whether a user has entered the information into the form correctly; can occur on the client side using JavaScript or on the server side,; best to use JavaScript to improve the user experience when completing the form or to give feedback about errors before being submitted</li>
+                    </ul>
+   
+    <br>
+    <div class="button">
+            <a href="https://astin-jeremiah.github.io/WDD330/" class="mainmenu">Return To Main Menu</a>&emsp;<a href="index.html" class="sectionmenu">Return To Section Menu</a>
+        </div>
+    
+    <script src="../js/week1.js"></script>   
+</body>
+</html>

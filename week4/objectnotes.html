@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+        <title>
+            Object Oriented Programming Notes
+        </title>
+        <link href="../style.css" type="text/css" rel="stylesheet" />
+        <link rel="icon" href="../images/favicon.png">
+    </head>
+
+<body class ="notes";>
+    <h1>WDD 330 Portfolio<br>
+        Jeremiah Astin<br><br>
+        <span class="notestitle">Object Oriented Programming Notes</span></h1>
+    <ul class="notedetail">
+                        <li>Object Oriented Programming - style of programming that involves separating the code into objects that have properties and methods</li>
+                        <li>Encapsulation - the inner workings are kept hidden inside the object and only the essential functions are exposed to the end user</li>
+                        <li>Polymorphism - the same process ca be used for different objects; various objects can share the same methods but also have the ability to override shared methods with more specific implementation</li>
+                        <li>Inheritance - taking the features of one object than adding new features; takes an object that currently exists and  inherit all of its properties and methods, we can use the new properties and methods </li>
+                        <li>This - keyword used to represent the object that will be returned by the construction function</li>
+                        <li>Static Methods - add the static keyword in the class declaration; called by the class directly rather than by instances of the class; not available to instances of the class</li>
+                        <li>Prototypal Inheritance - every class has a prototype property that is shared by every instance of the class; any properties or methods of a class's prototype can be accessed by every object instantiated by the class</li>
+                        <li>hasOwnProperty() = used to check if a method is its own property or is inherited from the prototype</li>
+                        <li>If a new property or method is added to the prototype any instances of its class will inherit the new properties and methods, even if the instance has already been created</li>
+                        <li>It is not possible to overwrite the prototype by assigning it to a new object literal if class declarations are used</li>
+                        <li>Object instance can overwrite any properties or methods inherited from its prototype by simply assigning a new value to them</li>
+                        <li>Public Methods - can be queried directly and changed by assignment; this is the default property</li>
+                        <li>Private Methods - impossible to access outside the scope; getter and setter methods are used to form a closure over this variable and provide controlled access to the property inside</li>
+                        <li>Object.getPrototypeOf() = shows us the prototype of the prototype is an apparently empty object lateral</li>
+                        <li>propertyIsEnumerable() = checks to see if a property is enumerable
+                            <ul>
+                                <li>All built in methods should be non-enumerable</li>
+                                <li>All user defined methods should be enumerable</li>
+                            </ul>
+                        </li>
+                        <li>Extends = allows a class to inherit from another class</li>
+                        <li>Monkey Patching - adding additional methods to the prototype of JavaScript's built in objects; should be avoided unless absolutely necessary</li>
+                        <li>All object properties have the following attributes
+                            <ul>
+                                <li>Value - values of the property and is undefined by default</li>
+                                <li>Writable - boolean value shows whether a property can be changed or not; false by default</li>
+                                <li>Enumerable - boolean value shows whether a property will shows up when the object is displayed in a for in loop; false by default</li>
+                                <li>Configurable - boolean value shows whether you can delete a property or change any of its attributes; false by default</li>
+                            </ul>
+                        </li>
+                        <li>Object() = creates a new object based on another object</li>
+                        <li>Mixin - Way of adding properties and methods of some object to another object without using inheritance</li>
+                        <li>Factory Function - a function that can be used to return an object</li>
+                        <li>If a method returns this its method can be chained together to form a sequence of method calls that acre called one after another</li>
+                        <li>That can sometimes go out of scope when nested in other functions
+                            <ul>
+                                <li>Set the variable that to equal this before the nested function; later refers to the nested function and not the this</li>
+                                <li>bind() = method for all functions and is used to set the value of this in the function</li>
+                                <li>For Of = syntax for arrays and does not require a nested function to be used so this remains bound to the object</li>
+                                <li>Using Arrow Functions - Arrow functions do not have their own context, so this remains bound to the original object making the function call</li>
+                                <li>Methods can be borrowed from objects without having to inherit all their properties and methods by making a reference to the function that you want to borrow</li>
+                                <li>call() = takes the object that the function is to be applied to as its first argument, then the usual arguments come afterwards</li>
+                            </ul>
+                        </li>
+                        
+                    </ul>
+   
+    <br>
+    <div class="button">
+            <a href="https://astin-jeremiah.github.io/WDD330/" class="mainmenu">Return To Main Menu</a>&emsp;<a href="index.html" class="sectionmenu">Return To Section Menu</a>
+        </div>
+    
+    <script src="../js/week1.js"></script>   
+</body>
+</html>

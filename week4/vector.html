@@ -1,9 +1,15 @@
 <!doctype html>
 <html>
 <head>
-  <title>Vector Calculations</title>
-  <script>
-      function calculate(){
+        <meta charset="UTF-8">
+        <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+        <title>
+            Vector Calculator
+        </title>
+        <link href="../style.css" type="text/css" rel="stylesheet" />
+        <link rel="icon" href="../images/favicon.png">
+        <script>
+        function calculate(){
         const inputa = document.getElementById("x1").value;
         const inputb = document.getElementById("y1").value;
         const inputc = document.getElementById("x2").value;
@@ -47,7 +53,7 @@
           
       }
       
-      class Vec {
+      class Vec{
           constructor(x,y) {
               this.x = x;
               this.y = y;
@@ -67,15 +73,15 @@
           return Math.sqrt(this.x *this.x + this.y *this.y);
       }
       }
-  </script>
+    </script> 
+    </head>
 
-  <style>
-
-  </style>
-</head>
-
-<body>
-    <h1>Calculate The Sum And Difference Of Vectors</h1>
+<body class="center">
+    <h1>WDD 330 Portfolio<br>
+        Jeremiah Astin<br><br>
+        <u>Vector Calculator</u></h1>
+    <div class="centerdiv">
+    <h2>Calculate The Sum And Difference Of Vectors</h2>
     <input type="number" id="x1" placeholder="Enter X Coordinate"></input>&nbsp;&nbsp;<input type="number" id="y1" placeholder="Enter Y Coordinate"></input>
     <br>
     <br>
@@ -86,7 +92,7 @@
     <br>
     <br>
     <section id="output"></section>
-    <h1>Caculate The Length Of A Vector</h1>
+    <h2>Calculate The Length Of A Vector</h2>
     <input type="number" id="x3" placeholder="Enter X Coordinate"></input>&nbsp;&nbsp;<input type="number" id="y3" placeholder="Enter Y Coordinate"></input>
     <br>
     <br>
@@ -94,6 +100,12 @@
     <br>
     <br>
     <section id="output2"></section>
+    </div>
+    <br>
+    <br>
+    <div class="button">
+            <a href="https://astin-jeremiah.github.io/WDD330/" class="mainmenu">Return To Main Menu</a>&emsp;<a href="index.html" class="sectionmenu">Return To Section Menu</a>
+    </div>
     
 </body>
 </html>
