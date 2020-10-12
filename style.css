@@ -1,13 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-@import url('https://fontlibrary.org/face/trueno');
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
 
 body {
     background-color: #f4faf8;
+    font-family: 'Lato', sans-serif;
 }
 
 .center{
-    width: 1100px;
+    width: 800px;
     display: block;
     margin: 0px auto 0px auto;
     padding: 0px;
@@ -28,11 +29,11 @@ body {
     display: relative;
 }
 
-#weeklist {
+#weeklist, #week1 {
     position: absolute;
 }
 
-ul#weeklist{
+ul#weeklist, ul#week1{
     list-style-type: none;
     display: grid;
     grid-template-columns: 150px 150px 150px;
@@ -77,9 +78,10 @@ ol.notes {
 ul.notedetail {
     font-size: 18px;
     color: #272727;
-    margin: 5px 0 5px 0;
+    margin: 5px auto 5px auto;
     margin-bottom: 5px;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Architects Daughter', cursive;
+    width: 650px;
 }
 
 ul.notedetail li {
@@ -99,33 +101,7 @@ p.subheading {
     text-align: center;
 }
 
-.myButton {
-	box-shadow:inset 0px 1px 0px 0px #f5978e;
-	background:linear-gradient(to bottom, #f24537 5%, #c62d1f 100%);
-	background-color:#A40B0B;
-	border-radius:6px;
-	border:1px solid #d02718;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Arial;
-	font-size:22px;
-	font-weight:bold;
-	padding:6px 24px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #810e05;
-    margin: auto;
-}
-.myButton:hover {
-	background:linear-gradient(to bottom, #c62d1f 5%, #f24537 100%);
-	background-color:#c62d1f;
-}
-.myButton:active {
-	position:relative;
-	top:1px;
-}
-
-#button {
+.button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -196,3 +172,64 @@ p.subheading {
     justify-content: center;
     align-items: center;
     }
+
+    #story_editor {
+          width: 800px;
+          height: 250px;
+          background-color: lightsteelblue;
+      }
+      
+      .story{
+          background-color: lightslategray;
+          font-weight: bold;
+      }
+
+.mainmenu, .sectionmenu {
+	box-shadow: 0px 1px 0px 0px #f0f7fa;
+	background:linear-gradient(to bottom, #33bdef 5%, #019ad2 100%);
+	background-color:#33bdef;
+	border-radius:6px;
+	border:1px solid #057fd0;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px -1px 0px #5b6178;
+}
+.mainmenu:hover, .sectionmenu:hover {
+	background:linear-gradient(to bottom, #019ad2 5%, #33bdef 100%);
+	background-color:#019ad2;
+}
+.mainmenu:active, .sectionmenu:active {
+	position:relative;
+	top:1px;
+}
+
+.notes{
+    width: 800px;
+    background-image: url("./images/paper.jpg");
+    background-repeat: repeat-y;
+    background-position: center top;
+    display: block;
+    margin: 0px auto 0px auto;
+    padding: 0px;
+    overflow: auto;
+}
+
+.notestitle {
+    font-family: 'Architects Daughter', cursive;
+    font-weight: normal;
+    text-decoration: underline;
+}
+
+.pressed:active {
+   transform: scale(.9);
+} 
+
+
+
+
