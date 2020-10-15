@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+        <title>Testing and Debugging Notes</title>
+        <link href="../style.css" type="text/css" rel="stylesheet" />
+        <link rel="icon" href="../images/favicon.png">
+    </head>
+
+<body class ="notes";>
+    <h1>WDD 330 Portfolio<br>
+        Jeremiah Astin<br><br>
+        <span class="notestitle">Testing and Debugging Notes</span></h1>
+    <ul class="notedetail">
+        <li>System Error - there's a problem with the system or external devices with which the program is interacting</li>
+        <li>Programmer Error - the program contains incorrect syntax or faulty logic; sometimes as simple as a typo</li>
+        <li>User Error - the user has entered data incorrectly and the program is unable to handle it</li>
+        <li>Exception - an error that produces a return value that can then be used by the program to deal with the error; function is not defined</li>
+        <li>Stack Trace - a sequence of functions or method calls that lead to the point where the error occurred; works backwards from the point at which the error occurred to id the original function or method that started the sequence</li>
+        <li>Warning - occurs if there's an error in the code that isn't enough to cause the program to crash</li>
+        <li>Browsers vary in how they display warnings and exceptions; Some display a small icon in the order of the browser and others require you to open the console</li>
+        <li>When a runtime error occurs in the browser the HTML will still appear on the page but the JavaScript code will stop working; In the case of a warning the JavaScript will continue to run, but may run incorrect</li>
+        <li>Strict Mode
+            <ul>
+                <li>Introduced in ECMAScript 5</li>
+                <lii>Produces more exceptions and warnings and prohibits the use of some deprecated features</lii>
+                <li>Using strict mode can help improve your coding clarity and speed</li>
+                <li>'use strict' is added to the first line of the JavaScript file to activate strict mode</li>
+            </ul>
+        </li>
+        <li>Linting Tools - tools designed to highlight any sloppy programming practices or syntax errors; Complain if certain style conventions are not followed such as proper indentation
+            <ul>
+                <li>JS Lint, JS Hint, ES Lint</li>
+                <li>Added as a text editor plug in</li>
+                <li>Use an online linking tool</li>
+                <li>Install using NPM and run as part of your worklow</li>
+            </ul>
+        </li>
+        <li>Some browsers support certain features others will not; do not relay on users having the most up to date browsers
+            <ul>
+                <li>Modernizer and Can I Use? are two useful resources for checking which features are currently supported in different browsers</li>
+            </ul>
+        </li>
+        <li>Debugging - The process of finding out where bugs occur in the code and dealing with them
+            <ul>
+                <li>alert() - method to show a dialog at certain points in the code; stops a program from running until OK is clicked; puts break points in the code that let us check the values of variables a that point to see if they're what we expect them to be</li>
+                <li>Most modern editors have a console object that provides a number of methods for logging information and debugging
+                    <ul>
+                        <li>console.log = logs the value of variables at different stages of the program</li>
+                        <li>console.trace() = logs an interactive stack trace in the console; shows the functions that were called in the lead up to an exception occurring while the code is running</li>
+                    </ul>
+                </li>
+                <li>breakpoints - pauses the code at a certain point; allowing you to see the values of all the variables at that point and make modifications as necessary
+                    <ul>
+                        <li>Add the debugger command in to the function to create a breakpoint in the code</li>
+                        <li>Must be removed before finalizing your program</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>Error Objects - created by the host environment when an exception occurs; created in the code using a constructor function
+            <ul>
+                <li>EvalError - not used in the current EXMAScrpit specification and only retained for backwards compatibility</li>
+                <li>RangeError - thrown when a number is outside an allowable range of values</li>
+                <li>ReferenceError - when a reference is named to an item that doesn't exist</li>
+                <li>SyntaxError - thrown when there's in the code's syntax</li>
+                <li>TypeError - thrown when there's an error in the type of value used; a string is used when a number is expected</li>
+                <li>URIError - when there's a problem encoding or decoding the URI</li>
+                <li>InternalError - Non-Standard error that is thrown when an error occurs in the JavaScript engines</li>
+            </ul>
+        </li>
+        <li>Common Errors
+            <ul>
+                <li>Name property returns the name of the error constructor function used as a string</li>
+                <li>Message property returns a description of the error and should be provided as on argument to the Error construction function</li>
+                <li>Stack property will remain a stack trace for that error</li>
+            </ul>
+        </li>
+        <li>throw - used to through your own exceptions </li>
+        <li>try block - runs the code inside the block as normal but if an exception occurs it will pass the error object that is thrown onto a catch block</li>
+        <li>catch block - will only run if an exception is thrown inside it</li>
+        <li>finally block - added after a catch block; always executed after the try or catch blocks, regardless of whether an exception occurred or not </li>
+        <li>Testing is an important step in the programming process; can be a piece of code that tests different variables</li>
+        <li>Test Driven Development - process of writing tests before an actual code
+            <ul>
+                <li>1. Write Tests</li>
+                <li>2. Write Code To Pass The Test</li>
+                <li>Refactor The Code</li>
+                <li>Test Refactored Code</li>
+                <li>Write More Tests For New Features</li>
+            </ul>
+        </li>
+        <li>You can write your own test but the process cab be very laborious</li>
+        <li>Jest - testing framework created by Facebook
+            <ul>
+                <li>To activate enter the command npm install -g jest into the terminal</li>
+                <li>Should install globally</li>
+            </ul>
+        </li>
+    </ul>
+
+    <br>
+    <div class="button">
+            <a href="https://astin-jeremiah.github.io/WDD330/" class="mainmenu">Return To Main Menu</a>&emsp;<a href="index.html" class="sectionmenu">Return To Section Menu</a>
+        </div>
+    
+    <script src="../js/week1.js"></script>   
+</body>
+</html>
