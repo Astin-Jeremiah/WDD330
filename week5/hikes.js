@@ -87,7 +87,7 @@ export default class Hikes {
 
     return backButton;
   }
-
+}
 
 
 //Builds HTML
