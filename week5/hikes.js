@@ -62,7 +62,7 @@ export default class Hikes {
   showOneHike(hikeName) {
       const hike = this.getHikeByName(hikeName);
       this.parentElement.innerHTML = '';
-      this.parentElement.appendChild(renderOneHike(hike));
+      this.parentElement.appendChild(renderOneHikeLight(hike));
       this.backButton.classList.remove('hidden');
   }
   // in order to show the details of a hike ontouchend we will need to attach a listener AFTER the list of hikes has been built. The function below does that.
