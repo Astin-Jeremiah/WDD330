@@ -25,6 +25,10 @@ img {
     max-width: 100%;
 }
 
+ul {
+    padding-left: 0px;
+}
+
 li {
     list-style: none;
 }
@@ -43,10 +47,25 @@ li {
 .light > div {
     width: 40%; 
     flex: 1 1 auto;
-    padding-left: 25px;
+    padding-left: 50px;
 }
 
 .light > h2 {
     width: 100%;
     flex:1 0 auto;
+}
+
+button {
+    padding-top: 10px;
+    box-shadow:inset 0px 39px 0px -24px #e67a73;
+	background-color:#e4685d;
+	border-radius:14px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #b23e35;
 }
