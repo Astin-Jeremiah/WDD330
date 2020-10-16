@@ -1,6 +1,6 @@
 const links =[
-    { image: "../images/forms.png", url: "testingnotes.html"},
-    { image: "../images/object.png", url: "hikes.html"},
+    { image: "../images/testing.png", url: "testingnotes.html"},
+    { image: "../images/hikes.png", url: "hikes.html"},
 ]
 
 const list = document.getElementById("week5");
