@@ -41,12 +41,12 @@ li {
     
 }
 
-.light div {
+.light > div {
     width 50%; 
     flex: 1 1 auto;
 }
 
-.light h2 {
+.light > h2 {
     width: 100%;
     flex:1 0 auto;
 }
