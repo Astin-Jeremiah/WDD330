@@ -2,6 +2,7 @@ h1 {
     background-color: salmon;
     padding: 25px 0px 25px 0px;
     text-align: center;
+    width: 750px;
 }
 
 h2 {
@@ -30,4 +31,14 @@ li {
 
 .hidden {
     display: none;
+}
+
+.light {
+    display: flex;
+    align-items: center;
+    
+}
+
+.light div {
+    width 50%; 
 }
