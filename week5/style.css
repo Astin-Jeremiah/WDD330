@@ -1,13 +1,13 @@
 h1 {
     background-color: salmon;
-    padding: 25px;
+    padding: 25px 0px 25px 0px;
     text-align: center;
 }
 
 h2 {
     background-color: gold;
     text-align: center;
-    padding: 5px;
+    padding: 5px 0px 5px 0px;
 }
 
 body {
