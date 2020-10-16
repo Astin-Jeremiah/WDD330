@@ -84,8 +84,6 @@ export default class Hikes {
       backButton.classList.add('hidden');
       this.parentElement.before(backButton);
       return backButton;
-
-    return backButton;
   }
 }
 
