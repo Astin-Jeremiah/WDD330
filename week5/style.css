@@ -41,7 +41,7 @@ li {
 }
 
 .light > div {
-    width 40%; 
+    width: 40%; 
     flex: 1 1 auto;
 }
 
