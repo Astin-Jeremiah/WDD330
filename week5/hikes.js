@@ -101,8 +101,8 @@ function renderOneHikeLight(hike) {
   // setting this to make getting the details for a specific hike easier later.
   item.setAttribute('data-name', hike.name);
   item.innerHTML = ` <h2>${hike.name}</h2>
-<div class="image"><img src="${imgBasePath}${hike.imgSrc}" alt="${hike.imgAlt}"></div>
-<div>
+    <div class="image"><img src="${imgBasePath}${hike.imgSrc}" alt="${hike.imgAlt}"></div>
+    <div>
         <div>
             <h3>Distance</h3>
             <p>${hike.distance}</p>
@@ -111,7 +111,7 @@ function renderOneHikeLight(hike) {
             <h3>Difficulty</h3>
             <p>${hike.difficulty}</p>
         </div>
-</div>`;
+    </div>`;
 
   return item;
 }
@@ -136,8 +136,6 @@ function renderOneHikeFull(hike) {
         <div>
             <h3>How to get there</h3>
             <p>${hike.directions}</p>
-        </div>
-    
-    `;
+        </div>`;
   return item;
 }
