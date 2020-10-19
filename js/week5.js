@@ -1,6 +1,7 @@
 const links =[
     { image: "../images/testing.png", url: "testingnotes.html"},
     { image: "../images/hikes.png", url: "hikes.html"},
+        { image: "../images/home.png", url: "https://astin-jeremiah.github.io/WDD330/"} 
 ]
 
 const list = document.getElementById("week5");
