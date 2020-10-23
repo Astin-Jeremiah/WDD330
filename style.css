@@ -273,3 +273,119 @@ p#hide {
     margin: auto;
 }
 
+.crossed {
+    text-decoration: line-through;
+    font-size: 18px;
+    font-style: italic;
+    margin-left: 10px;
+}
+
+.uncrossed {
+    font-size: 18px;
+    margin-left: 10px;
+}
+
+
+li.list {
+    list-style-type: none;
+    font-size: 20px;
+}
+
+#enteritems {
+    font-size: 20px;
+}
+
+.fas.fa-plus-circle {
+    font-size: 22px;
+    color: green;
+    position: relative;
+    top: 2px;
+    left: -10px;
+}
+
+.fas.fa-plus-circle:hover, .fas.fa-undo:hover {
+    color:#4b78d6;
+}
+
+.fas.fa-undo {
+    float: right;
+}
+
+.fa-circle {
+    color: red;
+    float: left;
+    position: relative;
+    top: 4px;
+ 
+}
+
+.fa-check-circle {
+    color: green;
+    float: left
+    position: relative;
+    top: 4px;
+}
+
+.fas.fa-trash-alt {
+    float:right;
+}
+
+.fas.fa-trash-alt:hover {
+    color:#4b78d6;
+}
+
+input#todoitem {
+    font-size: 18px;
+    text-align: center;
+    width: 250px;
+}
+
+fieldset#todoborder {
+    border: 1px solid #4b78d6;
+    border-radius: 10px;
+    min-height: 350px;
+    width: 700px;
+    margin: auto;
+}
+
+legend#title {
+    padding: 10px 100px 10px 100px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 24px;
+    font-family: 'Lato', sans-serif;
+    color: #272727;
+    font-weight: bold;
+    border: 1px solid #4b78d6;
+}
+
+button#all, button#add, button#act2, button#complete {
+    font-family: 'Lato', sans-serif;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    background-image: linear-gradient(#62a6ed, #4b78d6); 
+    text-decoration: none;
+    margin-bottom: 25px;
+}
+
+button#all:hover, button#add:hover, button#act2:hover, button#complete:hover {
+    background-image: linear-gradient(#039bda, #036ec5);
+}
+
+button#all:focus, button#add:focus, button#act2:focus, button#complete:focus {
+    background-image: linear-gradient(#1aafee, #0484d9);
+    border: none;
+}
+
+button#all:active, button#add:active, button#act2:active, button#complete:active {
+    transform: scale(.9);
+}
+
+ul#output {
+    min-height: 230px;
+    width: 280px;
+    margin: 10px auto 10px auto;
+    padding-left: 0px;
+}
+
