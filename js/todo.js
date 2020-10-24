@@ -52,7 +52,6 @@ function builditem () {
         });
         localStorage.setItem("list", JSON.stringify(items));
         id++
-        console.log(items);
     }
     input.value = "";
 }
@@ -77,27 +76,18 @@ function additem(name, id, completed, trash) {
 //Function To Mark Task Complete
 function complete() {
     const element = event.target.parentElement;
-    console.log(element);
-    console.log(items);
-    console.log(element.firstChild);
     element.firstChild.classList.toggle(check);
     element.firstChild.classList.toggle(uncheck);
-    console.log(element.querySelector("span").classList);
     element.querySelector("span").classList.toggle(crossed);
     element.querySelector("span").classList.toggle(uncrossed);
-    console.log(element.id);
     items[element.id].completed = items[element.id].completed ? false : true;
-    console.log(items);
     localStorage.setItem("list", JSON.stringify(items));
 }
 
 //Function To Delete Task
-function rem() {
+function removeitem() {
     const element = event.target.parentElement;
-    console.log(element);
-    console.log(element.id);
     items[element.id].trash = items[element.id].trash ? false : true;
-    console.log(items);
     if(items[element.id].trash) {
         element.remove();
     }
@@ -110,16 +100,14 @@ function notactive(items) {
     return items.completed == true && items.trash == false;
 }
 
-function comp() {
+function done() {
     const newitems = items.filter(notactive);
-    console.log(newitems);
     outputelement.innerHTML = "";
     for (let i=0; i < newitems.length; i++){
         
         let li = `<li class="list" id=${newitems[i].id}><i class="far ${check}" onclick="complete()"></i> 
                 <span class="${crossed}">${newitems[i].name}</span> 
-                <i class="fas fa-trash-alt" onclick="rem()"></i>`;
-        console.log(li);
+                <i class="fas fa-trash-alt" onclick="removeitem()"></i>`;
         outputelement.insertAdjacentHTML("beforeend", li);
     }
 }
@@ -131,20 +119,18 @@ function activeitem(items) {
 
 function active() {
     const newitems = items.filter(activeitem);
-    console.log(newitems);
     outputelement.innerHTML = "";
     for (let i=0; i < newitems.length; i++){
         
         let li = `<li class="list" id=${newitems[i].id}><i class="far ${uncheck}" onclick="complete()"></i> 
                 <span class="uncrossed">${newitems[i].name}</span> 
-                <i class="fas fa-trash-alt" onclick="rem()"></i>`;
-        console.log(li);
+                <i class="fas fa-trash-alt" onclick="removetiem()"></i>`;
         outputelement.insertAdjacentHTML("beforeend", li);
     }
 }
 
 //Reload Array When View All Tasks Button Is Pressed
-function adam() {
+function showall() {
     outputelement.innerHTML = "";
     loaddata(items);
 }
@@ -158,7 +144,6 @@ function del() {
     const newitems = items.filter(delitem);
     let test = "";
     let test2 = "";
-    console.log(newitems);
     outputelement.innerHTML = "";
     for (let i=0; i < newitems.length; i++){
         if (newitems[i].completed == true) {
@@ -172,7 +157,6 @@ function del() {
         let li = `<li class="list" id=${newitems[i].id}><i class="far ${test}" onclick="complete()"></i> 
                 <span class="${test2}">${newitems[i].name}</span> 
                 <i class="fas fa-undo" onclick="undo()"></i>`;
-        console.log(li);
         outputelement.insertAdjacentHTML("beforeend", li);
     }
 }
@@ -180,8 +164,6 @@ function del() {
 //Function To Reactivate Deleted Task
 function undo() {
     const element = event.target.parentElement;
-    console.log(element);
-    console.log(element.id);
     items[element.id].trash = items[element.id].trash ? false : true;
     del();
     localStorage.setItem("list", JSON.stringify(items));
