@@ -360,7 +360,7 @@ legend#title {
     border: 1px solid #4b78d6;
 }
 
-button#all, button#add, button#act2, button#complete {
+button#all, button#delete, button#act2, button#complete {
     font-family: 'Lato', sans-serif;
     color: white;
     padding: 10px;
