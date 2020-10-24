@@ -370,16 +370,16 @@ button#all, button#add, button#act2, button#complete {
     margin-bottom: 25px;
 }
 
-button#all:hover, button#add:hover, button#act2:hover, button#complete:hover {
+button#all:hover, button#delete:hover, button#act2:hover, button#complete:hover {
     background-image: linear-gradient(#039bda, #036ec5);
 }
 
-button#all:focus, button#add:focus, button#act2:focus, button#complete:focus {
+button#all:focus, button#delete:focus, button#act2:focus, button#complete:focus {
     background-image: linear-gradient(#1aafee, #0484d9);
     border: none;
 }
 
-button#all:active, button#add:active, button#act2:active, button#complete:active {
+button#all:active, button#delete:active, button#act2:active, button#complete:active {
     transform: scale(.9);
 }
 

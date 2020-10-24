@@ -67,7 +67,7 @@ function additem(name, id, completed, trash) {
     
     const li = `<li class="list" id=${id}><i class="far ${done}" onclick="complete()"></i> 
                 <span class="${crossout}">${name}</span> 
-                <i class="fas fa-trash-alt" onclick="rem()"></i>`;
+                <i class="fas fa-trash-alt" onclick="removeitem()"></i>`;
     
     outputelement.insertAdjacentHTML("beforeend", li);
     
