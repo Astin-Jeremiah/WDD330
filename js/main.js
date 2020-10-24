@@ -16,7 +16,7 @@ const links =[
     { image: "images/instagram.png", url: "https://www.instagram.com/astinjeremy/?hl=en"},
     { image: "images/twitter.png", url: "https://twitter.com/astin_jeremiah?p=s"},
     { image: "images/internet.png", url: "https://www.popculturevinyl.com/about_us/"},
-    { image: "images/mail.png", url: "week13/index.html"},
+    { image: "images/mail.png", url: "contact/index.html"},
     
 ]
 
