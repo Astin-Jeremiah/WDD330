@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+        <title>Ajax Notes</title>
+        <link href="../style.css" type="text/css" rel="stylesheet" />
+        <link rel="icon" href="../images/favicon.png">
+    </head>
+
+<body class ="notes";>
+    <h1>WDD 330 Portfolio<br>
+        Jeremiah Astin<br><br>
+        <span class="notestitle">Ajax Notes</span></h1>
+    <ul class="notedetail">
+        <li>Ajax - A technique that allows web pages to communicate asychronously with a server and it dynamically updates web pages without reloading; Allowing data to be sent and received in the background as well as portions of a page to be updated in response to user events while the rest of the program continues to run</li>
+        <li>Same Origin Policy - The browser blocks all requests from a domain that is different from the page making the request unless Cross-Orin resource sharing are used</li>
+        <li>Application Programming Interface (API) - collection of methods that allow external access to another program or service</li>
+        <li>fetch() - only mandatory argument is the URL of the resource you wish to fetch</li>
+        <li>Response Interface - deals with the object that's returned when the promise is fulfilled; has an ok property that checks to see if the response is successful; 200 = response was successful; 201 = resource was created; 204 = request is successful but no content was returned</li>
+        <li>redirect() - used to redirect to another URL</li>
+        <li>text() - takes a stream of text from the response, reads it to completion and returns a promise that resolves to a USVString object that can be treated as a string in JavaScript</li>
+        <li>blob() - used to read a file of raw data, such as an image or spreadsheet, once it has read the entire file it returns a promise that resolves with a blob object</li>
+        <li>json() - method used to deal with transforming a stream of JSON data into a promise that resolves to a JavaScript object</li>
+        <li>HTTP Methods - Tells the server what type of request is being made, which determines how the server will deal with the request
+            <ul>
+                <li>Get - requirements to retrieve resources</li>
+                <li>Post - requirements usually used to create a resource but can actually perform any task</li>
+                <li>Put - requests to upsert or insert a resource or update it entirely</li>
+                <li>Patch - requests to make partial updates to a resource</li>
+                <li>Delete - requests to delete a resource</li>
+            </ul>
+        </li>
+        <li>Request Interface - created used the request() constructor and include many properties
+            <ul>
+                <li>URL - the URL of the requested resource; required</li>
+                <li>method - a string that specifies which HTTP method should be used for the request</li>
+                <li>headers - a headers object that provides details of the requests headers; provide addition information such as file type of the resource, cookie information, authentication information, and when the resource was last modified
+                    <ul>
+                        <li>has() - used to check if the headers object contains the header provided as an argument</li>
+                        <li>get() - returns the value of the header provided as an argument</li>
+                        <li>set() - used to set a value of an already existing header or create a new header with the values provided as an argument if it does not already exist</li>
+                        <li>append() - adds a new header to the headers object</li>
+                        <li>delete() - removes the header provided as an argument</li>
+                        <li>keys(), values(), entries() - iterators that can be used to iterate over the headers key, values, or entries (key value pairs)</li>
+                    </ul>
+                </li>
+                <li>mode - all you to specify if CORS (default) is used or not</li>
+                <li>cache - allows you to specify how the request will use the browser's cache; force it to request a resource and update the cache with the result or force it to only look in the cache for the resource</li>
+                <li>credentials - lets you specify if cookies should be allowed with the request</li>
+                <li>redirect - specifies what to do if the response returns a redirect
+                    <ul>
+                        <li>Follow - the redirect is followed</li>
+                        <li>Error - an error is thrown</li>
+                        <li>Manual - the user has to click on a link to follow the redirect</li>
+                    </ul>
+                </li>
+                <li></li>
+            </ul>
+    </ul>
+
+    <br>
+    <div class="button">
+            <a href="https://astin-jeremiah.github.io/WDD330/" class="mainmenu">Return To Main Menu</a>&emsp;<a href="index.html" class="sectionmenu">Return To Section Menu</a>
+        </div>
+    
+    <script src="../js/week1.js"></script>   
+</body>
+</html>

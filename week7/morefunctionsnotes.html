@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+        <title>Further Functions Notes</title>
+        <link href="../style.css" type="text/css" rel="stylesheet" />
+        <link rel="icon" href="../images/favicon.png">
+    </head>
+
+<body class ="notes";>
+    <h1>WDD 330 Portfolio<br>
+        Jeremiah Astin<br><br>
+        <span class="notestitle">Further Functions Notes</span></h1>
+    <ul class="notedetail">
+        <li>All functions have a length property that returns the number of parameters the function has</li>
+        <li>call() - Used to set the value of this inside a function to an object that is provided as the first argument; if a function does not refer to an object than null must be provided as the first argument</li>
+        <li>apply() - Works similar to call but the arguments of the function are provided as on array; even if there is only one argument</li>
+        <li>You can add custom properties to functions; adding a description property to a function to describe what it does</li>
+        <li>Memoization - If a function takes some time to compute a return value, you can save the result in a cache property that can later be accessed instead of having to compute the result again</li>
+        <li>Immediately Invoked Function Expression - an anonymous function that invokes as soon as it's defined; the entire expression is placed in parentheses</li>
+        <li>Temporary Variables - If a variable is only required temporarily because the causes confusion if it is still available after the code or if the variable can clash with another piece of code</li>
+        <li>Initialization Code - Code that only runs once so it does not need reusable named functions and all variables in the code will be temporary</li>
+        <li>When using strict mode it is pest practice to wrap your code in an Immediately Invoked Function Expression; only forcing the code in the IIFE to use strict mode</li>
+        <li>Self Contained Code Blocks - Using an IIFE to enclose blocks of code inside its own scope  so it does not interfere with any other parts of the program</li>
+        <li>A function cannot only call itself but it also can define and redefine itself; this is done by assigning an anonymous function to a variable that has the same number as the same name as the function
+            <ul>
+                <li>If the function is also assigned to another variable, this variable will maintain the original function definition and not be rewritten</li>
+                <li>Any properties previously set on the function will be lost when the function redefines itself</li>
+            </ul>
+        </li>
+        <li>Init-Time Branching - enables the functions to work more effectively and avoid checking for features every time they're invoked</li>
+        <li>Recursive Function - one that invokes itself until a certain condition is met</li>
+        <li>Event-Driven Asynchronous Programming - Only one piece of code will be processed at a time; instead of waiting for an event to occur a call back can be created that is invoked when the event happens; the code is able to run out of order; ensures that waiting for other tasks to complete doesn't hold up the execution of the other parts of the program</li>
+        <li>Promise - the future result of an asynchronous operation; does not do anything that a call back cannot
+            <ul>
+                <li>Pending - the state until the operation takes place</li>
+                <li>Unsettled - state when the operations is taking place</li>
+                <li>Settled - once the operation is complete</li>
+                <li>Resolved - the asynchronous function was completed successfully</li>
+                <li>Rejected - the asynchronous operation didn't work as expected, wasn't successfully completed or resulted in an error</li>
+                <li>Executor - a constructor function that initializes the promise and starts the asynchronous operation </li>
+                <li>then() - used to deal with the outcome of a promise; fulfillment function is used when the function is resolved; rejection function is used if the promise is rejected; can be chained together to form a sequential piece of code that is easy to read</li>
+            </ul>
+        </li>
+        <li>Asycn Functions - start with the async keyword; it uses the await operator before an asynchronous function and wraps the return value of the function in promise that can be assigned to a variable followed by a line of code that is not executed until the promise is resolved.</li>
+        <li>Closure - a reference to a variable that was created inside the scope of another function, but is kept alive and used in another part of the program
+            <ul>
+                <li>An inner function which is declared inside another function has full access to all of the variables declared inside the scope of the function in which it's declared</li>
+                <li>the outer function only has access to the variable outside which was declared in its scope</li>
+            </ul>
+        </li>
+        <li>Generators - special functions used to produce iterators that maintain the state of a value; defined by the use of a asterisk symbol * after the function declaration; does not actually run any of the code in the function, but returns a generator object that can be used to create an iterator that implements on next() method
+            <ul>
+                <li>yield = special keyword used to return a value, but unlike return the value of the keyword is remembered for the next time yield is called</li>
+            </ul>
+        </li>
+        <li>Pure Functions
+            <ul>
+                <li>The return value of a pure function should only depend on the values provided as arguments.  It doesn't rely on values from somewhere else in the program</li>
+                <li>There are no side effects; A pure function doesn't change any values or data elsewhere in the program; It only makes non-destructive data transformations and return new values, rather than altering any of the underlying data.</li>
+                <li>Referential transparency; Given the same arguments, a pure function will always return the same result</li>
+                <li>Must have at least one argument; otherwise the return value must depend on something other than the arguments of the function</li>
+                <li> Must have a return value; otherwise there's no point in the function</li>
+            </ul>
+        </li>
+        <li>Higher Order Functions - functions that accept another function as an argument or return another function as a result</li>
+        <li>Curring - process that involves the partial application of functions; not all arguments have been supplied to the function so it returns another function that retains the arguments already provided and expects the remaining arguments that were omitted when the original function was called; A final result is only returned once all the expected arguments have eventually been provided</li>
+    </ul>
+
+    <br>
+    <div class="button">
+            <a href="https://astin-jeremiah.github.io/WDD330/" class="mainmenu">Return To Main Menu</a>&emsp;<a href="index.html" class="sectionmenu">Return To Section Menu</a>
+        </div>
+    
+    <script src="../js/week1.js"></script>   
+</body>
+</html>
