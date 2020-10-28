@@ -4,7 +4,7 @@ const apiButton = document.getElementById('chuck');
 
 const outputDiv = document.getElementById('output');
 
-const testURL = 'http://numbersai.com/random';
+const textURL = 'http://numbersai.com/random';
 
 const apiURL = 'http://api.chucknorris.io/jokes/random';
 
@@ -32,6 +32,6 @@ apiButton.addEventListener('click', () => {
         throw Error(response.statusText);
     })
     .then( response => response.json() )
-    .then( data => outputDiv.innerText = data.vale )
+    .then( data => outputDiv.innerText = data.valuee )
     .catch (error => console.log ('There was an error:', error))
 }, false);
