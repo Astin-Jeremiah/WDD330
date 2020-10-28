@@ -6,10 +6,10 @@ const outputDiv = document.getElementById('output');
 
 const textURL = 'http://numbersapi.com/random';
 
-const apiURL = 'http://api.chucknorris.io/jokes/random';
+const apiURL = 'https://api.chucknorris.io/jokes/random';
 
 textButton.addEventListener('click', () => {
-    fetch(testURL)
+    fetch(textURL)
     .then( response => {
         outputDiv.innerHTML = 'Waiting for response...';
         if (response.ok){
