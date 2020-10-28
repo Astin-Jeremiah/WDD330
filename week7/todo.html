@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
         <title>
-            AJax Practice Chuck Norris
+            AJax Practice To Do
         </title>
         <link href="../style.css" type="text/css" rel="stylesheet" />
         <link rel="icon" href="../images/favicon.png"> 
@@ -13,19 +13,18 @@
 <body class="center">
     <h1>WDD 330 Portfolio<br>
         Jeremiah Astin<br><br>
-        <u>Ajax Practice Chuck Norris</u></h1>
+        <u>Ajax Practice To Do</u></h1>
     <div class="centerdiv">
-    <button id='chuck'>Chuck Norris Fact</button>
-    <br>
-    <div id='output'>
-        Ajax response will appear here
-    </div>
+    <form id='todo' action='https://jsonplaceholder.typicode.com/todos' method='POST'>
+        <input type='text' name='task'  placeholder='Add Task' autofocus required>
+        <button type='submit'>Add Task</button>
+    </form>
     </div>
     <br>
     <br>
     <div class="button">
             <a href="https://astin-jeremiah.github.io/WDD330/" class="mainmenu">Return To Main Menu</a>&emsp;<a href="index.html" class="sectionmenu">Return To Section Menu</a>
     </div>
-    <script src="main.js"></script>
+    <script src="main2.js"></script>
 </body>
 </html>
