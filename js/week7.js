@@ -3,6 +3,7 @@ const links =[
     { image: "../images/ajaxnotes.png", url: "ajaxnotes.html"},
     { image: "../images/ajax.png", url: "chucknorris.html"},
     { image: "../images/server.png", url: "todo.html"},
+    { image: "../images/hikes.png", url: "hikes.html"},
     { image: "../images/home.png", url: "https://astin-jeremiah.github.io/WDD330/"},
 ]
 
