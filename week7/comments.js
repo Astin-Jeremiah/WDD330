@@ -63,7 +63,10 @@ class Comments {
 
   addSubmitListener(postName) {
     document.getElementById('commentSubmit').onclick = () => {
-      this.model.addComment(
+      if (document.getElementById('commentEntry').value == ''){
+          return false;
+      }
+        this.model.addComment(
         postName,
         document.getElementById('commentEntry').value
       );
