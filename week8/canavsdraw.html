@@ -63,10 +63,14 @@ context.lineWidth = 3;
 context.fill();
 context.stroke();
 
+window.addEventListener("load", draw, false);
+    
+function draw(){
 var canvas = document.getElementById("mc4");
 var context = canvas.getContext("2d");
 var image = document.getElementById("ghost");
 context.drawImage(image, 25, 25);
+}
 
 </script>
 </html>
