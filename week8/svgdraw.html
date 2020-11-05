@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+        <title>
+            SVG Examples
+        </title>
+        <link href="../style.css" type="text/css" rel="stylesheet" />
+        <link rel="icon" href="../images/favicon.png">
+    </head>
+
+<body class="center">
+    <h1>WDD 330 Portfolio<br>
+        Jeremiah Astin<br><br>
+        <u>SVG Examples</u></h1>
+    <div class="centerdiv">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><circle cx="50" cy="50" r="25" fill="red"/></svg>
+    <br>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><rect x="10" y="10" width="100" height="100" fill="blue" stroke="red" stroke-width="3"/></svg>
+    <br>
+    <br>
+    <div class="button">
+            <a href="https://astin-jeremiah.github.io/WDD330/" class="mainmenu">Return To Main Menu</a>&emsp;<a href="index.html" class="sectionmenu">Return To Section Menu</a>
+    </div>
+    </div>
+</body>
+<script>
+//function determineLocation() {
+    if (navigator.onLine) {
+        if (Modernizr.geolocation) {
+            navigator.geolocation.getCurrentPosition(displayOnMap);
+            var container = Raphael(document.getElementById("spinner"), 125, 125);
+            var spinner = container.image("spinner.svg", 0, 0, 125, 125);
+            var attrsToAnumate = {trasform: "r720"};
+            spinner.animate(attrsToAnumate, 60000);
+        }
+    }
+//}
+</script>
+</html>

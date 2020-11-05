@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+        <title>Canvas, SVG, and Drag and Drop Notes</title>
+        <link href="../style.css" type="text/css" rel="stylesheet" />
+        <link rel="icon" href="../images/favicon.png">
+    </head>
+
+<body class ="notes";>
+    <h1>WDD 330 Portfolio<br>
+        Jeremiah Astin<br><br>
+        <span class="notestitle">Canvas, SVG, and Drag and Drop Notes</span></h1>
+    <ul class="notedetail">
+        <li>Canvas allows you to draw shapes and lines, arcs and text, gradients and patters, as well as manipulate pixels in images and videos
+            <ul>
+                <li>Add a canvas element to the page; the text located between the html canvas tags will only be shown if the browser does not support canvas</li>
+                <li>Make sure to give the canvas tags an ID so the canvas JavaScript can access the element from the DOM</li>
+                <li>You must set both a width and height attribute to your canvas element; DO NOT USE CSS TO ADD THE ATTRIBUTES</li>
+                <li>Set Up The Canvas JavaScript File
+                    <ul>
+                        <li>Save the JavaScript File</li>
+                        <li>Grab the canvas element on the page; var canvas = docuement.getElementbyId("myCanvas");</li>
+                        <li>Set up the canvas context; var context = canvas.getContext("2d");</li>
+                        <li>Set a color string to style the stroke; context.strokeStyle = "red";
+                            <ul>
+                                <li>Can be changed to be a pattern, gradient, or image</li>
+                            </ul>
+                        </li>
+                        <li>Define a fill color; context.fillStyle = "blue";</li>
+                        <li>Add other elements such as drawing a rectangle; context.fillREct(10, 10, 100, 100); context.strokeRect (10, 10, 100, 100);</li>
+                        <li>Paths - create a blueprint for your lines, arcs, and shapes, but the paths are invisible until you give them a stroke</li>
+                        <li>toDataURL - creates a way you can save your canvas drawings as either a PNG or JPEG</li>
+                        <li>Canvas can be used to draw on image on your site as well as manipulate the image; manipulations are looked at per pixel so you can use a for loop to iterate through every pixel in the image</li>
+                    </ul>
+                </li>
+                <li>SVG - Scalable Vector Graphics- Vector Images preserve their quality even as you blow them up or shrink them down </li>
+                <li>Raphael is an open source JavaScript library that makes drawing and animating with SVG's much easier</li>
+                <li>Drag and Drop API - allows us to specify that certain elements are draggable and then specify what should happen when these draggable elements are dragged over or dropped onto other elements on the page; not supported by Android or iOS
+                    <ul>
+                        <li>Set the drggable attribute on any HTML element you'd like to be draggable</li>
+                        <li>Add an event listener for the dragstart event on any draggable HTML element</li>
+                        <li>Add an event listener for the dragover and drop events on any elements that you want to have accept dropped items</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <br>
+    <div class="button">
+            <a href="https://astin-jeremiah.github.io/WDD330/" class="mainmenu">Return To Main Menu</a>&emsp;<a href="index.html" class="sectionmenu">Return To Section Menu</a>
+        </div>
+    
+    <script src="../js/week1.js"></script>   
+</body>
+</html>

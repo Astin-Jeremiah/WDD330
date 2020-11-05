@@ -427,4 +427,69 @@ fieldset.contact legend {
     padding-top: 20px;
 }
 
+.hidden {
+    display: none;
+}
+
+.myCanvas {
+    border: dotted 2px black;
+    margin: 0 20px;
+}
+
+svg {
+    height: 200px;
+}
+
+#one:hover {
+    transform: translateX(40px);
+}
+
+#two:hover {
+    transform: scale(1.5);
+}
+
+#three:hover {
+    transform: rotate(10deg);
+}
+
+#four {
+    transform: skew(15deg, 4deg);
+}
+
+#five {
+    width: 50px;
+    height: 50px;
+    background: red;
+    transition: width 2s, height 2s, transform 2s;
+    margin: auto;
+}
+
+#five:hover {
+    width: 150px;
+    height: 150px;
+    transform: rotate(180deg);
+}
+
+#six {
+    width: 50px;
+    height: 50px; 
+    background-color: red;
+    position: relative;
+    animation-name: five;
+    animation-duration: 5s;
+    animation-iteration-count: 3;
+    animation-direction: alternate;
+    margin:auto;
+}
+
+@keyframes five {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:100px; top:0px;}
+    50%  {background-color:blue; left:100px; top:100px;}
+    75%  {background-color:green; left:0px; top:100px;}
+    100% {background-color:red; left:0px; top:0px;}
+}
+
+
+
 

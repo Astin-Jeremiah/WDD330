@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+        <title>Transforms and Transitions Notes</title>
+        <link href="../style.css" type="text/css" rel="stylesheet" />
+        <link rel="icon" href="../images/favicon.png">
+    </head>
+
+<body class ="notes";>
+    <h1>WDD 330 Portfolio<br>
+        Jeremiah Astin<br><br>
+        <span class="notestitle">CSS3 Transforms and Transitions</span></h1>
+    <ul class="notedetail">
+        <li>Transform - lets you translate, rotate, scale, and or skew any element on the page; do not work on inline elements; use display:inline-block to over come this</li>
+        <li>Translated elements can only be moved relative to its current position</li>
+        <li>translate(x,y) - moves an element x from the left and y from the top</li>
+        <li>translatex and translatey can be used to only move the object in one direction</li>
+        <li>scale(x,y) - scales an element by the defined factors horizontally and vertically; provide only one value to scale the same amount in both directions preserving the original aspect ratio</li>
+        <li>scalex and scaley can be used to only scale the element in one direction</li>
+        <li>Use a space separated list when declaring multiple transform functions to the same element</li>
+        <li>rotate() - rotates an element around the point of origin by a specified angle value; default point or origin is the objects center; angels are declared in degrees with positive and negative numbers to move clockwise or counterclockwise; values can also be in grads, radians, or turns</li>
+        <li>skew(x,y) - specifies a skew along the x and y axis; if only one number is proved it will only skew on the x axis</li>
+        <li>skewx and skewy can be used to skew in only one direction</li>
+        <li>transform-origin - CSS property to control the origin from which the transforms are applied center of object is the default</li>
+        <li>Creating A Simple Transition Using Only CSS
+            <ul>
+                <li>Declare the original state of the element in the default style declaration</li>
+                <li>Declare the final state of your transitioned element: a:hover state</li>
+                <li>Include the transition functions in your default styling declaration using the transition properties: transition-property, transition-duration, transition-timing-function and transition-delay</li>
+            </ul>
+        </li>
+        <li>transition-property - defines the CSS properties of the element that should be transitioned</li>
+        <li>transition-duration - sets how long the transition will take or the time it takes to go from the default sate to the transitioned sate; specified in seconds or milliseconds</li>
+        <li>transition-timing-function - lets you control the pace of the transition in even more granular detail; ease, linear, ease-in, ease-out, ease-in-out</li>
+        <li>The timing function be be more precise by defining a cubic-bezier function with four numeric parameters; advanced technique</li>
+        <li>transition-delay - introduce a delay before the transition begins; defined in number of seconds or milliseconds to delay the transition</li>
+        <li>Transition shorthand - combine multiples lines of transition properties to one single statement</li>
+        <li>The transition property allows for multiple transitions on one call; example change the color at the same time as size and rotation</li>
+        <li>Keyframe - snapshot that defines a staring and end point of any smooth transition</li>
+        <li>animation-name - attaches an animation to the element</li>
+        <li>animation-duration - defines the length of time (in seconds or milliseconds) an animation takes to complete one iterations</li>
+        <li>animation-timing-function - determines how the animation will progress over its duration (same options as transition-timing-function</li>
+        <li>animation-iteration-count - define how many times the animation will play through; usually expressed as a number or the value infinite; 1 is the default value</li>
+        <li>animation-direction - what direction the animation runs start to finish or finish to start; reverse or alternate are common values</li>
+        <li>animation-delay - define how many milliseconds or seconds to wait before the browser begins the animation</li>
+        <li>animation-fill-mode - defines what happens before the first animation iterations begins or after the last animation iteration concludes; none, forward, backwards, or both</li>
+        <li>animation-play-sate - defines whether the animation is running or paused</li>
+        <li>Animation Shorthand used to combine all the animations elements into a single CSS statement</li>
+    </ul>
+
+    <br>
+    <div class="button">
+            <a href="https://astin-jeremiah.github.io/WDD330/" class="mainmenu">Return To Main Menu</a>&emsp;<a href="index.html" class="sectionmenu">Return To Section Menu</a>
+        </div>
+    
+    <script src="../js/week1.js"></script>   
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+        <title>
+            Drag and Drop Example
+        </title>
+        <link href="../style.css" type="text/css" rel="stylesheet" />
+        <link rel="icon" href="../images/favicon.png">
+    </head>
+
+<body class="center">
+    <h1>WDD 330 Portfolio<br>
+        Jeremiah Astin<br><br>
+        <u>Drag and Drop Example</u></h1>
+    <div class="centerdiv">
+    <h2 id="output">Put The Hat On The Cat</h2>
+    <img src="../images/cat.png" id="cat" class="show"><img src="../images/cat2.png" id="cat2" class="hidden">
+    </div>
+    <img src="../images/hat.png" id ="hat2" draggable="true" class="show")>
+    </div>
+    <br>
+    <br>
+    <div class="button">
+            <a href="https://astin-jeremiah.github.io/WDD330/" class="mainmenu">Return To Main Menu</a>&emsp;<a href="index.html" class="sectionmenu">Return To Section Menu</a>
+        </div>
+</body>
+<script>
+var hat = document.getElementById("hat2");
+
+hat.addEventListener('dragstart', function (event) {
+    evet.dataTransfer.setData("text/plain", this.id);
+});
+    
+var cat = document.getElementById("cat");
+var cat2 = document.getElementById("cat2");
+    
+cat.addEventListener('dragover', function(event) {
+    event.preventDefault();
+});
+
+cat.addEventListener("drop", function(event) {
+    var outputelement = document.getElementById("output");
+    outputelement.innerHTML = "The Cat In The Hat";
+    hat.className = "hidden";
+    cat.className = "hidden";
+    cat2.className = "show";
+});
+    
+event.preventDefault();
+</script>
+
+<style>      
+</style>
+</html>
