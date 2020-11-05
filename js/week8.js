@@ -2,7 +2,7 @@ const links =[
     { image: "../images/tt.png", url: "transformsnotes.html"},
     { image: "../images/csd.png", url: "canvasnotes.html"},
     { image: "../images/transform.png", url: "transforms.html"},
-    { image: "../images/canvas.png", url: "canvasdraw.html"},
+    { image: "../images/canvas.png", url: "canavsdraw.html"},
     { image: "../images/SVG.png", url: "svgdraw.html"},
     { image: "../images/caticon.png", url: "cathat.html"},
     { image: "../images/home.png", url: "https://astin-jeremiah.github.io/WDD330/"},
