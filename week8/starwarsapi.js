@@ -16,7 +16,6 @@ function loaddata() {
     .then((response) => {
         return response.json();})
     .then((data) => {
-        console.log(data);
         list.push(...data.results);
         for (let i=0; i < list.length; i++){
             let summary = `<h2 class="sw2" id=${list[i].url} onclick="loadprofile(this.id)">${list[i].name}</h2>
@@ -25,7 +24,6 @@ function loaddata() {
                                 <li class="star">Birth Year: ${list[i].birth_year}</li>
                                 <li class="star">Gender: ${list[i].gender}</li>
                                 </ul>`
-        console.log(list);
         outputDiv.insertAdjacentHTML("beforeend", summary);
         }})
     .catch (error => console.log ('There was an error:', error))
@@ -36,13 +34,15 @@ function loadprofile(clicked_id) {
     output2.className="show";
     up.className="hidden";
     down.className="hidden";
-    const url = clicked_id;
+    let url = clicked_id;
+    if(url.match('^http://')){
+     url = url.replace("http://","https://")
+    }
     output2.innerHTML="";
     fetch(url)
     .then((response) => {
         return response.json();})
     .then((data) => {
-        console.log(data);
         profile = data;
         let fullprofile = `<h2 class="sw3">${profile.name}</h2>
                                 <ul class="wars">
@@ -55,7 +55,6 @@ function loadprofile(clicked_id) {
                                 <li class="star2">Gender: ${profile.gender}</li>
                                 </ul>
                                 <figure onclick="back()"><img src="../images/fight.png"><figcaption class="regular">Back</figcaption></figure>`
-        console.log(profile);
         output2.innerHTML = fullprofile;
         })
     .catch (error => console.log ('There was an error:', error))
@@ -84,7 +83,6 @@ function plus() {
     down.className="show";
     number = number+1;
     loaddata();
-    console.log(number);
     if (number == 9){
         up.className="hidden";
     }
@@ -99,7 +97,6 @@ function minus() {
     down.className="show";
     number = number-1;
     loaddata();
-    console.log(number);
     if (number == 1) {
         down.className="hidden";
     }
