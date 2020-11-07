@@ -498,14 +498,14 @@ svg {
 }
 
 .sw {
-    font-family: 'star';
+    font-family: 'star', sans-serif;
     font-size: 75px;
     color: gold;
     -webkit-text-stroke: 1px black;
 }
 
 .sw2 {
-    font-family: 'star';
+    font-family: 'star', sans-serif;
     font-size: 40px;
     color: blue;
     margin-bottom: 5px;
@@ -530,7 +530,7 @@ svg {
 }
 
 .sw3 {
-    font-family: 'star';
+    font-family: 'star', sans-serif;
     font-size: 60px;
     color: blue;
     margin-bottom: 5px;
