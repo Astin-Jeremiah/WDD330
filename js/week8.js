@@ -5,6 +5,7 @@ const links =[
     { image: "../images/canvas.png", url: "canavsdraw.html"},
     { image: "../images/SVG.png", url: "svgdraw.html"},
     { image: "../images/caticon.png", url: "cathat.html"},
+    { image: "../images/starwars.png", url: "starwars.html"},
     { image: "../images/home.png", url: "https://astin-jeremiah.github.io/WDD330/"},
 ]
 
