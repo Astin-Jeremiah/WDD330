@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+        <title>HTML 5 API Notes</title>
+        <link href="../style.css" type="text/css" rel="stylesheet" />
+        <link rel="icon" href="../images/favicon.png">
+    </head>
+
+<body class ="notes";>
+    <h1>WDD 330 Portfolio<br>
+        Jeremiah Astin<br><br>
+        <span class="notestitle">HTML 5 API Notes</span></h1>
+    <ul class="notedetail">
+        <li>data- Attribute - way of embedding data in a web page using custom attributes that are ignored by the browser; their sole purpose is to assist a JavaScript program
+            <ul>
+                <li>start with data-</li>
+                <li>contain only lowercase letters, number, hyphens, dots, colons or underscores</li>
+                <li>include an optional string value</li>
+            </ul>
+        </li>
+        <li>Web Storage API - provides key value stored on a clients computer that is similar to a cookie but has fewer restrictions, more storage capacity, and is generally easier to use; also know as Local Storage; only strings can be saved to local storage
+            <ul>
+                <li>Information stores is not shared with the server on any request</li>
+                <li>Information is available in multiple windows of the browser, but only if the domain is the same</li>
+                <li>Storage capacity is much larger than 4KB; most browsers have a limit of 5GBper domain</li>
+                <li>Any data stored does not automatically expire as it does with cookies</li>
+                <li>localStorage.setItem() - saves data to local storage</li>
+                <li>localStorage.name - can be used to change the name of the local storage element</li>
+                <li>localStorage.removeItem or delete localStorage.name - are used to remove items from local storage</li>
+                <li>localStorage.clear() - removes everything stored in local storage</li>
+                <li>Use JSON.stringify() and JSON.parse() to convert objects from JavaScript to local storage</li>
+            </ul>
+        </li>
+        <li>Geolocation API - used to obtain the geographical position of the device; find the users exact location; due to privacy concerts permission to use this data must be grated by the user
+            <ul>
+                <li>getCurrentPosition() - returns a position object to a specified call back function; returns the longitude and latitude of the device</li>
+                <li>position.speed - returns the ground speed of the device in meters per second</li>
+                <li>position.altitude - returns an estimate of the devices altitude in meters above the center of the earth</li>
+                <li>position.heading - returns the direction the device is moving in; measured in degrees clockwise from North</li>
+                <li>position.timestamp - returns the time the position information was recorded</li>
+                <li>position.accuracy - returns the accuracy of the latitude and longitude properties in meters; the lower the returned value the more accurate the measurement</li>
+                <li>position.altitudeAccuracy - returns the accuracy of the altitude property in meters</li>
+                <li>watchPosition() - will call a callback function every time the position of the device is updated</li>
+                <li>clearWatch() - stops the watch callback from being called</li>
+            </ul>
+        </li>
+        <li>Web Workers - allow processes to be run in the background, adding support for concurrency in JavaScript; prevents the script has become unresponsive error message if the process hakes a while to be carried out
+            <ul>
+                <li>Worker() - creates a new worker</li>
+                <li>Web browsers use the concept of messages to communicate back and forth between the main script and the worker script</li>
+                <li>postMessage() - used to send a message and start the worker working</li>
+                <li>terminate() or close() - used to stop a worker when they have completed its task</li>
+            </ul>
+        </li>
+        <li>Service Workers - allow a worker script to run in the background with the added benefit of being able to intercept network requests; allowing you do take alternative action if the network is offline and effectively creates an app like offline experience; allow access to push notifications or background sync; require a secure network to run on HTTPS to avoid any malicious code hijacking network requests</li>
+        <li>Websockets - allows two way communication with a server; also known as push messaging; the connection is kept open and resources are pushed to the client as soon as they are received</li>
+        <li>Notifications API - allows you to show messages using the system's notifications; usually a pop up in the corner of the screen
+            <ul>
+                <li>requestPermission() - before you send notifications you need to get permission granted from the user</li>
+                <li>close() - will close the notification</li>
+            </ul>
+        </li>
+        <li>Multimedia - HTML 5 introduced audio and video tags that can be used to insert audio and video clips into a webpage; a Media API was also included to control media playback using JavaScript
+            <ul>
+                <li>play() - starts the clip playing at its current position</li>
+                <li>pause() - pauses the clip at the current position</li>
+                <li>volume - number that can be used to set the audio volume</li>
+                <li>muted - boolean value that can be used to mute the audio</li>
+                <li>currentTime - number value that can be used to jump to another part of the clip</li>
+                <li>playbackRate - used to fast-forward or rewind the clip by changing the playback speed</li>
+                <li>loop - boolean value that can be set to true to make the clip repeat on a loop</li>
+                <li>duration - used to see how long the clip lasts</li>
+                <li>play event - fires when the clip starts and when it resumes after a pause</li>
+                <li>pause event - fires when the clip is paused</li>
+                <li>volumechange event - fires when the volume is changed</li>
+                <li>loadmetadata event - fires when all the video's metadata is loaded</li>
+            </ul>
+        </li>
+        <li>A shim or polyfill is a piece of code that adds support of missing features to older browsers</li>
+    </ul>
+
+    <br>
+    <div class="button">
+            <a href="https://astin-jeremiah.github.io/WDD330/" class="mainmenu">Return To Main Menu</a>&emsp;<a href="index.html" class="sectionmenu">Return To Section Menu</a>
+        </div>
+    
+    <script src="../js/week1.js"></script>   
+</body>
+</html>

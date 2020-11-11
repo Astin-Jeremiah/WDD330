@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+        <title>The Window Object Notes</title>
+        <link href="../style.css" type="text/css" rel="stylesheet" />
+        <link rel="icon" href="../images/favicon.png">
+    </head>
+
+<body class ="notes";>
+    <h1>WDD 330 Portfolio<br>
+        Jeremiah Astin<br><br>
+        <span class="notestitle">The Window Object Notes</span></h1>
+    <ul class="notedetail">
+        <li>Global Object - all variables that are created in the global scope are actually properties of a global object and any functions are methods of it</li>
+        <li>Browser Object Model - collection of properties and methods that contain information about the browser and computer screen</li>
+        <li>window.alert() - pause the execution of the program and display a message in a dialog box</li>
+        <li>window.confirm() - stop the execution of the program and display a confirmation dialog that shows the message provided as an argument and give the options of OK or cancel; returns boolean value of true if the user presses OK and false if the user clicks cancel</li>
+        <li>window.prompt() - stop the execution of the program and display a dialog that shows a message provided as an argument as well as an input field that allows the user to enter text; the text is returned as a string when the user clicks OK, if the user clicks cancel null is returned</li>
+        <li>window.navigator.userAgent - returns information about the browser and operating system being used; info can be masked by the user</li>
+        <li>window.location - contains information about the URL of the current page
+            <uL>
+                <li>href - returns the full URL as a string</li>
+                <li>host - returns a string describing the domain of the current URL and the port number; port might be omitted if the default port 80 is used</li>
+                <li>hostname - returns a string describing the domain of the current URL</li>
+                <li>port - returns a string describing the port number; will remain empty if the port is not explicitly stated in the URL</li>
+                <li>pathname - returns a string of the path that follows the domain</li>
+                <li>search - returns a string that starts with a ? followed by the query string parameters; contains an empty string if there are no query parameters</li>
+                <li>hash - returns a string that starts with a # followed by the fragment identifier; returns an empty string is there is no fragment identifier</li>
+                <li>origin - returns a string that shows the protocol and domain where the current page originated from; property cannot be changed, read only</li>
+                <li>reload() = used to force a reload of the current page; if given the parameter of true it will force the browser to reload the page from the server instead of a cached page</li>
+                <li>assign() - used to load another resource from a URL provided as a parameter</li>
+                <li>replace() - similar to assign() nut the current page will not be stored in the session history; so the user is unable to navigate back using the back button</li>
+                <li>toString() - returns a string containing the whole URL</li>
+            </uL>
+        </li>
+        <li>window.history - used to access information about any previously visited pages in the current browser session</li>
+        <li>window.history.length - shows how many pages have been visited before arriving at the current page</li>
+        <li>window.history.go() - used to go to a specific page where 0 is the current page</li>
+        <li>window.history.forward() and window.history.back() - used to navigate forward and backward by one page respectively; just like the forward and back buttons</li>
+        <li>window.open() - opens a new window</li>
+        <li>close() - close a window as long as you have a reference to the window</li>
+        <li>window.moveTo() - moves a window; takes two parameters an X and Y coordinate to move the window to</li>
+        <li>window.resizeTo() - resize a window; takes two parameters the width and height of the resized window</li>
+        <li>window.screen - object contains information about the screen the browser is displayed on; you can find out the height and width of the screen in pixels</li>
+        <li>availHeight and availWidth - find the height and width of the screen excluding the operating system menus</li>
+        <li>colorDepth - find the cold depth of the user's monitor</li>
+        <li>document.write() - writes a sting of text to the page; HTMl can be included in the string and becomes part of the DOM</li>
+        <li>Cookies - small files that are saved locally on a user's computer; stores information that can then be retrieved between page request; can be used to personalize a user's browsing experience, storing user preference, keeping track of user choices, authentication and tracking purposes; take the form a a text file that contain a list of name/value pairs separated by semicolons</li>
+        <li>Create a cookie by assigning it to a JavaScript cookie jar using the document.cookie property</li>
+        <li>Cookie values can be changed by reassigning to to document.cookie</li>
+        <li>You can view the current contents of a cookie with document.cookie</li>
+        <li>Use the split method to break a cookie string apart into an array containing each name/value pair and then use a loop to iterate through the array</li>
+        <li>By default cookies are session cookies and are deleted once a browser session is finished (user closes browser) this can be extended by adding ; expires=date to the end of the cookie when it is set; you can also set the max-age value which takes a value in seconds</li>
+        <li>By default cookies can only be read by pages inside the same directory and domain as the file was set; security reason so that access to the cookie is limited; paths can be changed so that any page on the root directly can read the cookie by adding ; path=/ to the end of the cookie set; you can also set 'domain=donainName at the end of the cookie</li>
+        <li>A cookie can be secured by adding 'secure to end of the cookie; can only be transmitted over a HTTPS network</li>
+        <li>To remove a cookie set it to expire at a time in the past; session cookies expire when the tab or browser is closed</li>
+        <li>window.setTimeout() - accepts a callback to a function as its first parameter and number of milliseconds or seconds as the second parameter; schedules the execution of a function</li>
+        <li>window.clearTimeout() - cancels a time out</li>
+        <li>window.setInterval() - works similar to setTimeout but will repeatedly invoke the callback function after every given number of milliseconds</li>
+        <li>window.clearInterval() - stops/clears a setInterval</li>
+        <li>setTimeout() and setInterval() can be used to animate elements on a page</li>
+    </ul>
+
+    <br>
+    <div class="button">
+            <a href="https://astin-jeremiah.github.io/WDD330/" class="mainmenu">Return To Main Menu</a>&emsp;<a href="index.html" class="sectionmenu">Return To Section Menu</a>
+        </div>
+    
+    <script src="../js/week1.js"></script>   
+</body>
+</html>
