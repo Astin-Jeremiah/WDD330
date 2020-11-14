@@ -482,14 +482,14 @@ svg {
     height: 50px; 
     background-color: red;
     position: relative;
-    animation-name: five;
+    animation-name: tsix;
     animation-duration: 5s;
     animation-iteration-count: 3;
     animation-direction: alternate;
     margin:auto;
 }
 
-@keyframes tfive {
+@keyframes tsix {
     0%   {background-color:red; left:0px; top:0px;}
     25%  {background-color:yellow; left:100px; top:0px;}
     50%  {background-color:blue; left:100px; top:100px;}
