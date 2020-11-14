@@ -447,23 +447,23 @@ svg {
     height: 200px;
 }
 
-#one:hover {
+#tone:hover {
     transform: translateX(40px);
 }
 
-#two:hover {
+#ttwo:hover {
     transform: scale(1.5);
 }
 
-#three:hover {
+#tthree:hover {
     transform: rotate(10deg);
 }
 
-#four {
+#tfour {
     transform: skew(15deg, 4deg);
 }
 
-#five {
+#tfive {
     width: 50px;
     height: 50px;
     background: red;
