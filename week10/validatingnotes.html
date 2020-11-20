@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+        <title>Validating Forms Notes</title>
+        <link href="../style.css" type="text/css" rel="stylesheet" />
+        <link rel="icon" href="../images/favicon.png">
+    </head>
+
+<body class ="notes";>
+    <h1>WDD 330 Portfolio<br>
+        Jeremiah Astin<br><br>
+        <span class="notestitle">Validating Forms Notes</span></h1>
+    <ul class="notedetail">
+        <li>Client Side Form Validation - ensure all required form controls are filled out in the correct format</li>
+        <li>Client Side Form Validation should not be considered an exhaustive security measure.  Your program should always perform security checks on any form submitted data on the server side as well as the client side.</li>
+        <li>Built In Form Validation - uses HTML5 form validation features to validate the form
+            <ul>
+                <li>required: specifies whether a form field need to be filled in before the form can be submitted</li>
+                <li>minlenght and maxlenght: specifies the minimum or maximum length of textual data for the entry</li>
+                <li>min and max: specifies the minimum and maximum values of numerical input types</li>
+                <li>type: specifies whether the data needs to be a number, an email address, or some other specific preset type</li>
+                <li>pattern: specifies a regular expression that defines a pattern the entered data needs to follow; regular patterns are case sensitive
+                    <ul>
+                        <li>a - matches one character that is a (not b or aa, or so on)</li>
+                        <li>abc - matches a, followed by b, followed by c</li>
+                        <li>ab?c - matches a, optionally followed by c, followed by c (ac or abc)</li>
+                        <li>ab*c - matches a, optionally followed by b's, followed by c (ac, abc, abbbbbc, and so on)</li>
+                        <li>a|b - matches one character that is a or b</li>
+                        <li>abc|xyz - matches exactly abd or exactly xyz (not abcxyz or a or y or so on)</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>JavaScript Form Validation - Form validation is custom coded via JavaScript
+            <ul>
+                <li>Most browsers support the Constraint Validation API
+                    <ul>
+                        <li>validateMessage - returns a localized message describing the validation constraints that the control doesn't satisfy, if no constraints are violated it will return an empty string</li>
+                        <li>validity - returns a ValidityStatment object that contains several properties describing the validity state of the elements
+                            <ul>
+                                <li>patternMismatch - returns true if the value does not match the specified patter and false if it does match</li>
+                                <li>tooLong - returns true if the value is longer than the maximum length specified by the maxLength attribute and false if it is shorter or equal to the maximum</li>
+                                <li>tooShort - returns true if the value is shorter than the minimum length specified by the minlength attribute or false if it is greater or equal to the minimum</li>
+                                <li>rangeOverflow - returns true if the value is greater than the maximum specified by the max attribute or false if it is less than or equal to the maximum</li>
+                                <li>rangeUnderflow - returns true if the value is less than the minimum specified by the min attribute or false if it is greater than or equal to the minimum</li>
+                                <li>typeMismatch - returns true if the value is not in the required syntax (email or url) or false if the syntax is correct</li>
+                                <li>valid - returns true if the element matches all its validation constraints and is therefor considered to be valid or false if it fails any constraints</li>
+                                <li>valueMissing - returns true if the element has a required attribute but not value or false otherwise</li>
+                                <li>willValidate - returns true if the element will be validated when the form is submitted and false otherwise</li>
+                                <li>checkValidity() - returns true if the elements value has no validity problems and false otherwise</li>
+                                <li>setCustomValidity(message) - adds a custom message to the element, the message is displayed if the element is considered invalid</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>You can write your own validation code, but you will want to consider questions.
+                    <ul>
+                        <li>What kind of validation should I perform?</li>
+                        <li>What should I do if the form doesn't match?</li>
+                        <li>How can I help the user to correct invalid data?</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <br>
+    <div class="button">
+            <a href="https://astin-jeremiah.github.io/WDD330/" class="mainmenu">Return To Main Menu</a>&emsp;<a href="index.html" class="sectionmenu">Return To Section Menu</a>
+        </div>
+    
+    <script src="../js/week1.js"></script>   
+</body>
+</html>

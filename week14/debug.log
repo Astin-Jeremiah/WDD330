@@ -1,0 +1,2 @@
+[1118/192947.301:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[1118/203149.894:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\jerem\AppData\Roaming\Brackets\live-dev-profile\Crashpad\attachments\48ad99f9-d7dd-4659-9735-4bb8bef83dcc: The system cannot find the path specified. (0x3)

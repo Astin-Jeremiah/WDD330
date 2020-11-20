@@ -1,10 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap');
 
 @font-face {
     font-family: 'star';
     src: url('./font/star.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'gyparody';
+    src: url('./font/gyparody.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'korina';
+    src: url('./font/korina.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
@@ -558,6 +572,74 @@ figcaption {
 .regular {
     transform: none;
 }
+
+#gameboard table {
+    margin: auto;
+}
+
+#Gamearea h2 {
+    font-family: 'gyparody';
+    color: #AAA9AD;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    font-size: 100px;
+    -webkit-text-stroke: 1px black;
+}
+
+.category {
+    font-size: 30px;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.money {
+    font-family: 'Open Sans', sans-serif;
+    color: #d69f4e;
+    font-size: 60px;
+    letter-spacing: -1px;
+}
+
+.money:hover {
+    background-color: #373CED;
+}
+
+#Gamearea {
+    background-color: #060CE9;
+    width: 1100px;
+    margin: auto;
+}
+
+#game th {
+    width: 200px;
+    height: 100px;
+    border: 5px inset black;
+}
+
+table#game {
+    border: 5px inset black;
+    margin-bottom: 10px;
+    border-collapse: collapse;
+}
+
+#footer {
+    background-color: white;
+    text-align: center;
+    font-size: 25px;
+}
+
+#questioncard {
+    width: 1100px;
+    background-color: #060CE9;
+    margin: auto;
+    font-family: 'korina';
+    color: white;
+    font-size: 25px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+
+
 
 
 

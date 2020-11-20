@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+        <title>
+            From Validation Examples
+        </title>
+        <link href="../style.css" type="text/css" rel="stylesheet" />
+        <link rel="icon" href="../images/favicon.png">
+        <style>
+            body {
+                background-color: #fff;
+                color: #333;
+                font: 1em / 1.4 Helvetica Neue, Helvetica, Arial, sans-serif;
+                padding: 1em;
+                margin: 0;
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+            
+            li {
+                list-style-type: none;
+            }
+            
+            input:invalid, textarea:invalid {
+                border: 2px solid red;
+            }
+
+            input:valid, textarea:valid {
+                border: 2px solid black;
+            }
+            
+            #one {
+                border: 1px solid black;
+                width: 400px;
+                margin: auto;
+                text-align: left;
+            }
+            
+            .cen {
+                text-align: center;
+            }
+    </style>
+    </head>
+
+<body class="center">
+    <h1>WDD 330 Portfolio<br>
+        Jeremiah Astin<br><br>
+        <u>Form Validation Examples</u></h1>
+    <div class="centerdiv">
+      <form id="one">
+      <ul>
+        <li>
+          <label for="uname">User name:</label>
+          <input type="text" name="uname" id="uname" required minlength="5" maxlength="20" pattern="[a-z]+[.]+[a-z]{3,}">
+        </li>
+          <br>
+        <li>
+          <label for="email">Email address:</label>
+          <input type="email" name="email" id="email" required pattern="^[A-za-z0-9]+@bigcorp.eu$">
+        </li>
+          <br>
+        <li>
+          <label for="phone">Phone number:</label>
+          <input type="tel" name="phone" id="phone" required pattern="^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$">
+        </li>
+          <br>
+        <li>
+          <label for="comment">Comment:</label>
+          <textarea name="comment" id="comment" maxlength="200" required></textarea>
+        </li>
+          <br>
+        <li class="cen">
+          <button id="sub">Submit comment</button>
+        </li>
+      </ul>
+    </form>
+    <br>
+    <br>
+    <form id="emailform">
+      <label for="mail">I would like you to provide me with an e-mail address:</label>
+      <input type="email" id="mail" name="mail" required minlength="10">
+      <button>Submit</button>
+    </form>    
+    <br>
+    <br>
+    <div class="button">
+            <a href="https://astin-jeremiah.github.io/WDD330/" class="mainmenu">Return To Main Menu</a>&emsp;<a href="index.html" class="sectionmenu">Return To Section Menu</a>
+    </div>
+    </div>
+</body>
+<script>
+    const email = document.getElementById("mail");
+
+    email.addEventListener("input", function(event) {
+        if(email.validity.valueMissing) {
+            email.setCustomValidity('You need to enter an e-mail address.');
+        } else if(email.validity.typeMismatch) {
+            email.setCustomValidity('Entered value needs to be an e-mail address.');
+        } else if(email.validity.tooShort) {
+            email.setCustomValidity(`Email should be at least ${ email.minLength } characters; you entered ${ email.value.length }.`);
+        } else {
+             email.setCustomValidity(""); 
+        }
+    });
+</script>
+</html>

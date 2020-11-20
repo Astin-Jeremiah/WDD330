@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+        <title>Using Fetch Notes</title>
+        <link href="../style.css" type="text/css" rel="stylesheet" />
+        <link rel="icon" href="../images/favicon.png">
+    </head>
+
+<body class ="notes";>
+    <h1>WDD 330 Portfolio<br>
+        Jeremiah Astin<br><br>
+        <span class="notestitle">Using Fetch Notes</span></h1>
+    <ul class="notedetail">
+        <li>Fetch API provides a JavaScript interface for accessing and manipulating parts of the HTTP pipeline and provides a global fetch() method that provides an easy logical way to fetch resources asynchronously across the network</li>
+        <li>Fetch differs from AJAX in three main ways
+            <ul>
+                <li>The promise returned from fetch() won't reject on HTTP error status and will only reject on network failure or if anything prevented the request from completing </li>
+                <li>fetch() can receive cross-site cookies</li>
+                <li>fetch() wont send cookies unless you set it in the credentials</li>
+            </ul>
+        </li>
+        <li>The Headers interface allows you to create your own headers for you site
+            <ul>
+                <li>Guard allows you to mute your header from outside site
+                    <ul>
+                        <li>none: default</li>
+                        <li>required: guard for a header object obtained from a request request.headers</li>
+                        <li>required-no-cors: guard for a header object obtained from a request created with request.node</li>
+                        <li>response: guard for a header obtained from a response response.header</li>
+                        <li>inmutable: mostly used for service workers, renders the header object read only</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>Response - what is returned when a fetch() promise is resolved
+            <ul>
+                <li>Response.status - an integer containing the response status code</li>
+                <li>Response.statusText - a string which corresponds to the HTTP status code message</li>
+                <li>Response.ok - shorthand for checking that the status is in the range of 200-299</li>
+            </ul>
+        </li>
+    </udl>
+
+    <br>
+    <div class="button">
+            <a href="https://astin-jeremiah.github.io/WDD330/" class="mainmenu">Return To Main Menu</a>&emsp;<a href="index.html" class="sectionmenu">Return To Section Menu</a>
+        </div>
+    
+    <script src="../js/week1.js"></script>   
+</body>
+</html>
