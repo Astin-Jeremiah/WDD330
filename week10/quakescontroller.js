@@ -1,6 +1,6 @@
 import { getLocation } from './utilities.js';
 import Quake from './quake.js';
-import QuakesView from './quakesView.js';
+import QuakesView from './quakesview.js';
 
 // Quake controller
 export default class QuakesController {
@@ -18,10 +18,10 @@ export default class QuakesController {
     this.quakesView = new QuakesView();
   }
   async init() {
-    // use this as a place to grab the element identified by this.parent, do the initial call of this.initPos(), and display some quakes by calling this.getQuakesByRadius()
+    // use this as a place to grab the element identified by this.parent, do the initial call of this.intiPos(), and display some quakes by calling this.getQuakesByRadius()
     this.parentElement = document.querySelector(this.parent);
     await this.initPos();
-    this.getQuakesByRadius(100);
+    this.getQuakesByRadius(100000);
   }
   async initPos() {
     // if a position has not been set
@@ -29,34 +29,36 @@ export default class QuakesController {
       try {
         // try to get the position using getLocation()
         const posFull = await getLocation();
+
         // if we get the location back then set the latitude and longitude into this.position
         this.position.lat = posFull.coords.latitude;
         this.position.lon = posFull.coords.longitude;
+        //console.log(posFull);
       } catch (error) {
         console.log(error);
       }
     }
   }
 
-  async getQuakesByRadius(radius = 100) {
-    // this method provides the glue between the model and view. Notice it first goes out and requests the appropriate data from the model, then it passes it to the view to be rendered.
-    //set loading message
+  async getQuakesByRadius(radius = 100000) {
+    //set a loading message in case it takes long to get the quakes
     this.parentElement.innerHTML = '<li>Loading...</li>';
     // get the list of quakes in the specified radius of the location
     const quakeList = await this.quakes.getEarthQuakesByRadius(
       this.position,
       100
     );
-    // render the list to html
+
+    // // render the list to html
     this.quakesView.renderQuakeList(quakeList, this.parentElement);
-    // add a listener to the new list of quakes to allow drill down in to the details
-    this.parentElement.addEventListener('touchend', e => {
-      this.getQuakeDetails(e.target.dataset.id);
-    });
+    // // add a listener to the new list of quakes to allow drill down in to the details. The listener should call this.getQuakeDetails on the targeted element
+    // this.parentElement.addEventListener('touchend', e => {
+    //   this.getQuakeDetails(e.target.dataset.id);
+    // });
   }
   async getQuakeDetails(quakeId) {
-    // get the details for the quakeId provided from the model, then send them to the view to be displayed
-   const quake = this.quakes.getQuakeById(quakeId);
-   this.quakesView.renderQuake(quake, this.parentElement);
+    // get the details for the quakeId provided, then send them to the view to be displayed
+    const quake = this.quakes.getQuakeById(quakeId);
+    this.quakesView.renderQuake(quake, this.parentElement);
   }
 }
