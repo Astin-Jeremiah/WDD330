@@ -51,11 +51,11 @@ body {
     z-index: -99;
 }
 
-#weeklist, #week1, #week2,#week3, #week4, #week5, #week6, #week7, #week8, #week9 {
+#weeklist, #week1, #week2,#week3, #week4, #week5, #week6, #week7, #week8, #week9, #week10 {
     position: absolute;
 }
 
-ul#weeklist, ul#week1, ul#week2, ul#week3, ul#week4, ul#week5, ul#week6, ul#week7, ul#week8, ul#week9 {
+ul#weeklist, ul#week1, ul#week2, ul#week3, ul#week4, ul#week5, ul#week6, ul#week7, ul#week8, ul#week9, ul#week10 {
     list-style-type: none;
     display: grid;
     grid-template-columns: 150px 150px 150px;
