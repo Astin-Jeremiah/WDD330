@@ -1,4 +1,6 @@
 import { getJSON } from "./utilities.js";
+
+const radius = document.getElementById("rad").value;
 // Quake Model
 export default class Quake {
   constructor() {
