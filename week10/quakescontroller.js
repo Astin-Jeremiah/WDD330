@@ -2,7 +2,8 @@ import { getLocation } from './utilities.js';
 import Quake from './quake.js';
 import QuakesView from './quakesview.js';
 
-const radius = = parseInt(document.getElementById("rad").value);
+const r = = document.getElementById("rad").value;
+const radius = parseInt(r);
 console.log(radius);
 
 // Quake controller
