@@ -4,6 +4,7 @@ import QuakesView from './quakesview.js';
 
 // Quake controller
 export default class QuakesController {
+  const radius = document.getElementById("rad").value;
   constructor(parent, position = null) {
     this.parent = parent;
     // sometimes the DOM won't exist/be ready when the Class gets instantiated, so we will set this later in the init()
