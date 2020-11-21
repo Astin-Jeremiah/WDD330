@@ -1,6 +1,7 @@
 import { getJSON } from "./utilities.js";
 // Quake Model
 export default class Quake {
+    const radius = document.getElementById("rad").value;
   constructor() {
     this.baseUrl =
       "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=2019-01-01&endtime=2020-11-18";
