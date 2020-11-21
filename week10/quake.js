@@ -15,6 +15,7 @@ export default class Quake {
       this.baseUrl +
       `&latitude=${position.lat}&longitude=${position.lon}&maxradiuskm=${radius}`;
     console.log(query);
+    console.log(radius);
     this._quakes = await getJSON(query);
     return this._quakes;
   }

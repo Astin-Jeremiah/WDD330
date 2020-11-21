@@ -2,11 +2,11 @@ import { getLocation } from './utilities.js';
 import Quake from './quake.js';
 import QuakesView from './quakesview.js';
 
+const r = document.getElementById("rad").value;
+const radius = parseInt(r);
+
 // Quake controller
 export default class QuakesController {
-    const r = document.getElementById("rad").value;
-const radius = parseInt(r);
-console.log (radius);
   constructor(parent, position = null) {
     this.parent = parent;
     // sometimes the DOM won't exist/be ready when the Class gets instantiated, so we will set this later in the init()
