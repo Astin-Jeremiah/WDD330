@@ -2,7 +2,7 @@ import { getLocation } from './utilities.js';
 import Quake from './quake.js';
 import QuakesView from './quakesview.js';
 
-const radius = document.getElementById("rad");
+const radius = document.getElementById("rad").value;
 
 // Quake controller
 export default class QuakesController {
