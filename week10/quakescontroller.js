@@ -50,7 +50,7 @@ export default class QuakesController {
     const quakeList = await this.quakes.getEarthQuakesByRadius(
       this.position, 100
     );
-      console.log(number);
+      console.log(radius);
 
     // // render the list to html
     this.quakesView.renderQuakeList(quakeList, this.parentElement);
