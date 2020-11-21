@@ -48,7 +48,7 @@ export default class QuakesController {
     this.parentElement.innerHTML = '<li>Loading...</li>';
     // get the list of quakes in the specified radius of the location
     const quakeList = await this.quakes.getEarthQuakesByRadius(
-      this.position, radius
+      this.position, this
     );
       console.log(radius);
 
