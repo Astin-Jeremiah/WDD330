@@ -17,12 +17,12 @@ export default class QuakesController {
     this.quakes = new Quake();
     this.quakesView = new QuakesView();
   }
-  async init(radius) {
+  async init(radius, date1, date2) {
     // use this as a place to grab the element identified by this.parent, do the initial call of this.intiPos(), and display some quakes by calling this.getQuakesByRadius()
     this.parentElement = document.querySelector(this.parent);
     await this.initPos();
     console.log(radius);
-    this.getQuakesByRadius(radius);
+    this.getQuakesByRadius(radius, date1, date2);
   }
   async initPos() {
     // if a position has not been set
