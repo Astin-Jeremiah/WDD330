@@ -3,7 +3,7 @@ import Quake from './quake.js';
 import QuakesView from './quakesview.js';
 
 const r = document.getElementById("rad").value;
-const radius = parseInt(r);
+//const radius = parseInt(r);
 
 // Quake controller
 export default class QuakesController {
@@ -48,7 +48,7 @@ export default class QuakesController {
     this.parentElement.innerHTML = '<li>Loading...</li>';
     // get the list of quakes in the specified radius of the location
     const quakeList = await this.quakes.getEarthQuakesByRadius(
-      this.position, 100
+      this.position, parseInt(r)
     );
       console.log(radius);
 
