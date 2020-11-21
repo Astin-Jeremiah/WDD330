@@ -2,7 +2,8 @@ import { getLocation } from './utilities.js';
 import Quake from './quake.js';
 import QuakesView from './quakesview.js';
 
-
+const radius = = parseInt(document.getElementById("rad").value);
+console.log(radius);
 
 // Quake controller
 export default class QuakesController {
@@ -23,7 +24,6 @@ export default class QuakesController {
     // use this as a place to grab the element identified by this.parent, do the initial call of this.intiPos(), and display some quakes by calling this.getQuakesByRadius()
     this.parentElement = document.querySelector(this.parent);
     await this.initPos();
-    this.radius = parseInt(document.getElementById("rad").value);
     console.log(radius);
     this.getQuakesByRadius(radius);
   }
