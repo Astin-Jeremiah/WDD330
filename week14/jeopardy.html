@@ -6,9 +6,10 @@
         <title>
             Jeopardy
         </title>
-        <link href="../style.css" type="text/css" rel="stylesheet" />
         <link rel="icon" href="../images/favicon.png">
-        <!--<script src="../js/week2.js"></script> -->
+        <link rel="stylesheet" href="../alertify.css">
+        <link href="../style.css" type="text/css" rel="stylesheet" />
+        <script src="../js/alertify.js"></script>
     </head>
 
 <body>
@@ -20,61 +21,61 @@
     <div id="gameboard">
         <table id="game">
             <tr>
-                <th class="category">Category 1</th>
-                <th class="category">Category 2</th>
-                <th class="category">Category 3</th>
-                <th class="category">Category 4</th>
-                <th class="category">Category 5</th>
+                <th class="category"><span id="cat0"></span></th>
+                <th class="category"><span id="cat1"></span></th>
+                <th class="category"><span id="cat2"></span></th>
+                <th class="category"><span id="cat3"></span></th>
+                <th class="category"><span id="cat4"></span></th>
             </tr>
             <tr>
-                <th class="money">$100</th>
-                <th class="money">$100</th>
-                <th class="money">$100</th>
-                <th class="money">$100</th>
-                <th class="money">$100</th>
+                <th class="money" data-key="0" data-money="100" id="q1">$100</th>
+                <th class="money" data-key="1" data-money="100" id="q2">$100</th>
+                <th class="money" data-key="2" data-money="100" id="q3">$100</th>
+                <th class="money" data-key="3" data-money="100" id="q4">$100</th>
+                <th class="money" data-key="4" data-money="100" id="q5">$100</th>
             </tr>
             <tr>
-                <th class="money">$200</th>
-                <th class="money">$200</th>
-                <th class="money">$200</th>
-                <th class="money">$200</th>
-                <th class="money">$200</th>
+                <th class="money" data-key="0" data-money="200">$200</th>
+                <th class="money" data-key="1" data-money="200">$200</th>
+                <th class="money" data-key="2" data-money="200">$200</th>
+                <th class="money" data-key="3" data-money="200">$200</th>
+                <th class="money" data-key="4" data-money="200">$200</th>
             </tr>
             <tr>
-                <th class="money">$300</th>
-                <th class="money">$300</th>
-                <th class="money">$300</th>
-                <th class="money">$300</th>
-                <th class="money">$300</th>
+                <th class="money" data-key="0" data-money="300">$300</th>
+                <th class="money" data-key="1" data-money="300">$300</th>
+                <th class="money" data-key="2" data-money="300">$300</th>
+                <th class="money" data-key="3" data-money="300">$300</th>
+                <th class="money" data-key="4" data-money="300">$300</th>
             </tr>
             <tr>
-                <th class="money">$400</th>
-                <th class="money">$400</th>
-                <th class="money">$400</th>
-                <th class="money">$400</th>
-                <th class="money">$400</th>
+                <th class="money" data-key="0" data-money="400">$400</th>
+                <th class="money" data-key="1" data-money="400">$400</th>
+                <th class="money" data-key="2" data-money="400">$400</th>
+                <th class="money" data-key="3" data-money="400">$400</th>
+                <th class="money" data-key="4" data-money="400">$400</th>
             </tr>
                <tr>
-                <th class="money">$500</th>
-                <th class="money">$500</th>
-                <th class="money">$500</th>
-                <th class="money">$500</th>
-                <th class="money">$500</th>
+                <th class="money" data-key="0" data-money="500">$500</th>
+                <th class="money" data-key="1" data-money="500">$500</th>
+                <th class="money" data-key="2" data-money="500">$500</th>
+                <th class="money" data-key="3" data-money="500">$500</th>
+                <th class="money" data-key="4" data-money="500">$500</th>
             </tr>
         </table>
     </div>
     <div id="footer">
-        <p>Game Total: $100</p>
+        <p><span id="name"></span>&emsp;Game Total: $100</p>
     </div>
     </div>
     <div id="questioncard">
-        <p>This Is Where The Question Will Go</p>
+        <p><span id="question"></span></p>
     </div>
     <br>
     <br>
     <div class="button">
             <a href="https://astin-jeremiah.github.io/WDD330/" class="mainmenu">Return To Main Menu</a>&emsp;<a href="index.html" class="sectionmenu">Return To Section Menu</a>
     </div>
-    <script src="../js/tictactoe.js"></script>
+<script src="../js/game.js"></script>
 </body>
 </html>
