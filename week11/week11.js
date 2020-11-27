@@ -22,11 +22,7 @@ async function getPosts() {
     ul.innerHTML = '';
     for (var i = 0; i < data.length; i++) {
       var li = document.createElement('li');
-      li.appendChild(document.createTextNode(data[i].title));
-        ul.appendChild(li);
-    li.appendChild(document.createTextNode(data[i].content));
-        ul.appendChild(li);
-        li.appendChild(document.createTextNode(data[i].userId));
+      li.appendChild(document.createTextNode("Title:" + data[i].title + "Content:" + data[i].content + "User Name:" + data[i].userId));
       ul.appendChild(li);
     }
     myErrors.clearError();
