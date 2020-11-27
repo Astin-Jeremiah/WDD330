@@ -16,12 +16,12 @@
         background-color: antiquewhite;
         width: 300px;
       }
-      form button {
+      form button, input[type=submit] {
         font-size: 1.2em;
         padding: 0.4em;
         background-color: slategray;
       }
-      form button:hover {
+      form button:hover, input[type=submit]:hover {
         background-color: cornflowerblue;
       }  
         
@@ -91,9 +91,7 @@
         </div>
         <div id="postError"></div>
 
-        <button type="button" class="btn btn-primary center-block">
-          Submit
-        </button>
+        <input type="submit" id="createSubmit" />
       </form>
       <ul id="list"></ul>
     </div>
