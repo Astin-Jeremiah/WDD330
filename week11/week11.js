@@ -23,6 +23,8 @@ async function getPosts() {
     for (var i = 0; i < data.length; i++) {
       var li = document.createElement('li');
       li.appendChild(document.createTextNode(data[i].title));
+    li.appendChild(document.createTextNode(data[i].content));
+        li.appendChild(document.createTextNode(data[i].userId));
       ul.appendChild(li);
     }
     myErrors.clearError();
