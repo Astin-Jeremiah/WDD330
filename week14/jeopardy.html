@@ -18,7 +18,7 @@
     <br>
     <div id="Gamearea">
     <h2>JEOPARDY!</h2>
-    <div id="gameboard">
+    <div id="gameboard" class="">
         <table id="game">
             <tr>
                 <th class="category"><span id="cat0"></span></th>
@@ -64,18 +64,40 @@
             </tr>
         </table>
     </div>
+    <div id="questioncard" class="hidden">
+        <span id="questionarea">
+        <h3 id="quesiton"></h3>
+        <div class="choice-container" data-key="0" onclick="check(this)">
+          <p class="choice-text" id="a1"></p>
+        </div>
+        <div class="choice-container" data-key="1" onclick="check(this)">
+          <p class="choice-text" id="b1"></p>
+        </div>
+        <div class="choice-container" data-key="2" onclick="check(this)">
+          <p class="choice-text" id="c1"></p>
+        </div>
+        <div class="choice-container" data-key="3" onclick="check(this)">
+          <p class="choice-text" id="d1"></p>
+        </div>
+        </span>
+    </div>
+    <div id="endcard" class="hidden">
+        <span id="messagearea">
+        <h3>GAME OVER</h3>  
+        <div class="end-container" onClick="window.location.reload(true);">
+            <p>NEW GAME</p>
+        </div>
+        </span>
+    </div>
     <div id="footer">
-        <p><span id="name"></span>&emsp;Game Total: $100</p>
+        <p><span id="name"></span>&ensp;Game Total: $<span id="total"></span></p>
     </div>
-    </div>
-    <div id="questioncard">
-        <p><span id="question"></span></p>
     </div>
     <br>
     <br>
     <div class="button">
             <a href="https://astin-jeremiah.github.io/WDD330/" class="mainmenu">Return To Main Menu</a>&emsp;<a href="index.html" class="sectionmenu">Return To Section Menu</a>
     </div>
-<script src="../js/game.js"></script>
+    <script src="../js/game.js"></script>
 </body>
 </html>

@@ -65,7 +65,7 @@
             }
         },
         glossary:{
-            title:'AlertifyJS',
+            title:'Jeopardy',
             ok: 'OK',
             cancel: 'Cancel',
             acccpt: 'Accept',
