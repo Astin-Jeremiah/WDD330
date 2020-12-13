@@ -1,6 +1,4 @@
 import {categories} from '../js/cat.js';
-import {fun} from '../js/cat.js';
-
 const questionbox = document.querySelector('#questioncard h3');
 const A1 = document.getElementById("a1");
 const B1 = document.getElementById("b1");
@@ -58,6 +56,48 @@ cat4.innerHTML = categories[arr[4]-9].name;
 }
 
 console.log(elements);
+
+export var fun = function() {
+    gb.classList.add("hidden");
+    qcard.classList.remove("hidden");
+    timer.classList.remove("hidden");
+    var attribute = this.getAttribute("data-key");
+    money = parseInt(this.getAttribute("data-money"));
+    console.log(attribute);
+    console.log(money);
+    const base2 = "https://opentdb.com/api.php?amount=1&category=";
+    const url2 = base2 + `${arr[attribute]}&type=multiple`;
+    console.log(arr[attribute]);
+    this.innerHTML = "";
+    this.removeEventListener("click", fun, true);
+    fetch(url2)
+    .then(res => {
+    return res.json();
+})
+
+    .then(loadedQuestions => {
+    set();
+    console.log(loadedQuestions.results);
+    loadedQuestions.results.map(loadedQuestion => {
+        const q = loadedQuestion.question;
+        console.log(q);
+        questionbox.innerHTML = q;
+        n = Math.floor(Math.random() * (4 - 0));
+        const answerChoices = [...loadedQuestion.incorrect_answers];
+        console.log(n);
+        answerChoices.splice(n, 0, loadedQuestion.correct_answer);
+    console.log(answerChoices);
+    console.log(loadedQuestion.correct_answer);
+    A1.innerHTML = "A:&ensp;" + answerChoices[0];  
+    B1.innerHTML = "B:&ensp;" + answerChoices[1];
+    C1.innerHTML = "C:&ensp;" + answerChoices[2];  
+    D1.innerHTML = "D:&ensp;" + answerChoices[3]; 
+    })
+    
+    })
+    
+};
+
 
         
 for (var j=0; j < elements.length; j++) {
