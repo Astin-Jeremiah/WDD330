@@ -1,4 +1,5 @@
 import {categories} from '../js/cat.js';
+import {fun} from '../js/cat.js';
 
 const questionbox = document.querySelector('#questioncard h3');
 const A1 = document.getElementById("a1");
@@ -57,46 +58,7 @@ cat4.innerHTML = categories[arr[4]-9].name;
 }
 
 console.log(elements);
-var fun = function() {
-    gb.classList.add("hidden");
-    qcard.classList.remove("hidden");
-    timer.classList.remove("hidden");
-    var attribute = this.getAttribute("data-key");
-    money = parseInt(this.getAttribute("data-money"));
-    console.log(attribute);
-    console.log(money);
-    const base2 = "https://opentdb.com/api.php?amount=1&category=";
-    const url2 = base2 + `${arr[attribute]}&type=multiple`;
-    console.log(arr[attribute]);
-    this.innerHTML = "";
-    this.removeEventListener("click", fun, true);
-    fetch(url2)
-    .then(res => {
-    return res.json();
-})
 
-    .then(loadedQuestions => {
-    set();
-    console.log(loadedQuestions.results);
-    loadedQuestions.results.map(loadedQuestion => {
-        const q = loadedQuestion.question;
-        console.log(q);
-        questionbox.innerHTML = q;
-        n = Math.floor(Math.random() * (4 - 0));
-        const answerChoices = [...loadedQuestion.incorrect_answers];
-        console.log(n);
-        answerChoices.splice(n, 0, loadedQuestion.correct_answer);
-    console.log(answerChoices);
-    console.log(loadedQuestion.correct_answer);
-    A1.innerHTML = "A:&ensp;" + answerChoices[0];  
-    B1.innerHTML = "B:&ensp;" + answerChoices[1];
-    C1.innerHTML = "C:&ensp;" + answerChoices[2];  
-    D1.innerHTML = "D:&ensp;" + answerChoices[3]; 
-    })
-    
-    })
-    
-};
         
 for (var j=0; j < elements.length; j++) {
     elements[j].addEventListener('click', fun, true);
@@ -109,7 +71,7 @@ function check(clickedElement) {
     var an = document.querySelectorAll("[data-ans]");
     console.log(an);
     console.log(elems);
-    /*lock(elems);*/
+    lock(elems);
     console.log(number);
     console.log(n);
     console.log(money);
@@ -122,7 +84,7 @@ function check(clickedElement) {
             gb.classList.remove("hidden");
             qcard.classList.add("hidden");
            clicked = false;
-            /*unlock(elems);*/
+            unlock(elems);
             rounds();
             clear();}, 2000);
    }else {
@@ -137,7 +99,7 @@ function check(clickedElement) {
             gb.classList.remove("hidden");
             qcard.classList.add("hidden");
            clicked = false;
-           /*unlock(elems);*/
+           unlock(elems);
            rounds();
            clear();}, 2000);
    }
@@ -152,7 +114,7 @@ function rounds() {
     }
 }
 
-/*function lock(elems) {
+function lock(elems) {
     for (var b=0; b < elems.length; b++) {
         elems[b].setAttribute('onclick','');
     }
@@ -162,7 +124,7 @@ function unlock(elems) {
     for (var b=0; b < elems.length; b++) {
             elems[b].setAttribute('onclick','check(this)');
     }
-}*/
+}
 
 function updatescore(){
     score = score + money;
