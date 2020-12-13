@@ -104,7 +104,7 @@ for (var j=0; j < elements.length; j++) {
     elements[j].addEventListener('click', fun, true);
     };
 
-function check(clickedElement) {
+function check() {
     clicked = true;
    var number = clickedElement.getAttribute("data-ans");
     var an = document.querySelectorAll("[data-ans]");
