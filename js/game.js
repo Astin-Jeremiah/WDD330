@@ -93,10 +93,11 @@ var fun = function() {
     B1.innerHTML = "B:&ensp;" + answerChoices[1];
     C1.innerHTML = "C:&ensp;" + answerChoices[2];  
     D1.innerHTML = "D:&ensp;" + answerChoices[3]; 
+    elems.addEventListener("click", check, true);
     })
     
     })
-    elems.addEventListener("click", check, true);
+    
 };
         
 for (var j=0; j < elements.length; j++) {
