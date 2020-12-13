@@ -20,10 +20,10 @@ let clicked = false;
 
 let arr = [];
 while(arr.length < 5){
-    var r = Math.floor(Math.random() * (31 - 9)) + 9;
+    let r = Math.floor(Math.random() * (31 - 9)) + 9;
     if(arr.indexOf(r) === -1) arr.push(r);
 }
-console.log(arr);
+
 
 window.addEventListener('load', () => {
   const build = new Audio('../images/build.mp3');  
@@ -39,7 +39,6 @@ window.addEventListener('load', () => {
    
 });
 
-console.log(categories);
 
 function buildcategories() {
 const cat0 = document.getElementById("cat0");
@@ -54,18 +53,15 @@ cat3.innerHTML = categories[arr[3]-9].name;
 cat4.innerHTML = categories[arr[4]-9].name;
 }
 
-console.log(elements);
-var fun = function() {
+
+let fun = function() {
     gb.classList.add("hidden");
     qcard.classList.remove("hidden");
     timer.classList.remove("hidden");
-    var attribute = this.getAttribute("data-key");
+    const attribute = this.getAttribute("data-key");
     money = parseInt(this.getAttribute("data-money"));
-    console.log(attribute);
-    console.log(money);
     const base2 = "https://opentdb.com/api.php?amount=1&category=";
     const url2 = base2 + `${arr[attribute]}&type=multiple`;
-    console.log(arr[attribute]);
     this.innerHTML = "";
     this.removeEventListener("click", fun, true);
     fetch(url2)
@@ -75,17 +71,12 @@ var fun = function() {
 
     .then(loadedQuestions => {
     set();
-    console.log(loadedQuestions.results);
     loadedQuestions.results.map(loadedQuestion => {
         const q = loadedQuestion.question;
-        console.log(q);
         questionbox.innerHTML = q;
         n = Math.floor(Math.random() * (4 - 0));
         const answerChoices = [...loadedQuestion.incorrect_answers];
-        console.log(n);
         answerChoices.splice(n, 0, loadedQuestion.correct_answer);
-    console.log(answerChoices);
-    console.log(loadedQuestion.correct_answer);
     A1.innerHTML = "A:&ensp;" + answerChoices[0];  
     B1.innerHTML = "B:&ensp;" + answerChoices[1];
     C1.innerHTML = "C:&ensp;" + answerChoices[2];  
@@ -95,21 +86,16 @@ var fun = function() {
     })
 };
         
-for (var j=0; j < elements.length; j++) {
+for (let j=0; j < elements.length; j++) {
     elements[j].addEventListener('click', fun, true);
     };
 
 function check(clickedElement) {
     clicked = true;
-   var number = clickedElement.getAttribute("data-ans");
-    var elems = document.getElementsByClassName("choice-container");
-    var an = document.querySelectorAll("[data-ans]");
-    console.log(an);
-    console.log(elems);
+   const number = clickedElement.getAttribute("data-ans");
+    const elems = document.getElementsByClassName("choice-container");
+    const an = document.querySelectorAll("[data-ans]");
     lock(elems);
-    console.log(number);
-    console.log(n);
-    console.log(money);
    if (number == n) {
        yes.play();
        clickedElement.style.color = "green";
@@ -142,7 +128,6 @@ function check(clickedElement) {
 
 function rounds() {
     round++;
-    console.log(round);
     if (round === 25){
         gb.classList.add("hidden");
         end.classList.remove("hidden");
@@ -150,13 +135,13 @@ function rounds() {
 }
 
 function lock(elems) {
-    for (var b=0; b < elems.length; b++) {
+    for (let b=0; b < elems.length; b++) {
         elems[b].setAttribute('onclick','');
     }
 }
 
 function unlock(elems) {
-    for (var b=0; b < elems.length; b++) {
+    for (let b=0; b < elems.length; b++) {
             elems[b].setAttribute('onclick','check(this)');
     }
 }
@@ -176,8 +161,8 @@ function clear(){
 }    
     
 function set() {
-    var tim = 20;
-    var timerId = setInterval(time, 1000);
+    let tim = 20;
+    const timerId = setInterval(time, 1000);
     
     function time() {
         timer.style.color = "white";
@@ -188,7 +173,6 @@ function set() {
         qcard.classList.add("hidden");
         rounds();
         clear();
-        timer.style.color = "#060CE9";
         }else if (clicked == true){
         clearTimeout(timerId);
         }else {
