@@ -62,7 +62,6 @@ var fun = function() {
     gb.classList.add("hidden");
     qcard.classList.remove("hidden");
     timer.classList.remove("hidden");
-    elems.addEventListener("click", check);
     var attribute = this.getAttribute("data-key");
     money = parseInt(this.getAttribute("data-money"));
     console.log(attribute);
@@ -97,6 +96,7 @@ var fun = function() {
     })
     
     })
+    elems.addEventListener("click", check);
 };
         
 for (var j=0; j < elements.length; j++) {
