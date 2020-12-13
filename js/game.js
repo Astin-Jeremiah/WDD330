@@ -56,7 +56,7 @@ cat4.innerHTML = categories[arr[4]-9].name;
 
 console.log(elements);
 
-export var fun = function() {
+var fun = function() {
     gb.classList.add("hidden");
     qcard.classList.remove("hidden");
     timer.classList.remove("hidden");
