@@ -6,6 +6,7 @@ const B1 = document.getElementById("b1");
 const C1 = document.getElementById("c1");
 const D1 = document.getElementById("d1");
 const elements = document.getElementsByClassName("money");
+var elems = document.getElementsByClassName("choice-container");
 const name = document.getElementById("name");
 const total = document.getElementById("total");
 const gb = document.getElementById("gameboard");
@@ -101,10 +102,11 @@ for (var j=0; j < elements.length; j++) {
     elements[j].addEventListener('click', fun, true);
     };
 
+elems.addEventListener("click", check);
+
 function check(clickedElement) {
     clicked = true;
    var number = clickedElement.getAttribute("data-ans");
-    var elems = document.getElementsByClassName("choice-container");
     var an = document.querySelectorAll("[data-ans]");
     console.log(an);
     console.log(elems);
