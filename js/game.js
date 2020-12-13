@@ -96,7 +96,7 @@ var fun = function() {
     })
     
     })
-    elems.addEventListener("click", check);
+    elems.addEventListener("click", check, true);
 };
         
 for (var j=0; j < elements.length; j++) {
@@ -109,7 +109,7 @@ function check(clickedElement) {
     var an = document.querySelectorAll("[data-ans]");
     console.log(an);
     console.log(elems);
-    lock(elems);
+    /*lock(elems);*/
     console.log(number);
     console.log(n);
     console.log(money);
@@ -122,7 +122,7 @@ function check(clickedElement) {
             gb.classList.remove("hidden");
             qcard.classList.add("hidden");
            clicked = false;
-            unlock(elems);
+            /*unlock(elems);*/
             rounds();
             clear();}, 2000);
    }else {
@@ -137,7 +137,7 @@ function check(clickedElement) {
             gb.classList.remove("hidden");
             qcard.classList.add("hidden");
            clicked = false;
-           unlock(elems);
+           /*unlock(elems);*/
            rounds();
            clear();}, 2000);
    }
@@ -152,7 +152,7 @@ function rounds() {
     }
 }
 
-function lock(elems) {
+/*function lock(elems) {
     for (var b=0; b < elems.length; b++) {
         elems[b].setAttribute('onclick','');
     }
@@ -162,7 +162,7 @@ function unlock(elems) {
     for (var b=0; b < elems.length; b++) {
             elems[b].setAttribute('onclick','check(this)');
     }
-}
+}*/
 
 function updatescore(){
     score = score + money;
