@@ -93,7 +93,6 @@ var fun = function() {
     B1.innerHTML = "B:&ensp;" + answerChoices[1];
     C1.innerHTML = "C:&ensp;" + answerChoices[2];  
     D1.innerHTML = "D:&ensp;" + answerChoices[3]; 
-    elems.addEventListener("click", check, true);
     })
     
     })
@@ -102,6 +101,10 @@ var fun = function() {
         
 for (var j=0; j < elements.length; j++) {
     elements[j].addEventListener('click', fun, true);
+    };
+
+for (var k=0; k < elems.length; k++) {
+    elements[k].addEventListener('click', check, true);
     };
 
 function check() {
