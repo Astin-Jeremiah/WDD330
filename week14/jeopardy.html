@@ -1,105 +1,106 @@
 <!doctype html>
 <html>
 <head>
-        <meta charset="UTF-8">
-        <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
-        <title>
-            Jeopardy
-        </title>
-        <link rel="icon" href="../images/favicon.png">
-        <link rel="stylesheet" href="../alertify.css">
-        <link href="../style.css" type="text/css" rel="stylesheet" />
-        <script src="../js/alertify.js"></script>
-        <script src="../js/cat.js"></script>
-    </head>
+    <meta charset="UTF-8">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+    <title>
+        Jeopardy
+    </title>
+    <link rel="icon" href="../images/favicon.png">
+    <link rel="stylesheet" href="../alertify.css">
+    <link href="../style.css" type="text/css" rel="stylesheet" />
+    <script src="../js/alertify.js"></script>
+    <script src="../js/cat.js"></script>
+</head>
 
 <body>
     <h1>WDD 330 Portfolio<br>
         Jeremiah Astin</h1>
     <br>
     <div id="Gamearea">
-    <h2>JEOPARDY!</h2>
-    <div id="gameboard" class="">
-        <table id="game">
-            <tr>
-                <th class="category"><span id="cat0"></span></th>
-                <th class="category"><span id="cat1"></span></th>
-                <th class="category"><span id="cat2"></span></th>
-                <th class="category"><span id="cat3"></span></th>
-                <th class="category"><span id="cat4"></span></th>
-            </tr>
-            <tr>
-                <th class="money" data-key="0" data-money="100" id="q1">$100</th>
-                <th class="money" data-key="1" data-money="100" id="q2">$100</th>
-                <th class="money" data-key="2" data-money="100" id="q3">$100</th>
-                <th class="money" data-key="3" data-money="100" id="q4">$100</th>
-                <th class="money" data-key="4" data-money="100" id="q5">$100</th>
-            </tr>
-            <tr>
-                <th class="money" data-key="0" data-money="200">$200</th>
-                <th class="money" data-key="1" data-money="200">$200</th>
-                <th class="money" data-key="2" data-money="200">$200</th>
-                <th class="money" data-key="3" data-money="200">$200</th>
-                <th class="money" data-key="4" data-money="200">$200</th>
-            </tr>
-            <tr>
-                <th class="money" data-key="0" data-money="300">$300</th>
-                <th class="money" data-key="1" data-money="300">$300</th>
-                <th class="money" data-key="2" data-money="300">$300</th>
-                <th class="money" data-key="3" data-money="300">$300</th>
-                <th class="money" data-key="4" data-money="300">$300</th>
-            </tr>
-            <tr>
-                <th class="money" data-key="0" data-money="400">$400</th>
-                <th class="money" data-key="1" data-money="400">$400</th>
-                <th class="money" data-key="2" data-money="400">$400</th>
-                <th class="money" data-key="3" data-money="400">$400</th>
-                <th class="money" data-key="4" data-money="400">$400</th>
-            </tr>
-               <tr>
-                <th class="money" data-key="0" data-money="500">$500</th>
-                <th class="money" data-key="1" data-money="500">$500</th>
-                <th class="money" data-key="2" data-money="500">$500</th>
-                <th class="money" data-key="3" data-money="500">$500</th>
-                <th class="money" data-key="4" data-money="500">$500</th>
-            </tr>
-        </table>
-    </div>
-    <div id="questioncard" class="hidden">
-        <div id="questionarea">
-        <h3 id="quesiton"></h3>
-        <div class="choice-container" data-ans="0" onclick="check(this)">
-          <p class="choice-text" id="a1"></p>
+        <h2>JEOPARDY!</h2>
+        <div id="gameboard" class="">
+            <table id="game">
+                <tr>
+                    <th class="category"><span id="cat0"></span></th>
+                    <th class="category"><span id="cat1"></span></th>
+                    <th class="category"><span id="cat2"></span></th>
+                    <th class="category"><span id="cat3"></span></th>
+                    <th class="category"><span id="cat4"></span></th>
+                </tr>
+                <tr>
+                    <th class="money" data-key="0" data-money="100" id="q1">$100</th>
+                    <th class="money" data-key="1" data-money="100" id="q2">$100</th>
+                    <th class="money" data-key="2" data-money="100" id="q3">$100</th>
+                    <th class="money" data-key="3" data-money="100" id="q4">$100</th>
+                    <th class="money" data-key="4" data-money="100" id="q5">$100</th>
+                </tr>
+                <tr>
+                    <th class="money" data-key="0" data-money="200">$200</th>
+                    <th class="money" data-key="1" data-money="200">$200</th>
+                    <th class="money" data-key="2" data-money="200">$200</th>
+                    <th class="money" data-key="3" data-money="200">$200</th>
+                    <th class="money" data-key="4" data-money="200">$200</th>
+                </tr>
+                <tr>
+                    <th class="money" data-key="0" data-money="300">$300</th>
+                    <th class="money" data-key="1" data-money="300">$300</th>
+                    <th class="money" data-key="2" data-money="300">$300</th>
+                    <th class="money" data-key="3" data-money="300">$300</th>
+                    <th class="money" data-key="4" data-money="300">$300</th>
+                </tr>
+                <tr>
+                    <th class="money" data-key="0" data-money="400">$400</th>
+                    <th class="money" data-key="1" data-money="400">$400</th>
+                    <th class="money" data-key="2" data-money="400">$400</th>
+                    <th class="money" data-key="3" data-money="400">$400</th>
+                    <th class="money" data-key="4" data-money="400">$400</th>
+                </tr>
+                <tr>
+                    <th class="money" data-key="0" data-money="500">$500</th>
+                    <th class="money" data-key="1" data-money="500">$500</th>
+                    <th class="money" data-key="2" data-money="500">$500</th>
+                    <th class="money" data-key="3" data-money="500">$500</th>
+                    <th class="money" data-key="4" data-money="500">$500</th>
+                </tr>
+            </table>
         </div>
-        <div class="choice-container" data-ans="1" onclick="check(this)">
-          <p class="choice-text" id="b1"></p>
+        <div id="questioncard" class="hidden">
+            <div id="questionarea">
+                <h3 id="quesiton"></h3>
+                <div class="choice-container" data-ans="0" onclick="check(this)">
+                    <p class="choice-text" id="a1"></p>
+                </div>
+                <div class="choice-container" data-ans="1" onclick="check(this)">
+                    <p class="choice-text" id="b1"></p>
+                </div>
+                <div class="choice-container" data-ans="2" onclick="check(this)">
+                    <p class="choice-text" id="c1"></p>
+                </div>
+                <div class="choice-container" data-ans="3" onclick="check(this)">
+                    <p class="choice-text" id="d1"></p>
+                </div>
+                <p id="times">20</p>
+            </div>
         </div>
-        <div class="choice-container" data-ans="2" onclick="check(this)">
-          <p class="choice-text" id="c1"></p>
+        <div id="endcard" class="hidden">
+            <div id="messagearea">
+                <h3>GAME OVER</h3>
+                <div class="end-container" onClick="window.location.reload(true);">
+                    <p>NEW GAME</p>
+                </div>
+            </div>
         </div>
-        <div class="choice-container" data-ans="3" onclick="check(this)">
-          <p class="choice-text" id="d1"></p>
+        <div id="footer">
+            <p><span id="name"></span>&ensp;Game Total: $<span id="total"></span></p>
         </div>
-            <p id="times">20</p>
-        </div>
-    </div>
-    <div id="endcard" class="hidden">
-        <div id="messagearea">
-        <h3>GAME OVER</h3>  
-        <div class="end-container" onClick="window.location.reload(true);">
-            <p>NEW GAME</p>
-        </div>
-        </div>
-    </div>
-    <div id="footer">
-        <p><span id="name"></span>&ensp;Game Total: $<span id="total"></span></p>
-    </div>
     </div>
     <br>
     <br>
     <div class="button">
-            <a href="https://astin-jeremiah.github.io/WDD330/" class="mainmenu">Return To Main Menu</a>&emsp;<a href="index.html" class="sectionmenu">Return To Section Menu</a>
+        <a href="https://astin-jeremiah.github.io/WDD330/" class="mainmenu">Return To Main Menu</a>&emsp;<a href="index.html" class="sectionmenu">Return To Section Menu</a>
     </div>
     <script src="../js/game.js"></script>
 </body>
+
 </html>
