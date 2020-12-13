@@ -1,4 +1,3 @@
-import { getJSON } from "../js/utilities.js";
 const questionbox = document.querySelector('#questioncard h3');
 const A1 = document.getElementById("a1");
 const B1 = document.getElementById("b1");
@@ -71,8 +70,9 @@ var fun = function() {
     console.log(arr[attribute]);
     this.innerHTML = "";
     this.removeEventListener("click", fun, true);
-    this.res = await getJSON(url2);
-    return this.loadedQuestisons;
+    fetch(url2)
+    .then(res => {
+    return res.json();
 })
 
     .then(loadedQuestions => {
