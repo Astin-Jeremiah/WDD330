@@ -1,4 +1,4 @@
-import categories from '../js/cat.js';
+import {categories} from '../js/cat.js';
 
 const questionbox = document.querySelector('#questioncard h3');
 const A1 = document.getElementById("a1");
